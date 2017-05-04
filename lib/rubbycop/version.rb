@@ -3,7 +3,7 @@
 module RubbyCop
   # This module holds the RubbyCop version information.
   module Version
-    STRING = '0.48.1'.freeze
+    STRING = '0.49.0'.freeze
 
     MSG = '%s (using Parser %s, running on %s %s %s)'.freeze
 
