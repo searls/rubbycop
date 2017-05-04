@@ -1,6 +1,6 @@
 ## Extensions
 
-It's possible to extend RuboCop with custom cops and formatters.
+It's possible to extend RubbyCop with custom cops and formatters.
 
 ### Loading Extensions
 
@@ -35,23 +35,23 @@ other cop.
 
 ### Custom Formatters
 
-You can customize RuboCop's output format with custom formatters.
+You can customize RubbyCop's output format with custom formatters.
 
 #### Creating a Custom Formatter
 
 To implement a custom formatter, you need to subclass
-`RuboCop::Formatter::BaseFormatter` and override some methods,
+`RubbyCop::Formatter::BaseFormatter` and override some methods,
 or implement all formatter API methods by duck typing.
 
 Please see the documents below for more formatter API details.
 
-* [RuboCop::Formatter::BaseFormatter](http://www.rubydoc.info/gems/rubocop/RuboCop/Formatter/BaseFormatter)
-* [RuboCop::Cop::Offense](http://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Offense)
+* [RubbyCop::Formatter::BaseFormatter](http://www.rubydoc.info/gems/rubocop/RubbyCop/Formatter/BaseFormatter)
+* [RubbyCop::Cop::Offense](http://www.rubydoc.info/gems/rubocop/RubbyCop/Cop/Offense)
 * [Parser::Source::Range](http://www.rubydoc.info/github/whitequark/parser/Parser/Source/Range)
 
 #### Using a Custom Formatter from the Command Line
 
-You can tell RuboCop to use your custom formatter with a combination of
+You can tell RubbyCop to use your custom formatter with a combination of
 `--format` and `--require` option.
 For example, when you have defined `MyCustomFormatter` in
 `./path/to/my_custom_formatter.rb`, you would type this command:

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common functionality for Rails safe mode.
     module SafeMode

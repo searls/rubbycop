@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     describe ClangStyleFormatter do
       subject(:formatter) { described_class.new(output) }

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Error raised when an unqualified cop name is used that could
     # refer to two or more cops under different departments
-    class AmbiguousCopName < RuboCop::Error
+    class AmbiguousCopName < RubbyCop::Error
       MSG = 'Ambiguous cop name `%<name>s` used in %<origin>s needs ' \
             'department qualifier. Did you mean %<options>s?'.freeze
 
@@ -61,23 +61,23 @@ module RuboCop
       #
       # @example gives back a correctly qualified cop name
       #
-      #   cops = RuboCop::Cop::Cop.all
+      #   cops = RubbyCop::Cop::Cop.all
       #   cops.
       #     qualified_cop_name('Layout/IndentArray') # => 'Layout/IndentArray'
       #
       # @example fixes incorrect namespaces
       #
-      #   cops = RuboCop::Cop::Cop.all
+      #   cops = RubbyCop::Cop::Cop.all
       #   cops.qualified_cop_name('Lint/IndentArray') # => 'Layout/IndentArray'
       #
       # @example namespaces bare cop identifiers
       #
-      #   cops = RuboCop::Cop::Cop.all
+      #   cops = RubbyCop::Cop::Cop.all
       #   cops.qualified_cop_name('IndentArray') # => 'Layout/IndentArray'
       #
       # @example passes back unrecognized cop names
       #
-      #   cops = RuboCop::Cop::Cop.all
+      #   cops = RubbyCop::Cop::Cop.all
       #   cops.qualified_cop_name('NotACop') # => 'NotACop'
       #
       # @param name [String] Cop name extracted from config

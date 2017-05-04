@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::ZeroLengthPredicate do
+describe RubbyCop::Cop::Style::ZeroLengthPredicate do
   subject(:cop) { described_class.new }
 
   before do

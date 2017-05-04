@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     describe FormatterSet do
       subject(:formatter_set) { described_class.new }
@@ -118,20 +118,20 @@ module RuboCop
         end
 
         it 'returns constant represented by the passed string' do
-          expect(custom_formatter_class('RuboCop')).to eq(RuboCop)
+          expect(custom_formatter_class('RubbyCop')).to eq(RubbyCop)
         end
 
         it 'can handle namespaced constant name' do
-          expect(custom_formatter_class('RuboCop::CLI')).to eq(RuboCop::CLI)
+          expect(custom_formatter_class('RubbyCop::CLI')).to eq(RubbyCop::CLI)
         end
 
         it 'can handle top level namespaced constant name' do
-          expect(custom_formatter_class('::RuboCop::CLI')).to eq(RuboCop::CLI)
+          expect(custom_formatter_class('::RubbyCop::CLI')).to eq(RubbyCop::CLI)
         end
 
         context 'when non-existent constant name is passed' do
           it 'raises error' do
-            expect { custom_formatter_class('RuboCop::NonExistentClass') }
+            expect { custom_formatter_class('RubbyCop::NonExistentClass') }
               .to raise_error(NameError)
           end
         end

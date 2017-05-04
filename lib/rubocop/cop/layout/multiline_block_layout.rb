@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # This cop checks whether the multiline do end blocks have a newline

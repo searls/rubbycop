@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
-    # `RuboCop::AST::Node` is a subclass of `Parser::AST::Node`. It provides
+    # `RubbyCop::AST::Node` is a subclass of `Parser::AST::Node`. It provides
     # access to parent nodes and an object-oriented way to traverse an AST with
     # the power of `Enumerable`.
     #
@@ -19,7 +19,7 @@ module RuboCop
     #   lvar_node = node.each_descendant.find(&:lvar_type?)
     #
     class Node < Parser::AST::Node # rubocop:disable Metrics/ClassLength
-      include RuboCop::AST::Sexp
+      include RubbyCop::AST::Sexp
 
       COMPARISON_OPERATORS = %i[! == === != <= >= > < <=>].freeze
 
@@ -47,7 +47,7 @@ module RuboCop
       # def_matcher can be used to define a pattern-matching method on Node
       class << self
         def def_matcher(method_name, pattern_str)
-          compiler = RuboCop::NodePattern::Compiler.new(pattern_str, 'self')
+          compiler = RubbyCop::NodePattern::Compiler.new(pattern_str, 'self')
           src = "def #{method_name}(" \
                 "#{compiler.emit_param_list});" \
                 "#{compiler.emit_method_code};end"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Performance
       # This cop checks for uses of `each_key` & `each_value` Hash methods.

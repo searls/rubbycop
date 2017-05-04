@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     describe DisabledConfigFormatter, :isolated_environment do
       include FileHelper
@@ -18,8 +18,8 @@ module RuboCop
       end
 
       let(:offenses) do
-        [RuboCop::Cop::Offense.new(:convention, location, 'message', 'Cop1'),
-         RuboCop::Cop::Offense.new(:convention, location, 'message', 'Cop2')]
+        [RubbyCop::Cop::Offense.new(:convention, location, 'message', 'Cop1'),
+         RubbyCop::Cop::Offense.new(:convention, location, 'message', 'Cop2')]
       end
 
       let(:location) { OpenStruct.new(line: 1, column: 5) }

@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Commissioner do
+describe RubbyCop::Cop::Commissioner do
   describe '#investigate' do
     let(:cop) do
-      double(RuboCop::Cop, offenses: [], excluded_file?: false).as_null_object
+      double(RubbyCop::Cop, offenses: [], excluded_file?: false).as_null_object
     end
-    let(:force) { double(RuboCop::Cop::Force).as_null_object }
+    let(:force) { double(RubbyCop::Cop::Force).as_null_object }
 
     it 'returns all offenses found by the cops' do
       allow(cop).to receive(:offenses).and_return([1])

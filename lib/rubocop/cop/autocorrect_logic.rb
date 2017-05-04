@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # This module encapsulates the logic for autocorrect behavior for a cop.
     module AutocorrectLogic

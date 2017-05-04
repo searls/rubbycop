@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::Delegate do
+describe RubbyCop::Cop::Rails::Delegate do
   subject(:cop) { described_class.new }
 
   it 'finds trivial delegate' do

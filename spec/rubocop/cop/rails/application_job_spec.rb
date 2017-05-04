@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::ApplicationJob do
+describe RubbyCop::Cop::Rails::ApplicationJob do
   let(:msgs) { [described_class::MSG] }
 
   context 'rails 4', :rails4, :config do

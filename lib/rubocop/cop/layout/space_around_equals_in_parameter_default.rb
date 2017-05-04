@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # Checks that the equals signs in parameter default assignments

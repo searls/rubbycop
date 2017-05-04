@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # This cop checks for unwanted parentheses in parameterless method calls.

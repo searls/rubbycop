@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # A node extension for `for` nodes. This will be used in place of a plain
     # node when the builder constructs the AST, making its methods available
-    # to all `for` nodes within RuboCop.
+    # to all `for` nodes within RubbyCop.
     class ForNode < Node
       # Returns the keyword of the `for` statement as a string.
       #

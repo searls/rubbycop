@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::SpaceAroundOperators do
+describe RubbyCop::Cop::Layout::SpaceAroundOperators do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    RuboCop::Config
+    RubbyCop::Config
       .new(
         'Layout/AlignHash' => { 'EnforcedHashRocketStyle' => hash_style },
         'Layout/SpaceAroundOperators' => {

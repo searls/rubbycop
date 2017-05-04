@@ -2,7 +2,7 @@
 
 require 'pathname'
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This formatter displays the list of offensive files, sorted by number of
     # offenses with the worst offenders first.

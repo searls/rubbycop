@@ -3,7 +3,7 @@
 require 'yaml'
 require 'pathname'
 
-module RuboCop
+module RubbyCop
   # A mixin to break up ConfigLoader
   module ConfigLoaderResolver
     def resolve_requires(path, hash)

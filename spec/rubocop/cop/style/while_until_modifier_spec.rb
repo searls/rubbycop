@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::WhileUntilModifier do
+describe RubbyCop::Cop::Style::WhileUntilModifier do
   include StatementModifierHelper
 
   subject(:cop) { described_class.new(config) }
   let(:config) do
     hash = { 'Metrics/LineLength' => { 'Max' => 80 } }
-    RuboCop::Config.new(hash)
+    RubbyCop::Config.new(hash)
   end
 
   it "accepts multiline unless that doesn't fit on one line" do
@@ -115,7 +115,7 @@ describe RuboCop::Cop::Style::WhileUntilModifier do
         'Metrics/LineLength' => { 'Max' => 100 },
         'Style/WhileUntilModifier' => { 'MaxLineLength' => 80 }
       }
-      RuboCop::Config.new(hash)
+      RubbyCop::Config.new(hash)
     end
 
     it "accepts multiline while that doesn't fit on one line" do

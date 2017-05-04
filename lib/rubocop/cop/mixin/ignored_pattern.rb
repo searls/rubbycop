@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # This module encapsulates the ability to ignore certain lines when
     # parsing.

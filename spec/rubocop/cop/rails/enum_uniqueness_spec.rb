@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::EnumUniqueness, :config do
+describe RubbyCop::Cop::Rails::EnumUniqueness, :config do
   subject(:cop) { described_class.new }
 
   context 'when array syntax is used' do

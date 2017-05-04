@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # Checks for if and unless statements used as modifiers of other if or

@@ -11,11 +11,11 @@ RSpec.shared_context 'cli spec behavior' do
     $stdout = StringIO.new
     $stderr = StringIO.new
 
-    RuboCop::ConfigLoader.debug = false
+    RubbyCop::ConfigLoader.debug = false
 
     # OPTIMIZE: Makes these specs faster. Work directory (the parent of
     # .rubocop_cache) is removed afterwards anyway.
-    RuboCop::ResultCache.inhibit_cleanup = true
+    RubbyCop::ResultCache.inhibit_cleanup = true
   end
 
   # Wrap all cli specs in `aggregate_failures` so that the expected and
@@ -30,6 +30,6 @@ RSpec.shared_context 'cli spec behavior' do
   after do
     $stdout = STDOUT
     $stderr = STDERR
-    RuboCop::ResultCache.inhibit_cleanup = false
+    RubbyCop::ResultCache.inhibit_cleanup = false
   end
 end

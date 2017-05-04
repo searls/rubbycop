@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     # Common logic for UI texts.
     module TextUtil

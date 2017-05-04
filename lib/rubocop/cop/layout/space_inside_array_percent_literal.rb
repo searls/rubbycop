@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # Checks for unnecessary additional spaces inside array percent literals

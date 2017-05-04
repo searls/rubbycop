@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::CharacterLiteral do
+describe RubbyCop::Cop::Style::CharacterLiteral do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for character literals' do

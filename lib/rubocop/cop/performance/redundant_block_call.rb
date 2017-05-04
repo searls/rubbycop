@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Performance
       # This cop identifies the use of a `&block` parameter and `block.call`

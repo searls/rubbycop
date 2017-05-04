@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # A node extension for `if` nodes. This will be used in place of a plain
     # node when the builder constructs the AST, making its methods available
-    # to all `if` nodes within RuboCop.
+    # to all `if` nodes within RubbyCop.
     class IfNode < Node
       include ConditionalNode
       include ModifierNode

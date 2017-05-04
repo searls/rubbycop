@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Performance
       # This cop is used to identify usages of `count` on an `Enumerable` that

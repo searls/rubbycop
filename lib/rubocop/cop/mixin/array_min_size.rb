@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Handles the `MinSize` configuration option for array-based cops
     # `Style/SymbolArray` and `Style/WordArray`, which check for use of the

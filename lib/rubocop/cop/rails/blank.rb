@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Rails
       # This cops checks for code that can be changed to `blank?`.

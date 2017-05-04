@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::RequestReferer, :config do
+describe RubbyCop::Cop::Rails::RequestReferer, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'when EnforcedStyle is referer' do

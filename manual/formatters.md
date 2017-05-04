@@ -1,7 +1,7 @@
 ## Formatters
 
-You can change the output format of RuboCop by specifying formatters with the `-f/--format` option.
-RuboCop ships with several built-in formatters, and also you can create your custom formatter.
+You can change the output format of RubbyCop by specifying formatters with the `-f/--format` option.
+RubbyCop ships with several built-in formatters, and also you can create your custom formatter.
 
 Additionally the output can be redirected to a file instead of `$stdout` with the `-o/--out` option.
 
@@ -152,7 +152,7 @@ $ rubocop --format files | xargs vim
 
 **Machine-parsable**
 
-You can get RuboCop's inspection result in JSON format by passing `--format json` option in command line.
+You can get RubbyCop's inspection result in JSON format by passing `--format json` option in command line.
 The JSON structure is like the following example:
 
 ```javascript
@@ -203,7 +203,7 @@ The JSON structure is like the following example:
 
 ### Offense Count Formatter
 
-Sometimes when first applying RuboCop to a codebase, it's nice to be able to
+Sometimes when first applying RubbyCop to a codebase, it's nice to be able to
 see where most of your style cleanup is going to be spent.
 
 With this in mind, you can use the offense count formatter to outline the offended

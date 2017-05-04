@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Util do
+describe RubbyCop::Cop::Util do
   class TestUtil
-    include RuboCop::Cop::Util
+    include RubbyCop::Cop::Util
   end
 
   describe '#line_range' do

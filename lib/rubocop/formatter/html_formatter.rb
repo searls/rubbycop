@@ -6,7 +6,7 @@ require 'ostruct'
 require 'base64'
 require 'rubocop/formatter/text_util'
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This formatter saves the output as an html file.
     class HTMLFormatter < BaseFormatter

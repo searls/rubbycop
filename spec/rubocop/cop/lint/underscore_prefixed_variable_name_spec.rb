@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::UnderscorePrefixedVariableName do
+describe RubbyCop::Cop::Lint::UnderscorePrefixedVariableName do
   subject(:cop) { described_class.new }
 
   before do

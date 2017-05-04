@@ -3,7 +3,7 @@
 require 'rubocop/formatter/colorizable'
 require 'rubocop/formatter/text_util'
 
-module RuboCop
+module RubbyCop
   module Formatter
     # A basic formatter that displays only files with offenses.
     # Offenses are displayed at compact form - just the

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # The CLI is a class responsible of handling all the command line interface
   # logic.
   class CLI
@@ -26,7 +26,7 @@ module RuboCop
       apply_default_formatter
 
       execute_runner(paths)
-    rescue RuboCop::Error => e
+    rescue RubbyCop::Error => e
       $stderr.puts Rainbow("Error: #{e.message}").red
       return 2
     rescue Finished
@@ -90,8 +90,8 @@ module RuboCop
     def handle_exiting_options
       return unless Options::EXITING_OPTIONS.any? { |o| @options.key? o }
 
-      puts RuboCop::Version.version(false) if @options[:version]
-      puts RuboCop::Version.version(true) if @options[:verbose_version]
+      puts RubbyCop::Version.version(false) if @options[:version]
+      puts RubbyCop::Version.version(true) if @options[:verbose_version]
       print_available_cops if @options[:show_cops]
       raise Finished
     end
@@ -178,10 +178,10 @@ module RuboCop
       errors.each { |error| warn error }
 
       warn <<-END.strip_indent
-        Errors are usually caused by RuboCop bugs.
-        Please, report your problems to RuboCop's issue tracker.
+        Errors are usually caused by RubbyCop bugs.
+        Please, report your problems to RubbyCop's issue tracker.
         Mention the following information in the issue report:
-        #{RuboCop::Version.version(true)}
+        #{RubbyCop::Version.version(true)}
       END
     end
 

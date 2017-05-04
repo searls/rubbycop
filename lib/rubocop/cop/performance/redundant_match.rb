@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Performance
       # This cop identifies use of `Regexp#match` or `String#match` in a context

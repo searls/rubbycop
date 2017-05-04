@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::NestedParenthesizedCalls do
+describe RubbyCop::Cop::Style::NestedParenthesizedCalls do
   subject(:cop) { described_class.new }
 
   before do

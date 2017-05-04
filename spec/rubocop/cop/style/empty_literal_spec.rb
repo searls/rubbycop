@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::EmptyLiteral do
+describe RubbyCop::Cop::Style::EmptyLiteral do
   subject(:cop) { described_class.new }
 
   describe 'Empty Array' do
@@ -141,7 +141,7 @@ describe RuboCop::Cop::Style::EmptyLiteral do
 
     context 'when double-quoted string literals are preferred' do
       let(:config) do
-        RuboCop::Config.new(
+        RubbyCop::Config.new(
           'Style/StringLiterals' =>
             {
               'EnforcedStyle' => 'double_quotes'

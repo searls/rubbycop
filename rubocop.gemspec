@@ -6,7 +6,7 @@ require 'English'
 
 Gem::Specification.new do |s|
   s.name = 'rubocop'
-  s.version = RuboCop::Version::STRING
+  s.version = RubbyCop::Version::STRING
   s.platform = Gem::Platform::RUBY
   s.required_ruby_version = '>= 2.0.0'
   s.authors = ['Bozhidar Batsov', 'Jonas Arvidsson', 'Yuji Nakayama']

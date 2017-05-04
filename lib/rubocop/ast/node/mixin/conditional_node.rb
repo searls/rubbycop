@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # Common functionality for nodes that have conditions:
     # `if`, `while`, `until`, `case`.

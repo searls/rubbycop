@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # If the `else` branch of a conditional consists solely of an `if` node,

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     describe TextUtil do
-      subject(:text_util) { RuboCop::Formatter::TextUtil }
+      subject(:text_util) { RubbyCop::Formatter::TextUtil }
 
       describe 'pluralize' do
         it 'will not change 0 to no' do

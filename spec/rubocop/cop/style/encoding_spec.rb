@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::Encoding, :config do
+describe RubbyCop::Cop::Style::Encoding, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'when_needed' do

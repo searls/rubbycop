@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::UnusedMethodArgument, :config do
+describe RubbyCop::Cop::Lint::UnusedMethodArgument, :config do
   subject(:cop) { described_class.new(config) }
   let(:cop_config) do
     { 'AllowUnusedKeywordArguments' => false, 'IgnoreEmptyMethods' => false }

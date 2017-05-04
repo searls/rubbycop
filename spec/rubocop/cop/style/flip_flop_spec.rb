@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::FlipFlop do
+describe RubbyCop::Cop::Style::FlipFlop do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for inclusive flip flops' do

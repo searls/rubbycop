@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     describe BaseFormatter do
       include FileHelper
@@ -91,11 +91,11 @@ module RuboCop
         end
 
         describe '#finished' do
-          context 'when RuboCop finished inspecting all files normally' do
+          context 'when RubbyCop finished inspecting all files normally' do
             include_examples 'receives all file paths', :started
           end
 
-          context 'when RuboCop is interrupted by user' do
+          context 'when RubbyCop is interrupted by user' do
             it 'receives only processed file paths' do
               class << formatter
                 attr_reader :processed_file_count
@@ -170,7 +170,7 @@ module RuboCop
               else
                 raise
               end
-              expect(offenses.all? { |o| o.is_a?(RuboCop::Cop::Offense) })
+              expect(offenses.all? { |o| o.is_a?(RubbyCop::Cop::Offense) })
                 .to be_truthy
             end
             run

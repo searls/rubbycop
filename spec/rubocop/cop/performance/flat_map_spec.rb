@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::FlatMap, :config do
+describe RubbyCop::Cop::Performance::FlatMap, :config do
   subject(:cop) { described_class.new(config) }
 
   shared_examples 'map_and_collect' do |method, flatten|
@@ -35,7 +35,7 @@ describe RuboCop::Cop::Performance::FlatMap, :config do
 
   describe 'configured to only warn when flattening one level' do
     let(:config) do
-      RuboCop::Config.new('Performance/FlatMap' => {
+      RubbyCop::Config.new('Performance/FlatMap' => {
                             'Enabled' => true,
                             'EnabledForFlattenWithoutParams' => false
                           })
@@ -62,7 +62,7 @@ describe RuboCop::Cop::Performance::FlatMap, :config do
 
   describe 'configured to warn when flatten is not called with parameters' do
     let(:config) do
-      RuboCop::Config.new('Performance/FlatMap' => {
+      RubbyCop::Config.new('Performance/FlatMap' => {
                             'Enabled' => true,
                             'EnabledForFlattenWithoutParams' => true
                           })

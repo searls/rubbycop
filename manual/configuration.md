@@ -1,12 +1,12 @@
 ## Configuration
 
-The behavior of RuboCop can be controlled via the
+The behavior of RubbyCop can be controlled via the
 [.rubocop.yml](https://github.com/bbatsov/rubocop/blob/master/.rubocop.yml)
 configuration file. It makes it possible to enable/disable certain cops
 (checks) and to alter their behavior if they accept any parameters. The file
 can be placed either in your home directory or in some project directory.
 
-RuboCop will start looking for the configuration file in the directory
+RubbyCop will start looking for the configuration file in the directory
 where the inspected file is and continue its way up to the root directory.
 
 The file has the following format:
@@ -26,7 +26,7 @@ Metrics/LineLength:
 
 ### Inheritance
 
-RuboCop supports inheriting configuration from one or more supplemental
+RubbyCop supports inheriting configuration from one or more supplemental
 configuration files at runtime. Settings in the file that inherits
 override settings in the file that's inherited from. Configuration
 parameter that are hashes, for example `PreferredMethods` in
@@ -82,7 +82,7 @@ inherit_from:
 
 The optional `inherit_gem` directive is used to include configuration from
 one or more gems external to the current project. This makes it possible to
-inherit a shared dependency's RuboCop configuration that can be used from
+inherit a shared dependency's RubbyCop configuration that can be used from
 multiple disparate projects.
 
 Configurations inherited in this way will be essentially *prepended* to the
@@ -114,7 +114,7 @@ inherit_gem:
 
 **Note**: If the shared dependency is declared using a [Bundler](http://bundler.io/)
 Gemfile and the gem was installed using `bundle install`, it would be
-necessary to also invoke RuboCop using Bundler in order to find the
+necessary to also invoke RubbyCop using Bundler in order to find the
 dependency's installation path at runtime:
 
 ```
@@ -125,7 +125,7 @@ $ bundle exec rubocop <options...>
 
 The file
 [config/default.yml](https://github.com/bbatsov/rubocop/blob/master/config/default.yml)
-under the RuboCop home directory contains the default settings that
+under the RubbyCop home directory contains the default settings that
 all configurations inherit from. Project and personal `.rubocop.yml`
 files need only make settings that are different from the default
 ones. If there is no `.rubocop.yml` file in the project or home
@@ -133,7 +133,7 @@ directory, `config/default.yml` will be used.
 
 ### Including/Excluding files
 
-RuboCop checks all files found by a recursive search starting from the
+RubbyCop checks all files found by a recursive search starting from the
 directory it is run in, or directories given as command line
 arguments.  However, it only recognizes files ending with `.rb` or
 extensionless files with a `#!.*ruby` declaration as Ruby files.
@@ -179,7 +179,7 @@ correct way to match the file in any directory, including the current, is
 valid for the directory tree starting where they are defined. They are not
 shadowed by the setting of `Include` and `Exclude` in other `.rubocop.yml`
 files in subdirectories. This is different from all other parameters, who
-follow RuboCop's general principle that configuration for an inspected file
+follow RubbyCop's general principle that configuration for an inspected file
 is taken from the nearest `.rubocop.yml`, searching upwards.
 
 Cops can be run only on specific sets of files when that's needed (for
@@ -287,8 +287,8 @@ inspected code must run on. For example, using Ruby 2.0+ keyword arguments
 rather than an options hash can help make your code shorter and more
 expressive... _unless_ it must run on Ruby 1.9.
 
-If `.ruby-version` exists in the directory RuboCop is invoked in, RuboCop
-will use the version specified by it. Otherwise, users may let RuboCop
+If `.ruby-version` exists in the directory RubbyCop is invoked in, RubbyCop
+will use the version specified by it. Otherwise, users may let RubbyCop
 know the oldest version of Ruby which your project supports with:
 
 ```yaml

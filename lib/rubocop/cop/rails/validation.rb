@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Rails
       # This cop checks for the use of old-style attribute validation macros.

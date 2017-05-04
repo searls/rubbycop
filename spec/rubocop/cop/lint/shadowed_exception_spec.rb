@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::ShadowedException do
+describe RubbyCop::Cop::Lint::ShadowedException do
   subject(:cop) { described_class.new }
 
   context 'modifier rescue' do

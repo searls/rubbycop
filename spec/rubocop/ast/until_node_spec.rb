@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::AST::UntilNode do
+describe RubbyCop::AST::UntilNode do
   let(:until_node) { parse_source(source).ast }
 
   describe '.new' do

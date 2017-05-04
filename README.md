@@ -10,43 +10,39 @@
 [![OpenCollective](https://opencollective.com/rubocop/sponsors/badge.svg)](#open-collective-sponsors)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bbatsov/rubocop/master/logo/rubo-logo-horizontal.png" alt="RuboCop Logo"/>
+  <img src="https://raw.githubusercontent.com/bbatsov/rubocop/master/logo/rubo-logo-horizontal.png" alt="RubbyCop Logo"/>
 </p>
 
 > Role models are important. <br/>
 > -- Officer Alex J. Murphy / RoboCop
 
-**RuboCop** is a Ruby static code analyzer. Out of the box it will
+**RubbyCop** is a Ruby static code analyzer. Out of the box it will
 enforce many of the guidelines outlined in the community
 [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
 
 Most aspects of its behavior can be tweaked via various
 [configuration options](https://github.com/bbatsov/rubocop/blob/master/config/default.yml).
 
-Apart from reporting problems in your code, RuboCop can also
+Apart from reporting problems in your code, RubbyCop can also
 automatically fix some of the problems for you.
-
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bbatsov/rubocop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-**Please consider [supporting financially its ongoing development](#funding).**
 
 ## Installation
 
-**RuboCop**'s installation is pretty standard:
+**RubbyCop**'s installation is pretty standard:
 
 ```sh
-$ gem install rubocop
+$ gem install rubbycop
 ```
 
-If you'd rather install RuboCop using `bundler`, don't require it in your `Gemfile`:
+If you'd rather install RubbyCop using `bundler`, don't require it in your `Gemfile`:
 
 ```rb
 gem 'rubocop', require: false
 ```
 
-RuboCop's development is moving at a very rapid pace and there are
+RubbyCop's development is moving at a very rapid pace and there are
 often backward-incompatible changes between minor releases (since we
-haven't reached version 1.0 yet). To prevent an unwanted RuboCop update you
+haven't reached version 1.0 yet). To prevent an unwanted RubbyCop update you
 might want to use a conservative version locking in your `Gemfile`:
 
 ```rb
@@ -64,11 +60,11 @@ $ rubocop
 
 ## Official manual
 
-You can read a ton more about RuboCop in its [official manual](http://rubocop.readthedocs.io).
+You can read a ton more about RubbyCop in its [official manual](http://rubocop.readthedocs.io).
 
 ## Compatibility
 
-RuboCop supports the following Ruby implementations:
+RubbyCop supports the following Ruby implementations:
 
 * MRI 2.0
 * MRI 2.1
@@ -80,7 +76,7 @@ RuboCop supports the following Ruby implementations:
 
 ## Team
 
-Here's a list of RuboCop's core developers:
+Here's a list of RubbyCop's core developers:
 
 * [Bozhidar Batsov](https://github.com/bbatsov)
 * [Jonas Arvidsson](https://github.com/jonas054)
@@ -89,7 +85,7 @@ Here's a list of RuboCop's core developers:
 
 ## Logo
 
-RuboCop's logo was created by [Dimiter Petrov](https://www.chadomoto.com/). You can find the logo in various
+RubbyCop's logo was created by [Dimiter Petrov](https://www.chadomoto.com/). You can find the logo in various
 formats [here](https://github.com/bbatsov/rubocop/tree/master/logo).
 
 The logo is licensed under a
@@ -98,23 +94,23 @@ The logo is licensed under a
 ## Contributors
 
 Here's a [list](https://github.com/bbatsov/rubocop/graphs/contributors) of
-all the people who have contributed to the development of RuboCop.
+all the people who have contributed to the development of RubbyCop.
 
 I'm extremely grateful to each and every one of them!
 
-If you'd like to contribute to RuboCop, please take the time to go
+If you'd like to contribute to RubbyCop, please take the time to go
 through our short
 [contribution guidelines](CONTRIBUTING.md).
 
-Converting more of the Ruby Style Guide into RuboCop cops is our top
-priority right now. Writing a new cop is a great way to dive into RuboCop!
+Converting more of the Ruby Style Guide into RubbyCop cops is our top
+priority right now. Writing a new cop is a great way to dive into RubbyCop!
 
 Of course, bug reports and suggestions for improvements are always
 welcome. GitHub pull requests are even better! :-)
 
 ## Funding
 
-While RuboCop is free software and will always be, the project would benefit immensely from some funding.
+While RubbyCop is free software and will always be, the project would benefit immensely from some funding.
 Raising a monthly budget of a couple of thousand dollars would make it possible to pay people to work on
 certain complex features, fund other development related stuff (e.g. hardware, conference trips) and so on.
 Raising a monthly budget of over $5000 would open the possibility of someone working full-time on the project
@@ -126,10 +122,10 @@ wide array of funding channels to account for your preferences
 currently [Open Collective](https://opencollective.com/rubocop) is our
 preferred funding platform).
 
-If you're working in a company that's making significant use of RuboCop we'd appreciate it if you suggest to your company
-to become a RuboCop sponsor.
+If you're working in a company that's making significant use of RubbyCop we'd appreciate it if you suggest to your company
+to become a RubbyCop sponsor.
 
-You can support the development of RuboCop via
+You can support the development of RubbyCop via
 [Salt](https://salt.bountysource.com/teams/rubocop),
 [Gratipay](https://www.gratipay.com/rubocop) and [Open Collective](https://opencollective.com/rubocop).
 
@@ -207,7 +203,7 @@ Become a sponsor and get your logo on our README on GitHub with a link to your s
 
 ## Changelog
 
-RuboCop's changelog is available [here](CHANGELOG.md).
+RubbyCop's changelog is available [here](CHANGELOG.md).
 
 ## Copyright
 

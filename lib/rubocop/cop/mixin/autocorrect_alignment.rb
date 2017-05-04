@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # This module does auto-correction of nodes that should just be moved to
     # the left or to the right, amount being determined by the instance

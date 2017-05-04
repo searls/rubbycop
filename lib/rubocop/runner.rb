@@ -2,7 +2,7 @@
 
 require 'parallel'
 
-module RuboCop
+module RubbyCop
   # This class handles the processing of files, which includes dealing with
   # formatters and letting cops inspect the files.
   class Runner # rubocop:disable Metrics/ClassLength
@@ -46,7 +46,7 @@ module RuboCop
 
     private
 
-    # Warms up the RuboCop cache by forking a suitable number of rubocop
+    # Warms up the RubbyCop cache by forking a suitable number of rubocop
     # instances that each inspects its alotted group of files.
     def warm_cache(target_files)
       puts 'Running parallel inspection'
@@ -154,7 +154,7 @@ module RuboCop
       cop.processed_source = source
 
       Cop::Team.new(
-        RuboCop::Cop::Registry.new,
+        RubbyCop::Cop::Registry.new,
         nil,
         @options
       ).autocorrect(source.buffer, [cop])
@@ -321,7 +321,7 @@ module RuboCop
     def minimum_severity_to_fail
       @minimum_severity_to_fail ||= begin
         name = @options[:fail_level] || :refactor
-        RuboCop::Cop::Severity.new(name)
+        RubbyCop::Cop::Severity.new(name)
       end
     end
 

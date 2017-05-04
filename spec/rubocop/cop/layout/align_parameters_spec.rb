@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::AlignParameters do
+describe RubbyCop::Cop::Layout::AlignParameters do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    RuboCop::Config.new('Layout/AlignParameters' => cop_config,
+    RubbyCop::Config.new('Layout/AlignParameters' => cop_config,
                         'Layout/IndentationWidth' => {
                           'Width' => indentation_width
                         })
@@ -750,7 +750,7 @@ describe RuboCop::Cop::Layout::AlignParameters do
 
       context 'with AlignParameters:IndentationWidth set to 4' do
         let(:config) do
-          RuboCop::Config.new('Layout/AlignParameters' =>
+          RubbyCop::Config.new('Layout/AlignParameters' =>
                               cop_config.merge('IndentationWidth' => 4))
         end
 

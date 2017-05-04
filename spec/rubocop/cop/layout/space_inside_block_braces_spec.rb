@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::SpaceInsideBlockBraces, :config do
+describe RubbyCop::Cop::Layout::SpaceInsideBlockBraces, :config do
   SUPPORTED_STYLES = %w[space no_space].freeze
 
   subject(:cop) { described_class.new(config) }
@@ -211,7 +211,7 @@ describe RuboCop::Cop::Layout::SpaceInsideBlockBraces, :config do
 
     context 'and BlockDelimiters cop enabled' do
       let(:config) do
-        RuboCop::Config.new('Style/BlockDelimiters' => { 'Enabled' => true },
+        RubbyCop::Config.new('Style/BlockDelimiters' => { 'Enabled' => true },
                             'Layout/SpaceInsideBlockBraces' => cop_config)
       end
 

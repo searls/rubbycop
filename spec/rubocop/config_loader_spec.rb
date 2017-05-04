@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::ConfigLoader do
+describe RubbyCop::ConfigLoader do
   include FileHelper
 
   let(:default_config) { described_class.default_configuration }
@@ -183,14 +183,14 @@ describe RuboCop::ConfigLoader do
 
     context 'when a third party require defines a new gem' do
       before do
-        allow(RuboCop::Cop::Cop)
+        allow(RubbyCop::Cop::Cop)
           .to receive(:registry)
           .and_return(
-            RuboCop::Cop::Registry.new(RuboCop::Cop::Cop.registry.cops)
+            RubbyCop::Cop::Registry.new(RubbyCop::Cop::Cop.registry.cops)
           )
 
         create_file('third_party/gem.rb', <<-END.strip_indent)
-          module RuboCop
+          module RubbyCop
             module Cop
               module Custom
                 class FilePath < Cop
@@ -531,12 +531,12 @@ describe RuboCop::ConfigLoader do
 
         it 'enables cops that are explicitly in the config file '\
           'even if they are disabled by default' do
-          cop_class = RuboCop::Cop::Style::Copyright
+          cop_class = RubbyCop::Cop::Style::Copyright
           expect(cop_enabled?(cop_class)).to be true
         end
 
         it 'disables cops that are normally enabled by default' do
-          cop_class = RuboCop::Cop::Layout::TrailingWhitespace
+          cop_class = RubbyCop::Cop::Layout::TrailingWhitespace
           expect(cop_enabled?(cop_class)).to be false
         end
 
@@ -551,17 +551,17 @@ describe RuboCop::ConfigLoader do
           end
 
           it 'enables cops in that department' do
-            cop_class = RuboCop::Cop::Style::Alias
+            cop_class = RubbyCop::Cop::Style::Alias
             expect(cop_enabled?(cop_class)).to be true
           end
 
           it 'disables cops in other departments' do
-            cop_class = RuboCop::Cop::Layout::AlignHash
+            cop_class = RubbyCop::Cop::Layout::AlignHash
             expect(cop_enabled?(cop_class)).to be false
           end
 
           it 'keeps cops that are disabled in default configuration disabled' do
-            cop_class = RuboCop::Cop::Style::AutoResourceCleanup
+            cop_class = RubbyCop::Cop::Style::AutoResourceCleanup
             expect(cop_enabled?(cop_class)).to be false
           end
         end
@@ -578,12 +578,12 @@ describe RuboCop::ConfigLoader do
         end
 
         it 'enables cops that are disabled by default' do
-          cop_class = RuboCop::Cop::Layout::FirstMethodArgumentLineBreak
+          cop_class = RubbyCop::Cop::Layout::FirstMethodArgumentLineBreak
           expect(cop_enabled?(cop_class)).to be true
         end
 
         it 'respects cops that are disbled in the config' do
-          cop_class = RuboCop::Cop::Layout::TrailingWhitespace
+          cop_class = RubbyCop::Cop::Layout::TrailingWhitespace
           expect(cop_enabled?(cop_class)).to be false
         end
       end
@@ -730,7 +730,7 @@ describe RuboCop::ConfigLoader do
 
       it 'gets an Exclude relative to the inherited file converted to ' \
          'absolute' do
-        expect(config.for_cop(RuboCop::Cop::Style::CharacterLiteral)['Exclude'])
+        expect(config.for_cop(RubbyCop::Cop::Style::CharacterLiteral)['Exclude'])
           .to eq([File.join(Dir.pwd, 'test/blargh/blah.rb')])
       end
     end

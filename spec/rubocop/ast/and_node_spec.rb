@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::AST::AndNode do
+describe RubbyCop::AST::AndNode do
   let(:and_node) { parse_source(source).ast }
 
   describe '.new' do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This mix-in module provides string coloring methods for terminals.
     # It automatically disables coloring if coloring is disabled in the process

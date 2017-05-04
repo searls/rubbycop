@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # This module provides functionality for checking if names match the
     # configured EnforcedStyle.

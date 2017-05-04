@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Rails
       # This cop enforces that 'exit' calls are not used within a rails app.

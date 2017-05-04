@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::NegatedWhile do
+describe RubbyCop::Cop::Style::NegatedWhile do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for while with exclamation point condition' do

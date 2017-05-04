@@ -1,7 +1,7 @@
 ## Caching
 
 Large projects containing hundreds or even thousands of files can take
-a really long time to inspect, but RuboCop has functionality to
+a really long time to inspect, but RubbyCop has functionality to
 mitigate this problem. There's a caching mechanism that stores
 information about offenses found in inspected files.
 
@@ -12,7 +12,7 @@ stored information instead of inspecting the file again. This will be
 done if the cache for the file is still valid, which it is if there
 are no changes in:
 * the contents of the inspected file
-* RuboCop configuration for the file
+* RubbyCop configuration for the file
 * the options given to `rubocop`, with some exceptions that have no
   bearing on which offenses are reported
 * the Ruby version used to invoke `rubocop`
@@ -35,7 +35,7 @@ directory, `/tmp/rubocop_cache/` on Unix-like systems. The
 configuration parameter `AllCops: CacheRootDirectory` can be used to
 set it to a different path. One reason to use this option could be
 that there's a network disk where users on different machines want to
-have a common RuboCop cache. Another could be that a Continuous
+have a common RubbyCop cache. Another could be that a Continuous
 Integration system allows directories, but not a temporary directory,
 to be saved between runs.
 

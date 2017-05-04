@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Test
-      class ModuleMustBeAClassCop < RuboCop::Cop::Cop
+      class ModuleMustBeAClassCop < RubbyCop::Cop::Cop
         def on_module(node)
           add_offense(node, :expression, 'Module must be a Class')
         end

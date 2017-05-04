@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Bundler
       # A Gem's requirements should be listed only once in a Gemfile.

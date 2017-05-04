@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::MultipleCompare do
-  let(:config) { RuboCop::Config.new }
+describe RubbyCop::Cop::Lint::MultipleCompare do
+  let(:config) { RubbyCop::Config.new }
   subject(:cop) { described_class.new(config) }
 
   shared_examples 'Check to use two comparison operator' do |op1, op2|

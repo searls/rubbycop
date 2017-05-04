@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::ColonMethodCall do
+describe RubbyCop::Cop::Style::ColonMethodCall do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for instance method call' do

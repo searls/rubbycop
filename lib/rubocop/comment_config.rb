@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # This class parses the special `rubocop:disable` comments in a source
   # and provides a way to check if each cop is enabled at arbitrary line.
   class CommentConfig

@@ -13,7 +13,7 @@ shared_context 'isolated environment', :isolated_environment do
       tmpdir = File.realpath(tmpdir)
 
       # Make upwards search for .rubocop.yml files stop at this directory.
-      RuboCop::ConfigLoader.root_level = tmpdir
+      RubbyCop::ConfigLoader.root_level = tmpdir
 
       begin
         virtual_home = File.expand_path(File.join(tmpdir, 'home'))
@@ -37,7 +37,7 @@ end
 shared_context 'config', :config do
   let(:config) do
     # Module#<
-    unless described_class < RuboCop::Cop::Cop
+    unless described_class < RubbyCop::Cop::Cop
       raise '`config` must be used in `describe SomeCopClass do .. end`'
     end
 
@@ -46,14 +46,14 @@ shared_context 'config', :config do
     hash['AllCops']['TargetRailsVersion'] = rails_version if rails_version
     if respond_to?(:cop_config)
       cop_name = described_class.cop_name
-      hash[cop_name] = RuboCop::ConfigLoader
+      hash[cop_name] = RubbyCop::ConfigLoader
                        .default_configuration[cop_name]
                        .merge(cop_config)
     end
 
     hash = other_cops.merge hash if respond_to?(:other_cops)
 
-    RuboCop::Config.new(hash, "#{Dir.pwd}/.rubocop.yml")
+    RubbyCop::Config.new(hash, "#{Dir.pwd}/.rubocop.yml")
   end
 end
 

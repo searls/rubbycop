@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::PerlBackrefs do
+describe RubbyCop::Cop::Style::PerlBackrefs do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for $1' do

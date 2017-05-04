@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     # A basic formatter that displays the lines disabled
     # inline comments.

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::ImplicitRuntimeError do
+describe RubbyCop::Cop::Style::ImplicitRuntimeError do
   subject(:cop) { described_class.new }
 
   %w[raise fail].each do |method|

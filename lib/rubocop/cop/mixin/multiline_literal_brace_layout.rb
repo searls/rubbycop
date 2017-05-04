@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common functionality for checking the closing brace of a literal is
     # either on the same line as the last contained elements, or a new line.

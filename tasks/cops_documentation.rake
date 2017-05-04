@@ -78,7 +78,7 @@ task generate_cops_documentation: :yard do
 
   def references(config, cop)
     cop_config = config.for_cop(cop)
-    urls = RuboCop::Cop::MessageAnnotator.new(config, cop_config, {}).urls
+    urls = RubbyCop::Cop::MessageAnnotator.new(config, cop_config, {}).urls
     return '' if urls.empty?
 
     content = h3('References')
@@ -106,7 +106,7 @@ task generate_cops_documentation: :yard do
     description = 'No documentation'
     examples_object = []
     YARD::Registry.all(:class).detect do |code_object|
-      next unless RuboCop::Cop::Badge.for(code_object.to_s) == cop.badge
+      next unless RubbyCop::Cop::Badge.for(code_object.to_s) == cop.badge
 
       description = code_object.docstring unless code_object.docstring.blank?
       examples_object = code_object.tags('example')
@@ -163,8 +163,8 @@ task generate_cops_documentation: :yard do
     end
   end
 
-  cops   = RuboCop::Cop::Cop.registry
-  config = RuboCop::ConfigLoader.default_configuration
+  cops   = RubbyCop::Cop::Cop.registry
+  config = RubbyCop::ConfigLoader.default_configuration
   config['Rails']['Enabled'] = true
 
   YARD::Registry.load!

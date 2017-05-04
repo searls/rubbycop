@@ -633,7 +633,7 @@ config/default.yml.  The default can be changed as follows:
       Notice: '^Copyright (\(c\) )?2\d{3} Acme Inc'
 
 This regex string is treated as an unanchored regex.  For each file
-that RuboCop scans, a comment that matches this regex must be found or
+that RubbyCop scans, a comment that matches this regex must be found or
 an offense is reported.
 
 ### Important attributes

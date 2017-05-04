@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::EmptyCaseCondition do
+describe RubbyCop::Cop::Style::EmptyCaseCondition do
   subject(:cop) { described_class.new }
 
   shared_examples 'detect/correct empty case, accept non-empty case' do

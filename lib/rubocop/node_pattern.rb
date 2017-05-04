@@ -3,7 +3,7 @@
 # rubocop:disable Metrics/ClassLength
 # rubocop:disable Metrics/CyclomaticComplexity
 
-module RuboCop
+module RubbyCop
   # This class performs a pattern-matching operation on an AST node.
   #
   # Initialize a new `NodePattern` with `NodePattern.new(pattern_string)`, then
@@ -470,7 +470,7 @@ module RuboCop
       # If the node matches, and no block is provided, the new method will
       # return the captures, or `true` if there were none.
       def def_node_matcher(method_name, pattern_str)
-        compiler = RuboCop::NodePattern::Compiler.new(pattern_str, 'node')
+        compiler = RubbyCop::NodePattern::Compiler.new(pattern_str, 'node')
         src = "def #{method_name}(node" \
               "#{compiler.emit_trailing_params});" \
               "#{compiler.emit_method_code};end"
@@ -486,7 +486,7 @@ module RuboCop
       # as soon as it finds a descendant which matches. Otherwise, it will
       # yield all descendants which match.
       def def_node_search(method_name, pattern_str)
-        compiler = RuboCop::NodePattern::Compiler.new(pattern_str, 'node')
+        compiler = RubbyCop::NodePattern::Compiler.new(pattern_str, 'node')
         called_from = caller(1..1).first.split(':')
 
         if method_name.to_s.end_with?('?')

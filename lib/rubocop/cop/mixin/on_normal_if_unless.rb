@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common functionality for cops checking if and unless expressions.
     module OnNormalIfUnless

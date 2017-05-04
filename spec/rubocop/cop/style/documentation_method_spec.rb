@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::DocumentationMethod, :config do
+describe RubbyCop::Cop::Style::DocumentationMethod, :config do
   subject(:cop) { described_class.new(config) }
 
   before do
@@ -29,7 +29,7 @@ describe RuboCop::Cop::Style::DocumentationMethod, :config do
   let(:require_for_non_public_methods) { false }
 
   let(:config) do
-    RuboCop::Config.new(
+    RubbyCop::Config.new(
       'Style/CommentAnnotation' => {
         'Keywords' => %w[TODO FIXME OPTIMIZE HACK REVIEW]
       },

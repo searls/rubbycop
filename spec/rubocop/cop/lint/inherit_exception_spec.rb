@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::InheritException, :config do
+describe RubbyCop::Cop::Lint::InheritException, :config do
   subject(:cop) { described_class.new(config) }
 
   shared_examples 'registers an offense' do |message|

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Offense do
+describe RubbyCop::Cop::Offense do
   let(:location) do
     source_buffer = Parser::Source::Buffer.new('test', 1)
     source_buffer.source = "a\n"

@@ -2,7 +2,7 @@
 
 require 'set'
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # This cop checks for tabs inside the source code.

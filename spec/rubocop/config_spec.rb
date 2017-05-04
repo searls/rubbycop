@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Config do
+describe RubbyCop::Config do
   include FileHelper
 
   subject(:configuration) { described_class.new(hash, loaded_path) }
@@ -9,7 +9,7 @@ describe RuboCop::Config do
 
   describe '#validate', :isolated_environment do
     subject(:configuration) do
-      RuboCop::ConfigLoader.load_file(configuration_path)
+      RubbyCop::ConfigLoader.load_file(configuration_path)
     end
 
     let(:configuration_path) { '.rubocop.yml' }
@@ -41,7 +41,7 @@ describe RuboCop::Config do
 
       it 'raises validation error' do
         expect { configuration.validate }
-          .to raise_error(RuboCop::ValidationError,
+          .to raise_error(RubbyCop::ValidationError,
                           %r{^empty section Metrics/LineLength})
       end
     end
@@ -53,17 +53,17 @@ describe RuboCop::Config do
 
       it 'raises validation error' do
         expect { configuration.validate }
-          .to raise_error(RuboCop::ValidationError, /^empty section AllCops/)
+          .to raise_error(RubbyCop::ValidationError, /^empty section AllCops/)
       end
     end
 
-    context 'when the configuration is in the base RuboCop config folder' do
+    context 'when the configuration is in the base RubbyCop config folder' do
       before do
         create_file(configuration_path, <<-END.strip_indent)
           InvalidProperty:
             Enabled: true
         END
-        stub_const('RuboCop::ConfigLoader::RUBOCOP_HOME', rubocop_home_path)
+        stub_const('RubbyCop::ConfigLoader::RUBOCOP_HOME', rubocop_home_path)
       end
 
       let(:rubocop_home_path) { File.realpath('.') }
@@ -139,7 +139,7 @@ describe RuboCop::Config do
 
       it 'raises validation error' do
         expect { configuration.validate }
-          .to raise_error(RuboCop::ValidationError, /itisinvalid/)
+          .to raise_error(RubbyCop::ValidationError, /itisinvalid/)
       end
     end
 
@@ -166,7 +166,7 @@ describe RuboCop::Config do
 
       it 'raises validation error' do
         expect { configuration.validate }
-          .to raise_error(RuboCop::ValidationError, /itisinvalid/)
+          .to raise_error(RubbyCop::ValidationError, /itisinvalid/)
       end
     end
 
@@ -180,7 +180,7 @@ describe RuboCop::Config do
 
       it 'raises validation error' do
         expect { configuration.validate }
-          .to raise_error(RuboCop::ValidationError,
+          .to raise_error(RubbyCop::ValidationError,
                           %r{Style/MethodCallWithoutArgsParentheses})
       end
     end
@@ -195,7 +195,7 @@ describe RuboCop::Config do
 
       it 'raises validation error' do
         expect { configuration.validate }
-          .to raise_error(RuboCop::ValidationError, /EnforcedStyle/)
+          .to raise_error(RubbyCop::ValidationError, /EnforcedStyle/)
       end
     end
 
@@ -221,7 +221,7 @@ describe RuboCop::Config do
             message.include?('Layout/SpaceAroundKeyword')
         end
         expect { configuration.validate }
-          .to raise_error(RuboCop::ValidationError, message_matcher)
+          .to raise_error(RubbyCop::ValidationError, message_matcher)
       end
     end
 
@@ -237,7 +237,7 @@ describe RuboCop::Config do
       it 'raises validation error' do
         expect { configuration.validate }
           .to raise_error(
-            RuboCop::ValidationError,
+            RubbyCop::ValidationError,
             /Cops cannot be both enabled by default and disabled by default/
           )
       end
@@ -512,7 +512,7 @@ describe RuboCop::Config do
         end
 
         it 'still disables the cop' do
-          cop_class = RuboCop::Cop::Layout::TrailingWhitespace
+          cop_class = RubbyCop::Cop::Layout::TrailingWhitespace
           expect(cop_enabled(cop_class)).to be false
         end
       end
@@ -528,7 +528,7 @@ describe RuboCop::Config do
         end
 
         it 'still disables the cop' do
-          cop_class = RuboCop::Cop::Layout::TrailingWhitespace
+          cop_class = RubbyCop::Cop::Layout::TrailingWhitespace
           expect(cop_enabled(cop_class)).to be false
         end
       end
@@ -542,7 +542,7 @@ describe RuboCop::Config do
       end
 
       it 'enables the cop by default' do
-        cop_class = RuboCop::Cop::Layout::TrailingWhitespace
+        cop_class = RubbyCop::Cop::Layout::TrailingWhitespace
         expect(cop_enabled(cop_class)).to be true
       end
     end
@@ -573,7 +573,7 @@ describe RuboCop::Config do
       end
 
       it 'uses the default rails version' do
-        default_version = RuboCop::Config::DEFAULT_RAILS_VERSION
+        default_version = RubbyCop::Config::DEFAULT_RAILS_VERSION
         expect(configuration.target_rails_version).to eq default_version
       end
     end

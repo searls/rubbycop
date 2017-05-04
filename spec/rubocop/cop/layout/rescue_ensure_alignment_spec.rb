@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::RescueEnsureAlignment do
+describe RubbyCop::Cop::Layout::RescueEnsureAlignment do
   subject(:cop) { described_class.new }
 
   shared_examples 'common behavior' do |keyword|
@@ -114,7 +114,7 @@ describe RuboCop::Cop::Layout::RescueEnsureAlignment do
 
   describe 'excluded file' do
     let(:config) do
-      RuboCop::Config.new('Layout/RescueEnsureAlignment' =>
+      RubbyCop::Config.new('Layout/RescueEnsureAlignment' =>
                           { 'Enabled' => true,
                             'Exclude' => ['**/**'] })
     end

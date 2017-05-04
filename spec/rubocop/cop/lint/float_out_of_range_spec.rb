@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::FloatOutOfRange do
+describe RubbyCop::Cop::Lint::FloatOutOfRange do
   subject(:cop) { described_class.new }
 
   before do

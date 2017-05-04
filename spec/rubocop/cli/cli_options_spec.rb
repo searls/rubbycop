@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-describe RuboCop::CLI, :isolated_environment do
+describe RubbyCop::CLI, :isolated_environment do
   include_context 'cli spec behavior'
 
   subject(:cli) { described_class.new }
 
   before(:each) do
-    RuboCop::ConfigLoader.default_configuration = nil
+    RubbyCop::ConfigLoader.default_configuration = nil
   end
 
   describe '--parallel' do
-    if RuboCop::Platform.windows?
+    if RubbyCop::Platform.windows?
       context 'on Windows' do
         it 'prints a warning' do
           cli.run ['-P']
@@ -101,7 +101,7 @@ describe RuboCop::CLI, :isolated_environment do
     it 'exits cleanly' do
       expect(cli.run(['-v'])).to eq(0)
       expect(cli.run(['--version'])).to eq(0)
-      expect($stdout.string).to eq((RuboCop::Version::STRING + "\n") * 2)
+      expect($stdout.string).to eq((RubbyCop::Version::STRING + "\n") * 2)
     end
   end
 
@@ -172,7 +172,7 @@ describe RuboCop::CLI, :isolated_environment do
             Enabled: true
         END
         create_file('rubocop_ext.rb', <<-END.strip_indent)
-          module RuboCop
+          module RubbyCop
             module Cop
               module Style
                 class SomeCop < Cop
@@ -182,7 +182,7 @@ describe RuboCop::CLI, :isolated_environment do
           end
         END
         create_file('redirect.rb', '$stderr = STDOUT')
-        rubocop = "#{RuboCop::ConfigLoader::RUBOCOP_HOME}/bin/rubocop"
+        rubocop = "#{RubbyCop::ConfigLoader::RUBOCOP_HOME}/bin/rubocop"
         # Since we define a new cop class, we have to do this in a separate
         # process. Otherwise, the extra cop will affect other specs.
         output =
@@ -591,13 +591,13 @@ describe RuboCop::CLI, :isolated_environment do
       end
     end
 
-    let(:cops) { RuboCop::Cop::Cop.all }
-    let(:registry) { RuboCop::Cop::Cop.registry }
+    let(:cops) { RubbyCop::Cop::Cop.all }
+    let(:registry) { RubbyCop::Cop::Cop.registry }
 
     let(:global_conf) do
       config_path =
-        RuboCop::ConfigLoader.configuration_file_for(Dir.pwd.to_s)
-      RuboCop::ConfigLoader.configuration_from_file(config_path)
+        RubbyCop::ConfigLoader.configuration_file_for(Dir.pwd.to_s)
+      RubbyCop::ConfigLoader.configuration_from_file(config_path)
     end
 
     let(:stdout) { $stdout.string }
@@ -912,7 +912,7 @@ describe RuboCop::CLI, :isolated_environment do
       context 'when a class name is specified' do
         it 'uses the class as a formatter' do
           module MyTool
-            class RuboCopFormatter < RuboCop::Formatter::BaseFormatter
+            class RubbyCopFormatter < RubbyCop::Formatter::BaseFormatter
               def started(all_files)
                 output.puts "started: #{all_files.join(',')}"
               end
@@ -931,7 +931,7 @@ describe RuboCop::CLI, :isolated_environment do
             end
           end
 
-          cli.run(['--format', 'MyTool::RuboCopFormatter', 'example.rb'])
+          cli.run(['--format', 'MyTool::RubbyCopFormatter', 'example.rb'])
           expect($stdout.string).to eq(<<-END.strip_indent)
             started: #{target_file}
             file_started: #{target_file}

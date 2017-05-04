@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::Exit, :config do
+describe RubbyCop::Cop::Rails::Exit, :config do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for an exit call with no receiver' do
     inspect_source(cop,
                    'exit')
-    expect(cop.messages).to eq([RuboCop::Cop::Rails::Exit::MSG])
+    expect(cop.messages).to eq([RubbyCop::Cop::Rails::Exit::MSG])
   end
 
   it 'registers an offense for an exit! call with no receiver' do
     inspect_source(cop,
                    'exit!')
-    expect(cop.messages).to eq([RuboCop::Cop::Rails::Exit::MSG])
+    expect(cop.messages).to eq([RubbyCop::Cop::Rails::Exit::MSG])
   end
 
   context 'exit calls on objects' do
@@ -54,13 +54,13 @@ describe RuboCop::Cop::Rails::Exit, :config do
     it 'does register an offense for explicit Kernel.exit calls' do
       inspect_source(cop,
                      'Kernel.exit')
-      expect(cop.messages).to eq([RuboCop::Cop::Rails::Exit::MSG])
+      expect(cop.messages).to eq([RubbyCop::Cop::Rails::Exit::MSG])
     end
 
     it 'does register an offense for explicit Process.exit calls' do
       inspect_source(cop,
                      'Process.exit')
-      expect(cop.messages).to eq([RuboCop::Cop::Rails::Exit::MSG])
+      expect(cop.messages).to eq([RubbyCop::Cop::Rails::Exit::MSG])
     end
   end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common functionality for checking for a line break before the first
     # element in a multi-line collection.

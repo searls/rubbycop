@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::Next, :config do
+describe RubbyCop::Cop::Style::Next, :config do
   subject(:cop) { described_class.new(config) }
   let(:cop_config) { { 'MinBodyLength' => 1 } }
 

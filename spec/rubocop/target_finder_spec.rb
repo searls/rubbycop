@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-describe RuboCop::TargetFinder, :isolated_environment do
+describe RubbyCop::TargetFinder, :isolated_environment do
   include FileHelper
 
   subject(:target_finder) do
     described_class.new(config_store, options)
   end
 
-  let(:config_store) { RuboCop::ConfigStore.new }
+  let(:config_store) { RubbyCop::ConfigStore.new }
   let(:options) { { force_exclusion: force_exclusion, debug: debug } }
   let(:force_exclusion) { false }
   let(:debug) { false }
@@ -70,34 +70,34 @@ describe RuboCop::TargetFinder, :isolated_environment do
     end
 
     context 'when files with a ruby extension are passed' do
-      let(:args) { RuboCop::RUBY_EXTENSIONS.map { |ext| "dir2/file#{ext}" } }
+      let(:args) { RubbyCop::RUBY_EXTENSIONS.map { |ext| "dir2/file#{ext}" } }
 
       it 'picks all the ruby files' do
         expect(found_basenames).to eq(
-          RuboCop::RUBY_EXTENSIONS.map { |ext| "file#{ext}" }
+          RubbyCop::RUBY_EXTENSIONS.map { |ext| "file#{ext}" }
         )
       end
     end
 
     context 'when a file with a ruby filename is passed' do
-      let(:args) { RuboCop::RUBY_FILENAMES.map { |name| "dir2/#{name}" } }
+      let(:args) { RubbyCop::RUBY_FILENAMES.map { |name| "dir2/#{name}" } }
 
       it 'picks all the ruby files' do
-        expect(found_basenames).to eq(RuboCop::RUBY_FILENAMES)
+        expect(found_basenames).to eq(RubbyCop::RUBY_FILENAMES)
       end
     end
 
     context 'when files with ruby interpreters are passed' do
-      let(:args) { RuboCop::RUBY_INTERPRETERS.map { |name| "dir2/#{name}" } }
+      let(:args) { RubbyCop::RUBY_INTERPRETERS.map { |name| "dir2/#{name}" } }
 
       before do
-        RuboCop::RUBY_INTERPRETERS.each do |interpreter|
+        RubbyCop::RUBY_INTERPRETERS.each do |interpreter|
           create_file("dir2/#{interpreter}", "#!/usr/bin/#{interpreter}")
         end
       end
 
       it 'picks all the ruby files' do
-        expect(found_basenames).to eq(RuboCop::RUBY_INTERPRETERS)
+        expect(found_basenames).to eq(RubbyCop::RUBY_INTERPRETERS)
       end
     end
 

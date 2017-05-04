@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::UnifiedInteger do
-  let(:config) { RuboCop::Config.new }
+describe RubbyCop::Cop::Lint::UnifiedInteger do
+  let(:config) { RubbyCop::Config.new }
   subject(:cop) { described_class.new(config) }
 
   shared_examples 'registers an offence' do |klass|

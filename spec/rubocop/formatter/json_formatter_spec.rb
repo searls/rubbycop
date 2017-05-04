@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   describe Formatter::JSONFormatter do
     subject(:formatter) { described_class.new(output) }
     let(:output) { StringIO.new }

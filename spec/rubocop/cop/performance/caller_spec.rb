@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::Caller do
+describe RubbyCop::Cop::Performance::Caller do
   subject(:cop) { described_class.new }
 
   it "doesn't register an offense when caller is called" do

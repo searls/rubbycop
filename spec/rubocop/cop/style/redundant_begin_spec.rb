@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::RedundantBegin do
+describe RubbyCop::Cop::Style::RedundantBegin do
   subject(:cop) { described_class.new }
 
   it 'reports an offense for single line def with redundant begin block' do

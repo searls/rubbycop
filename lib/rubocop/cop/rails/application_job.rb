@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Rails
       # This cop checks that jobs subclass ApplicationJob with Rails 5.0.
@@ -25,7 +25,7 @@ module RuboCop
         SUPERCLASS = 'ApplicationJob'.freeze
         BASE_PATTERN = '(const (const nil :ActiveJob) :Base)'.freeze
 
-        include RuboCop::Cop::EnforceSuperclass
+        include RubbyCop::Cop::EnforceSuperclass
       end
     end
   end

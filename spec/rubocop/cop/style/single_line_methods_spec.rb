@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::SingleLineMethods do
+describe RubbyCop::Cop::Style::SingleLineMethods do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    RuboCop::Config.new('Style/SingleLineMethods' => cop_config,
+    RubbyCop::Config.new('Style/SingleLineMethods' => cop_config,
                         'Layout/IndentationWidth' => { 'Width' => 2 })
   end
   let(:cop_config) { { 'AllowIfMethodIsEmpty' => true } }

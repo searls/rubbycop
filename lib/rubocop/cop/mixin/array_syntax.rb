@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common code for ordinary arrays with [] that can be written with %
     # syntax.

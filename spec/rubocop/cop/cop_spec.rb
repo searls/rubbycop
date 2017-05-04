@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Cop do
+describe RubbyCop::Cop::Cop do
   subject(:cop) { described_class.new }
   let(:location) do
     source_buffer = Parser::Source::Buffer.new('test', 1)
@@ -44,7 +44,7 @@ describe RuboCop::Cop::Cop do
 
     it 'raises an error if the cop name is in more than one namespace' do
       expect { described_class.qualified_cop_name('SafeNavigation', '--only') }
-        .to raise_error(RuboCop::Cop::AmbiguousCopName)
+        .to raise_error(RubbyCop::Cop::AmbiguousCopName)
     end
 
     it 'returns the given cop name if it already has a namespace even when ' \
@@ -88,7 +88,7 @@ describe RuboCop::Cop::Cop do
   end
 
   it 'registers offense with its name' do
-    cop = RuboCop::Cop::Style::For.new
+    cop = RubbyCop::Cop::Style::For.new
     cop.add_offense(nil, location, 'message')
     expect(cop.offenses.first.cop_name).to eq('Style/For')
   end
@@ -106,7 +106,7 @@ describe RuboCop::Cop::Cop do
     end
 
     context 'when cop supports autocorrection' do
-      let(:cop) { RuboCop::Cop::Style::Alias.new }
+      let(:cop) { RubbyCop::Cop::Style::Alias.new }
 
       context 'when offense was corrected' do
         before do
@@ -152,19 +152,19 @@ describe RuboCop::Cop::Cop do
   end
 
   context 'with style cops' do
-    subject(:cop) { RuboCop::Cop::Style::For }
+    subject(:cop) { RubbyCop::Cop::Style::For }
     it('has right name') { expect(cop.cop_name).to eq('Style/For') }
     it('has right department') { expect(cop.department).to eq(:Style) }
   end
 
   context 'with lint cops' do
-    subject(:cop) { RuboCop::Cop::Lint::Loop }
+    subject(:cop) { RubbyCop::Cop::Lint::Loop }
     it('has right name') { expect(cop.cop_name).to eq('Lint/Loop') }
     it('has right department') { expect(cop.department).to eq(:Lint) }
   end
 
   context 'with rails cops' do
-    subject(:cop) { RuboCop::Cop::Rails::Validation }
+    subject(:cop) { RubbyCop::Cop::Rails::Validation }
     it('has right name') { expect(cop.cop_name).to eq('Rails/Validation') }
     it('has right department') { expect(cop.department).to eq(:Rails) }
   end
@@ -207,7 +207,7 @@ describe RuboCop::Cop::Cop do
 
   describe '#autocorrect?' do
     # dummy config for a generic cop instance
-    let(:config) { RuboCop::Config.new({}) }
+    let(:config) { RubbyCop::Config.new({}) }
     let(:cop) { described_class.new(config, options) }
     let(:support_autocorrect) { true }
     subject { cop.autocorrect? }
@@ -232,7 +232,7 @@ describe RuboCop::Cop::Cop do
 
       context 'when the cop is set to not autocorrect' do
         let(:config) do
-          RuboCop::Config.new('Cop/Cop' => { 'AutoCorrect' => false })
+          RubbyCop::Config.new('Cop/Cop' => { 'AutoCorrect' => false })
         end
         it { is_expected.to be(false) }
       end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::MethodDefParentheses, :config do
+describe RubbyCop::Cop::Style::MethodDefParentheses, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'require_parentheses' do

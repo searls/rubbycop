@@ -2,7 +2,7 @@
 
 require 'fileutils'
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This is a collection of formatters. A FormatterSet can hold multiple
     # formatter instances and provides transparent formatter API methods

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::IndentHeredoc, :config do
+describe RubbyCop::Cop::Layout::IndentHeredoc, :config do
   subject(:cop) { described_class.new(config) }
 
   shared_examples :offense do |name, code, correction = nil|
@@ -42,7 +42,7 @@ describe RuboCop::Cop::Layout::IndentHeredoc, :config do
           END2
         END
       end
-      expect(&correct).to raise_error(RuboCop::Warning, message)
+      expect(&correct).to raise_error(RubbyCop::Warning, message)
     end
   end
 

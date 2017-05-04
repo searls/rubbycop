@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::EmptyElse do
+describe RubbyCop::Cop::Style::EmptyElse do
   subject(:cop) { described_class.new(config) }
   let(:missing_else_config) { {} }
 
@@ -46,7 +46,7 @@ describe RuboCop::Cop::Style::EmptyElse do
 
   context 'configured to warn on empty else' do
     let(:config) do
-      RuboCop::Config.new('Style/EmptyElse' => {
+      RubbyCop::Config.new('Style/EmptyElse' => {
                             'EnforcedStyle' => 'empty',
                             'SupportedStyles' => %w[empty nil both]
                           },
@@ -168,7 +168,7 @@ describe RuboCop::Cop::Style::EmptyElse do
 
   context 'configured to warn on nil in else' do
     let(:config) do
-      RuboCop::Config.new('Style/EmptyElse' => {
+      RubbyCop::Config.new('Style/EmptyElse' => {
                             'EnforcedStyle' => 'nil',
                             'SupportedStyles' => %w[empty nil both]
                           },
@@ -357,7 +357,7 @@ describe RuboCop::Cop::Style::EmptyElse do
 
   context 'configured to warn on empty else and nil in else' do
     let(:config) do
-      RuboCop::Config.new('Style/EmptyElse' => {
+      RubbyCop::Config.new('Style/EmptyElse' => {
                             'EnforcedStyle' => 'both',
                             'SupportedStyles' => %w[empty nil both]
                           },

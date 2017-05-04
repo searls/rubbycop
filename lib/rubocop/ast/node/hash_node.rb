@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # A node extension for `hash` nodes. This will be used in place of a plain
     # node when the builder constructs the AST, making its methods available
-    # to all `hash` nodes within RuboCop.
+    # to all `hash` nodes within RubbyCop.
     class HashNode < Node
       # Returns an array of all the key value pairs in the `hash` literal.
       #

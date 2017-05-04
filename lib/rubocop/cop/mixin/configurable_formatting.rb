@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Shared functionality between mixins that enforce naming conventions
     module ConfigurableFormatting

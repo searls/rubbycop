@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::CommentIndentation do
+describe RubbyCop::Cop::Layout::CommentIndentation do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    RuboCop::Config
+    RubbyCop::Config
       .new('Layout/IndentationWidth' => { 'Width' => indentation_width })
   end
   let(:indentation_width) { 2 }

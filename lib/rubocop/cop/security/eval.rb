@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Security
       # This cop checks for the use of `Kernel#eval` and `Binding#eval`.

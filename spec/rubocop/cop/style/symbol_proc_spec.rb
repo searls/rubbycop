@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::SymbolProc, :config do
+describe RubbyCop::Cop::Style::SymbolProc, :config do
   subject(:cop) { described_class.new(config) }
 
   let(:cop_config) { { 'IgnoredMethods' => %w[respond_to] } }

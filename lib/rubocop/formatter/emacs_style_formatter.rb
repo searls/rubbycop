@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This formatter displays the report data in format that's
     # easy to process in the Emacs text editor.

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Lint
       # This cop checks for redundant access modifiers, including those with no

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::CaseWhenSplat do
+describe RubbyCop::Cop::Performance::CaseWhenSplat do
   subject(:cop) { described_class.new }
 
   it 'allows case when without splat' do

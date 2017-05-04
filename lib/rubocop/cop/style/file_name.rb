@@ -2,7 +2,7 @@
 
 require 'pathname'
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # This cop makes sure that Ruby source files have snake_case

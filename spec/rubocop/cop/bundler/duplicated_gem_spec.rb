@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Bundler::DuplicatedGem, :config do
+describe RubbyCop::Cop::Bundler::DuplicatedGem, :config do
   let(:cop_config) { { 'Include' => ['**/Gemfile'] } }
   subject(:cop) { described_class.new(config) }
 

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # A node extension for `when` nodes. This will be used in place of a plain
     # node when the builder constructs the AST, making its methods available
-    # to all `when` nodes within RuboCop.
+    # to all `when` nodes within RubbyCop.
     class WhenNode < Node
       # Returns an array of all the conditions in the `when` branch.
       #

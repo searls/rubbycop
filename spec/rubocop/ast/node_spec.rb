@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::AST::Node do
+describe RubbyCop::AST::Node do
   describe '#asgn_method_call?' do
     it 'does not match ==' do
       parsed = parse_source('Object.new == value')
@@ -34,10 +34,10 @@ describe RuboCop::AST::Node do
   end
 
   describe '#value_used?' do
-    let(:node) { RuboCop::ProcessedSource.new(src, ruby_version).ast }
+    let(:node) { RubbyCop::ProcessedSource.new(src, ruby_version).ast }
 
     before(:all) do
-      module RuboCop
+      module RubbyCop
         module AST
           class Node
             # Let's make our predicate matchers read better
@@ -150,7 +150,7 @@ describe RuboCop::AST::Node do
   end
 
   describe '#recursive_basic_literal?' do
-    let(:node) { RuboCop::ProcessedSource.new(src, ruby_version).ast }
+    let(:node) { RubbyCop::ProcessedSource.new(src, ruby_version).ast }
 
     shared_examples :literal do |source|
       let(:src) { source }
@@ -196,7 +196,7 @@ describe RuboCop::AST::Node do
   end
 
   describe '#pure?' do
-    let(:node) { RuboCop::ProcessedSource.new(src, ruby_version).ast }
+    let(:node) { RubbyCop::ProcessedSource.new(src, ruby_version).ast }
 
     context 'for a method call' do
       let(:src) { 'obj.method(arg1, arg2)' }
@@ -366,7 +366,7 @@ describe RuboCop::AST::Node do
   end
 
   describe '#sibling_index' do
-    let(:node) { RuboCop::ProcessedSource.new(src, ruby_version).ast }
+    let(:node) { RubbyCop::ProcessedSource.new(src, ruby_version).ast }
 
     let(:src) do
       [

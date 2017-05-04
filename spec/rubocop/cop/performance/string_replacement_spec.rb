@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::StringReplacement do
+describe RubbyCop::Cop::Performance::StringReplacement do
   subject(:cop) { described_class.new }
 
   it 'accepts methods other than gsub' do

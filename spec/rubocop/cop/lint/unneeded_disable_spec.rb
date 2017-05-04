@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::UnneededDisable do
+describe RubbyCop::Cop::Lint::UnneededDisable do
   describe '.check' do
     let(:cop) do
       cop = described_class.new
@@ -9,11 +9,11 @@ describe RuboCop::Cop::Lint::UnneededDisable do
       cop
     end
     let(:processed_source) do
-      RuboCop::ProcessedSource.new(source, ruby_version)
+      RubbyCop::ProcessedSource.new(source, ruby_version)
     end
     let(:comments) { processed_source.comments }
     let(:corrected_source) do
-      RuboCop::Cop::Corrector
+      RubbyCop::Cop::Corrector
         .new(processed_source.buffer, cop.corrections)
         .rewrite
     end
@@ -130,7 +130,7 @@ describe RuboCop::Cop::Lint::UnneededDisable do
             end
             let(:offenses) do
               [
-                RuboCop::Cop::Offense.new(:convention,
+                RubbyCop::Cop::Offense.new(:convention,
                                           OpenStruct.new(line: 7, column: 0),
                                           'Class has too many lines.',
                                           'Metrics/ClassLength')
@@ -164,7 +164,7 @@ describe RuboCop::Cop::Lint::UnneededDisable do
             end
             let(:offenses) do
               [
-                RuboCop::Cop::Offense.new(:convention,
+                RubbyCop::Cop::Offense.new(:convention,
                                           OpenStruct.new(line: 7, column: 0),
                                           'Method has too many lines.',
                                           'Metrics/MethodLength')
@@ -196,7 +196,7 @@ describe RuboCop::Cop::Lint::UnneededDisable do
               end
               let(:offenses) do
                 [
-                  RuboCop::Cop::Offense.new(:convention,
+                  RubbyCop::Cop::Offense.new(:convention,
                                             OpenStruct.new(line: 7, column: 0),
                                             'Method has too many lines.',
                                             'Metrics/MethodLength')
@@ -224,7 +224,7 @@ describe RuboCop::Cop::Lint::UnneededDisable do
               end
               let(:offenses) do
                 [
-                  RuboCop::Cop::Offense.new(:convention,
+                  RubbyCop::Cop::Offense.new(:convention,
                                             OpenStruct.new(line: 7, column: 0),
                                             'Method has too many lines.',
                                             'Metrics/MethodLength')
@@ -283,7 +283,7 @@ describe RuboCop::Cop::Lint::UnneededDisable do
         let(:cop_name) { 'Style/ClassVars' }
         let(:offenses) do
           offense_lines.map do |line|
-            RuboCop::Cop::Offense.new(:convention,
+            RubbyCop::Cop::Offense.new(:convention,
                                       OpenStruct.new(line: line, column: 3),
                                       message,
                                       cop_name)
@@ -342,7 +342,7 @@ describe RuboCop::Cop::Lint::UnneededDisable do
       context 'and there is an offense' do
         let(:offenses) do
           [
-            RuboCop::Cop::Offense.new(:convention,
+            RubbyCop::Cop::Offense.new(:convention,
                                       OpenStruct.new(line: 7, column: 0),
                                       'Tab detected.',
                                       'Layout/Tab')

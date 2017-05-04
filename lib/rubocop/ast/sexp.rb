@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # This module provides a shorthand method to create a {Node} like
     # `Parser::AST::Sexp`.

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::IndentArray do
+describe RubbyCop::Cop::Layout::IndentArray do
   subject(:cop) { described_class.new(config) }
   let(:config) do
     supported_styles = {
       'SupportedStyles' => %w[special_inside_parentheses consistent
                               align_brackets]
     }
-    RuboCop::Config.new('Layout/IndentArray' =>
+    RubbyCop::Config.new('Layout/IndentArray' =>
                         cop_config.merge(supported_styles).merge(
                           'IndentationWidth' => cop_indent
                         ),

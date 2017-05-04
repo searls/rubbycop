@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common code for indenting literal arrays and hashes.
     module ArrayHashIndentation

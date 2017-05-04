@@ -2,7 +2,7 @@
 
 require 'set'
 
-module RuboCop
+module RubbyCop
   RUBY_EXTENSIONS = %w[.rb
                        .builder
                        .fcgi

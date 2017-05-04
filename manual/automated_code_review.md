@@ -5,7 +5,7 @@ The section describes SaaS that provides automated code reviews.
 ### Codacy
 
 [Codacy](https://www.codacy.com/) checks your code from style to security, duplication, complexity, and also integrates with coverage.
-Codacy is free for open source, and it provides RuboCop analysis out-of-the-box.
+Codacy is free for open source, and it provides RubbyCop analysis out-of-the-box.
 
 ### Code Climate
 

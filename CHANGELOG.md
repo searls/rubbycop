@@ -4,7 +4,7 @@
 
 ### New features
 
-* [#117](https://github.com/bbatsov/rubocop/issues/117): Add `--parallel` option for running RuboCop in multiple processes or threads. ([@jonas054][])
+* [#117](https://github.com/bbatsov/rubocop/issues/117): Add `--parallel` option for running RubbyCop in multiple processes or threads. ([@jonas054][])
 * Add auto-correct support to `Style/MixinGrouping`. ([@rrosenblum][])
 * [#4236](https://github.com/bbatsov/rubocop/issues/4236): Add new `Rails/ApplicationJob` and `Rails/ApplicationRecord` cops. ([@tjwp][])
 * [#4078](https://github.com/bbatsov/rubocop/pull/4078): Add new `Performance/Caller` cop. ([@alpaca-tc][])
@@ -201,7 +201,7 @@
 * [#3786](https://github.com/bbatsov/rubocop/pull/3786): Avoid crash `Style/ConditionalAssignment` cop with mass assign method. ([@pocke][])
 * [#3749](https://github.com/bbatsov/rubocop/pull/3749): Detect corner case of `Style/NumericLitterals`. ([@kamaradclimber][])
 * [#3788](https://github.com/bbatsov/rubocop/pull/3788): Prevent bad auto-correct in `Style/Next` when block has nested conditionals. ([@drenmi][])
-* [#3807](https://github.com/bbatsov/rubocop/pull/3807): Prevent `Style/Documentation` and `Style/DocumentationMethod` from mistaking RuboCop directives for class documentation. ([@drenmi][])
+* [#3807](https://github.com/bbatsov/rubocop/pull/3807): Prevent `Style/Documentation` and `Style/DocumentationMethod` from mistaking RubbyCop directives for class documentation. ([@drenmi][])
 * [#3815](https://github.com/bbatsov/rubocop/pull/3815): Fix false positive in `Style/IdenticalConditionalBranches` cop when branches have same line at leading. ([@pocke][])
 * Fix false negative in `Rails/HttpPositionalArguments` where offense would go undetected if one of the request parameter names matched one of the special keyword arguments. ([@deivid-rodriguez][])
 * Fix false negative in `Rails/HttpPositionalArguments` where offense would go undetected if the `:format` keyword was used with other non-special keywords. ([@deivid-rodriguez][])
@@ -366,7 +366,7 @@
 * [#3347](https://github.com/bbatsov/rubocop/issues/3347): Prevent infinite loop in `Style/TernaryParentheses` cop when used together with `Style/RedundantParentheses`. ([@drenmi][])
 * [#3209](https://github.com/bbatsov/rubocop/issues/3209): Remove faulty line length check from `Style/GuardClause` cop. ([@drenmi][])
 * [#3366](https://github.com/bbatsov/rubocop/issues/3366): Make `Style/MutableConstant` cop aware of splat assignments. ([@drenmi][])
-* [#3372](https://github.com/bbatsov/rubocop/pull/3372): Fix RuboCop crash with empty brackets in `Style/Next` cop. ([@pocke][])
+* [#3372](https://github.com/bbatsov/rubocop/pull/3372): Fix RubbyCop crash with empty brackets in `Style/Next` cop. ([@pocke][])
 * [#3358](https://github.com/bbatsov/rubocop/issues/3358): Make `Style/MethodMissing` cop aware of class scope. ([@drenmi][])
 * [#3342](https://github.com/bbatsov/rubocop/issues/3342): Fix error in `Lint/ShadowedException` cop if last rescue does not have parameter. ([@soutaro][])
 * [#3380](https://github.com/bbatsov/rubocop/issues/3380): Fix false positive in `Style/TrailingUnderscoreVariable` cop. ([@drenmi][])
@@ -509,14 +509,14 @@
 * Modify `Style/ParallelAssignment` to use implicit begins when parallel assignment uses a `rescue` modifier and is the only thing in the method. ([@rrosenblum][])
 * [#3217](https://github.com/bbatsov/rubocop/pull/3217): Fix output of ellipses for multi-line offense ranges in HTML formatter. ([@jonas054][])
 * [#3207](https://github.com/bbatsov/rubocop/issues/3207): Auto-correct modifier `while`/`until` and `begin`..`end` + `while`/`until` in `Style/InfiniteLoop`. ([@jonas054][])
-* [#3202](https://github.com/bbatsov/rubocop/issues/3202): Fix `Style/EmptyElse` registering wrong offenses and thus making RuboCop crash. ([@deivid-rodriguez][])
+* [#3202](https://github.com/bbatsov/rubocop/issues/3202): Fix `Style/EmptyElse` registering wrong offenses and thus making RubbyCop crash. ([@deivid-rodriguez][])
 * [#3183](https://github.com/bbatsov/rubocop/issues/3183): Ensure `Style/SpaceInsideBlockBraces` reports offenses for multi-line blocks. ([@owst][])
 * [#3017](https://github.com/bbatsov/rubocop/issues/3017): Fix `Style/StringLiterals` to register offenses on non-ascii strings. ([@deivid-rodriguez][])
 * [#3056](https://github.com/bbatsov/rubocop/issues/3056): Fix `Style/StringLiterals` to register offenses on non-ascii strings. ([@deivid-rodriguez][])
 * [#2986](https://github.com/bbatsov/rubocop/issues/2986): Fix `RedundantBlockCall` to not report calls that pass block arguments, or where the block has been overridden. ([@owst][])
 * [#3223](https://github.com/bbatsov/rubocop/issues/3223): Return can take many arguments. ([@ptarjan][])
 * [#3239](https://github.com/bbatsov/rubocop/pull/3239): Fix bug with --auto-gen-config and a file that does not exist. ([@meganemura][])
-* [#3138](https://github.com/bbatsov/rubocop/issues/3138): Fix RuboCop crashing when config file contains utf-8 characters and external encoding is not utf-8. ([@deivid-rodriguez][])
+* [#3138](https://github.com/bbatsov/rubocop/issues/3138): Fix RubbyCop crashing when config file contains utf-8 characters and external encoding is not utf-8. ([@deivid-rodriguez][])
 * [#3175](https://github.com/bbatsov/rubocop/pull/3175): Generate 'Exclude' list for the cops with configurable enforced style to `.rubocop_todo.yml` if different styles are used. ([@flexoid][])
 * [#3231](https://github.com/bbatsov/rubocop/pull/3231): Make `Rails/UniqBeforePluck` more conservative. ([@tjwp][])
 
@@ -687,7 +687,7 @@
 ### Changes
 
 * Handle auto-correction of nested interpolations in `Lint/LiteralInInterpolation`. ([@lumeet][])
-* RuboCop results cache uses different directory names when there are many (or long) CLI options, to avoid a very long path which could cause failures on some filesystems. ([@alexdowad][])
+* RubbyCop results cache uses different directory names when there are many (or long) CLI options, to avoid a very long path which could cause failures on some filesystems. ([@alexdowad][])
 
 ## 0.37.1 (2016-02-09)
 
@@ -702,12 +702,12 @@
 ### Bug fixes
 
 * Fix auto-correction of `not` with parentheses in `Style/Not`. ([@lumeet][])
-* [#2784](https://github.com/bbatsov/rubocop/issues/2784): RuboCop can inspect `super { ... }` and `super(arg) { ... }`. ([@alexdowad][])
+* [#2784](https://github.com/bbatsov/rubocop/issues/2784): RubbyCop can inspect `super { ... }` and `super(arg) { ... }`. ([@alexdowad][])
 * [#2781](https://github.com/bbatsov/rubocop/issues/2781): `Performance/RedundantMerge` doesn't flag calls to `#update`, since many classes have methods by this name (not only `Hash`). ([@alexdowad][])
 * [#2780](https://github.com/bbatsov/rubocop/issues/2780): `Lint/DuplicateMethods` does not flag method definitions inside dynamic `Class.new` blocks. ([@alexdowad][])
 * [#2775](https://github.com/bbatsov/rubocop/issues/2775): `Style/SpaceAroundKeyword` doesn't flag `yield.method`. ([@alexdowad][])
 * [#2774](https://github.com/bbatsov/rubocop/issues/2774): `Style/SpaceAroundOperators` doesn't flag calls to `#[]`. ([@alexdowad][])
-* [#2772](https://github.com/bbatsov/rubocop/issues/2772): RuboCop doesn't crash when `AllCops` section in configuration file is empty (rather, it displays a warning as intended). ([@alexdowad][])
+* [#2772](https://github.com/bbatsov/rubocop/issues/2772): RubbyCop doesn't crash when `AllCops` section in configuration file is empty (rather, it displays a warning as intended). ([@alexdowad][])
 * [#2737](https://github.com/bbatsov/rubocop/issues/2737): `Style/GuardClause` handles `elsif` clauses correctly. ([@alexdowad][])
 * [#2735](https://github.com/bbatsov/rubocop/issues/2735): `Style/MultilineBlockLayout` doesn't cause an infinite loop by moving `end` onto the same line as the block args. ([@alexdowad][])
 * [#2715](https://github.com/bbatsov/rubocop/issues/2715): `Performance/RedundantMatch` doesn't flag calls to `#match` which take a block. ([@alexdowad][])
@@ -813,7 +813,7 @@
 * A warning is printed if an invalid `EnforcedStyle` is configured. ([@alexdowad][])
 * [#1367](https://github.com/bbatsov/rubocop/issues/1367): New `Lint/IneffectiveAccessModifier` checks for access modifiers which are erroneously applied to a singleton method, where they have no effect. ([@alexdowad][])
 * [#1614](https://github.com/bbatsov/rubocop/issues/1614): `Lint/BlockAlignment` aligns block end with splat operator when applied to a splatted method call. ([@alexdowad][])
-* [#2263](https://github.com/bbatsov/rubocop/issues/2263): Warn if `task.options = %w(--format ...)` is used when configuring `RuboCop::RakeTask`; this should be `task.formatters = ...` instead. ([@alexdowad][])
+* [#2263](https://github.com/bbatsov/rubocop/issues/2263): Warn if `task.options = %w(--format ...)` is used when configuring `RubbyCop::RakeTask`; this should be `task.formatters = ...` instead. ([@alexdowad][])
 * [#2511](https://github.com/bbatsov/rubocop/issues/2511): `--no-offense-counts` CLI option suppresses the inclusion of offense count lines in auto-generated config. ([@alexdowad][])
 * [#2504](https://github.com/bbatsov/rubocop/issues/2504): New `AllowForAlignment` config parameter for `Style/SingleSpaceBeforeFirstArg` allows the insertion of extra spaces before the first argument if it aligns it with something on the preceding or following line. ([@alexdowad][])
 * [#2478](https://github.com/bbatsov/rubocop/issues/2478): `Style/ExtraSpacing` has new `ForceEqualSignAlignment` config parameter which forces = signs on consecutive lines to be aligned, and it can auto-correct. ([@alexdowad][])
@@ -908,14 +908,14 @@
 * [#2467](https://github.com/bbatsov/rubocop/issues/2467): Explicitly inheriting configuration from the rubocop gem in .rubocop.yml is not allowed. ([@alexdowad][])
 * [#2322](https://github.com/bbatsov/rubocop/issues/2322): Output of --auto-gen-config shows content of default config parameters which are Arrays; this is especially useful for SupportedStyles. ([@alexdowad][])
 * [#1566](https://github.com/bbatsov/rubocop/issues/1566): When autocorrecting on Windows, line endings are not converted to "\r\n" in untouched portions of the source files; corrected portions may use "\n" rather than "\r\n". ([@alexdowad][])
-* New `rake repl` task can be used for experimentation when working on RuboCop. ([@alexdowad][])
+* New `rake repl` task can be used for experimentation when working on RubbyCop. ([@alexdowad][])
 * `Lint/SpaceBeforeFirstArg` cop has been removed, since it just duplicates `Style/SingleSpaceBeforeFirstArg`. ([@alexdowad][])
 * `Style/SingleSpaceBeforeFirstArg` cop has been renamed to `Style/SpaceBeforeFirstArg`, which more accurately reflects what it now does. ([@alexdowad][])
 * `Style/UnneededPercentQ` reports `%q()` strings with what only appears to be an escape, but is not really (there are no escapes in `%q()` strings). ([@alexdowad][])
 * `Performance/StringReplacement`, `Performance\StartWith`, and `Performance\EndWith` more accurately identify code which can be improved. ([@alexdowad][])
 * The `MultiSpaceAllowedForOperators` config parameter for `Style/SpaceAroundOperators` has been removed, as it is made redundant by `AllowForAlignment`. If someone attempts to use it, config validation will fail with a helpful message. ([@alexdowad][])
 * The `RunRailsCops` config parameter in .rubocop.yml is now obsolete. If someone attempts to use it, config validation will fail with a helpful message. ([@alexdowad][])
-* If .rubocop.yml contains configuration for a custom cop, no warning regarding "unknown cop" will be printed. The custom cop must inherit from RuboCop::Cop::Cop, and must be loaded into memory for this to work. ([@alexdowad][])
+* If .rubocop.yml contains configuration for a custom cop, no warning regarding "unknown cop" will be printed. The custom cop must inherit from RubbyCop::Cop::Cop, and must be loaded into memory for this to work. ([@alexdowad][])
 * [#2102](https://github.com/bbatsov/rubocop/issues/2102): If .rubocop.yml exists in the working directory when running --auto-gen-config, any `Exclude` config parameters in .rubocop.yml will be merged into the generated .rubocop_todo.yml. ([@alexdowad][])
 * [#1895](https://github.com/bbatsov/rubocop/issues/1895): Remove `Rails/DefaultScope` cop. ([@alexdowad][])
 * [#2550](https://github.com/bbatsov/rubocop/issues/2550): New `TargetRubyVersion` configuration parameter can be used to specify which version of the Ruby interpreter the inspected code is intended to run on. ([@alexdowad][])
@@ -923,7 +923,7 @@
 * `Style/EmptyLinesAroundClassBody`, `Style/EmptyLinesAroundModuleBody`, and `Style/EmptyLinesAroundBlockBody` accept an empty body with no blank line, even if configured to `empty_lines` style. This is because the empty lines only serve to provide a break between the header, body, and footer, and are redundant if there is no body. ([@alexdowad][])
 * [#2554](https://github.com/bbatsov/rubocop/issues/2554): `Style/FirstMethodArgumentLineBreak` handles implicit hash arguments without braces; `Style/FirstHashElementLineBreak` still handles those with braces. ([@alexdowad][])
 * `Style/TrailingComma` has been split into `Style/TrailingCommaInArguments` and `Style/TrailingCommaInLiteral`. ([@alexdowad][])
-* RuboCop returns process exit code 2 if it fails due to bad configuration, bad CLI options, or an internal error. If it runs successfully but finds one or more offenses, it still exits with code 1, as was previously the case. This is helpful when invoking RuboCop programmatically, perhaps from a script. ([@alexdowad][])
+* RubbyCop returns process exit code 2 if it fails due to bad configuration, bad CLI options, or an internal error. If it runs successfully but finds one or more offenses, it still exits with code 1, as was previously the case. This is helpful when invoking RubbyCop programmatically, perhaps from a script. ([@alexdowad][])
 
 ## 0.35.1 (2015-11-10)
 
@@ -997,7 +997,7 @@
 * [#1981](https://github.com/bbatsov/rubocop/issues/1981): `Lint/UselessAssignment` doesn't erroneously identify assignments in identical if branches as useless. ([@alexdowad][])
 * [#2323](https://github.com/bbatsov/rubocop/issues/2323): `Style/IfUnlessModifier` cop parenthesizes autocorrected code when necessary due to operator precedence, to avoid changing its meaning. ([@alexdowad][])
 * [#2003](https://github.com/bbatsov/rubocop/issues/2003): Make `Lint/UnneededDisable` work with `--auto-correct`. ([@jonas054][])
-* Default RuboCop cache dir moved to per-user folders. ([@br3nda][])
+* Default RubbyCop cache dir moved to per-user folders. ([@br3nda][])
 * [#2393](https://github.com/bbatsov/rubocop/pull/2393): `Style/MethodCallParentheses` doesn't fail on `obj.method ||= func()`. ([@alexdowad][])
 * [#2344](https://github.com/bbatsov/rubocop/pull/2344): When autocorrecting, `Style/ParallelAssignment` reorders assignment statements, if necessary, to avoid breaking code. ([@alexdowad][])
 * `Style/MultilineOperationAlignment` does not try to align the receiver and selector of a method call if both are on the LHS of an assignment. ([@alexdowad][])
@@ -1089,7 +1089,7 @@
 * Do not register a `Rails/TimeZone` offense when using Time.new safely. ([@maxjacobson][])
 * [#2124](https://github.com/bbatsov/rubocop/issues/2124): Fix bug in `Style/EmptyLineBetweenDefs` when there are only comments between method definitions. ([@lumeet][])
 * [#2154](https://github.com/bbatsov/rubocop/issues/2154): `Performance/StringReplacement` can auto-correct replacements with backslash in them. ([@rrosenblum][])
-* [#2009](https://github.com/bbatsov/rubocop/issues/2009): Fix bug in `RuboCop::ConfigLoader.load_file` when `safe_yaml` is required. ([@eitoball][])
+* [#2009](https://github.com/bbatsov/rubocop/issues/2009): Fix bug in `RubbyCop::ConfigLoader.load_file` when `safe_yaml` is required. ([@eitoball][])
 * [#2155](https://github.com/bbatsov/rubocop/issues/2155): Configuration `EndAlignment: AlignWith: variable` only applies when the operands of `=` are on the same line. ([@jonas054][])
 * Fix bug in `Style/IndentationWidth` when `rescue` or `ensure` is preceded by an empty body. ([@lumeet][])
 * [#2183](https://github.com/bbatsov/rubocop/issues/2183): Fix bug in `Style/BlockDelimiters` when auto-correcting adjacent braces. ([@lumeet][])
@@ -1594,7 +1594,7 @@
 
 * [#1097](https://github.com/bbatsov/rubocop/issues/1097): Add optional namespace prefix to cop names: `Style/LineLength` instead of `LineLength` in config files, `--only` argument, `--show-cops` output, and `# rubocop:disable`. ([@jonas054][])
 * [#1075](https://github.com/bbatsov/rubocop/issues/1075): More strict limits on when to require trailing comma. ([@jonas054][])
-* Renamed `Rubocop` module to `RuboCop`. ([@bbatsov][])
+* Renamed `Rubocop` module to `RubbyCop`. ([@bbatsov][])
 
 ### Bugs fixed
 
@@ -1680,7 +1680,7 @@
 * [#976](https://github.com/bbatsov/rubocop/issues/976): Fix `EndAlignment` not handling element assignment correctly. ([@tamird][])
 * [#976](https://github.com/bbatsov/rubocop/issues/976): Fix `IndentationWidth` not handling element assignment correctly. ([@tamird][])
 * [#800](https://github.com/bbatsov/rubocop/issues/800): Do not report `[Corrected]` in `--auto-correct` mode if correction wasn't done. ([@jonas054][])
-* [#968](https://github.com/bbatsov/rubocop/issues/968): Fix bug when running RuboCop with `-c .rubocop.yml`. ([@bquorning][])
+* [#968](https://github.com/bbatsov/rubocop/issues/968): Fix bug when running RubbyCop with `-c .rubocop.yml`. ([@bquorning][])
 * [#975](https://github.com/bbatsov/rubocop/pull/975): Fix infinite correction in `IndentationWidth`. ([@jonas054][])
 * [#986](https://github.com/bbatsov/rubocop/issues/986): When `--lint` is used together with `--only`, all lint cops are run in addition to the given cops. ([@jonas054][])
 * [#997](https://github.com/bbatsov/rubocop/issues/997): Fix handling of file paths for matching against `Exclude` property when `rubocop .` is called. ([@jonas054][])
@@ -1905,7 +1905,7 @@
 * [#724](https://github.com/bbatsov/rubocop/issues/724): Accept colons denoting required keyword argument (a new feature in Ruby 2.1) without trailing space in `SpaceAfterColon`. ([@jonas054][])
 * The `--no-color` option works again. ([@jonas054][])
 * [#716](https://github.com/bbatsov/rubocop/issues/716): Fixed a regression in the auto-correction logic of `MethodDefParentheses`. ([@bbatsov][])
-* Inspected projects that lack a `.rubocop.yml` file, and therefore get their configuration from RuboCop's `config/default.yml`, no longer get configuration from RuboCop's `.rubocop.yml` and `rubocop-todo.yml`. ([@jonas054][])
+* Inspected projects that lack a `.rubocop.yml` file, and therefore get their configuration from RubbyCop's `config/default.yml`, no longer get configuration from RubbyCop's `.rubocop.yml` and `rubocop-todo.yml`. ([@jonas054][])
 * [#730](https://github.com/bbatsov/rubocop/issues/730): `EndAlignment` now handles for example `private def some_method`, which is allowed in Ruby 2.1. It requires `end` to be aligned with `private`, not `def`, in such cases. ([@jonas054][])
 * [#744](https://github.com/bbatsov/rubocop/issues/744): Any new offences created by `--auto-correct` are now handled immediately and corrected when possible, so running `--auto-correct` once is enough. ([@jonas054][])
 * [#748](https://github.com/bbatsov/rubocop/pull/748): Auto-correction conflict between `EmptyLinesAroundBody` and `TrailingWhitespace` resolved. ([@jonas054][])
@@ -1988,7 +1988,7 @@
 ### Changes
 
 * [#557](https://github.com/bbatsov/rubocop/pull/557): Configuration files for excluded files are no longer loaded. ([@jonas054][])
-* [#571](https://github.com/bbatsov/rubocop/pull/571): The default rake task now runs RuboCop over itself! ([@nevir][])
+* [#571](https://github.com/bbatsov/rubocop/pull/571): The default rake task now runs RubbyCop over itself! ([@nevir][])
 * Encoding errors are reported as fatal offences rather than printed with red text. ([@jonas054][])
 * `AccessControl` cop is now configurable with the `EnforcedStyle` option. ([@sds][])
 * Split `AccessControl` cop to `AccessModifierIndentation` and `EmptyLinesAroundAccessModifier`. ([@bbatsov][])
@@ -2180,7 +2180,7 @@
 ### New features
 
 * [#421](https://github.com/bbatsov/rubocop/issues/421): `TrivialAccessors` now ignores methods on user-configurable whitelist (such as `to_s` and `to_hash`).
-* [#369](https://github.com/bbatsov/rubocop/issues/369): New option `--auto-gen-config` outputs RuboCop configuration that disables all cops that detect any offences.
+* [#369](https://github.com/bbatsov/rubocop/issues/369): New option `--auto-gen-config` outputs RubbyCop configuration that disables all cops that detect any offences.
 * The list of annotation keywords recognized by the `CommentAnnotation` cop is now configurable.
 * Configuration file names are printed as they are loaded in `--debug` mode.
 * Auto-correct support added in `AlignParameters` cop.
@@ -2275,7 +2275,7 @@
 * Added clang style formatter showing the offending source. code. (`--format clang`). The `clang` formatter marks a whole range rather than just the starting position, to indicate more clearly where the problem is.
 * Added `-f`/`--format` option to specify formatter.
 * Added `-o`/`--out` option to specify output file for each formatter.
-* Added `-r/--require` option to inject external Ruby code into RuboCop.
+* Added `-r/--require` option to inject external Ruby code into RubbyCop.
 * Added `-V/--verbose-version` option that displays Parser version and Ruby version as well.
 * Added `-R/--rails` option that enables extra Rails-specific cops.
 * Added support for auto-correction of some offences with `-a`/`--auto-correct`.

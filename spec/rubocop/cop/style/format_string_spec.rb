@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::FormatString, :config do
+describe RubbyCop::Cop::Style::FormatString, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'when enforced style is sprintf' do

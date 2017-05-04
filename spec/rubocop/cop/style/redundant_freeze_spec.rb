@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::RedundantFreeze do
+describe RubbyCop::Cop::Style::RedundantFreeze do
   subject(:cop) { described_class.new }
   let(:prefix) { nil }
 
@@ -44,7 +44,7 @@ describe RuboCop::Cop::Style::RedundantFreeze do
   end
 
   context 'when the receiver is a frozen string literal' do
-    if RuboCop::Config::KNOWN_RUBIES.include?(3.0)
+    if RubbyCop::Config::KNOWN_RUBIES.include?(3.0)
       context 'when the target ruby version >= 3.0' do
         let(:ruby_version) { 3.0 }
 

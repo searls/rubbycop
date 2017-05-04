@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::AST::PairNode do
+describe RubbyCop::AST::PairNode do
   let(:pair_node) { parse_source(source).ast.children.first }
 
   describe '.new' do

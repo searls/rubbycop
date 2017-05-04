@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Lint
       # This cop checks for uses of the deprecated class method usages.
@@ -21,7 +21,7 @@ module RuboCop
         # This class exists to add abstraction and clean naming to the
         # objects that are going to be operated on.
         class DeprecatedClassMethod
-          include RuboCop::AST::Sexp
+          include RubbyCop::AST::Sexp
 
           attr_reader :class_constant, :deprecated_method, :replacement_method
 

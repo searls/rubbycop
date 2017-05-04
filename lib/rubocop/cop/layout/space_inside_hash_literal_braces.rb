@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # Checks that braces used for hash literals have or don't have
@@ -111,7 +111,7 @@ module RuboCop
             # changes to the inspected code. If we replace the brace with a
             # brace plus space (rather than just inserting a space), then any
             # removal of the same brace will give us a clobbering error. This
-            # in turn will make RuboCop fall back on cop-by-cop
+            # in turn will make RubbyCop fall back on cop-by-cop
             # auto-correction.  Problem solved.
             case range.source
             when /\s/ then corrector.remove(range)

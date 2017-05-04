@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     class VariableForce
       # A Scope represents a context of local variable visibility.

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This formatter display dots for files with no offenses and
     # letters for files with problems in the them. In the end it

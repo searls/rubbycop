@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Commissioner class is responsible for processing the AST and delegating
     # work to the specified cops.
     class Commissioner
-      include RuboCop::AST::Traversal
+      include RubbyCop::AST::Traversal
 
       CopError = Struct.new(:error, :line, :column)
 

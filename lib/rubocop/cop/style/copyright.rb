@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # Check that a copyright notice was given in each source file.
@@ -12,12 +12,12 @@ module RuboCop
       #       Notice: '^Copyright (\(c\) )?2\d{3} Acme Inc'
       #
       # This regex string is treated as an unanchored regex.  For each file
-      # that RuboCop scans, a comment that matches this regex must be found or
+      # that RubbyCop scans, a comment that matches this regex must be found or
       # an offense is reported.
       #
       class Copyright < Cop
         AUTOCORRECT_EMPTY_WARNING = 'An AutocorrectNotice must be defined in' \
-                                    'your RuboCop config'.freeze
+                                    'your RubbyCop config'.freeze
 
         def message
           "Include a copyright notice matching /#{notice}/" \

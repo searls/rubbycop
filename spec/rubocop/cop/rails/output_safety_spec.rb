@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::OutputSafety do
+describe RubbyCop::Cop::Rails::OutputSafety do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for html_safe methods with a receiver and no ' \

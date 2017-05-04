@@ -26,8 +26,8 @@ task :coverage do
   Rake::Task['spec'].execute
 end
 
-desc 'Run RuboCop over itself'
-RuboCop::RakeTask.new(:internal_investigation)
+desc 'Run RubbyCop over itself'
+RubbyCop::RakeTask.new(:internal_investigation)
 
 task default: %i[spec ascii_spec internal_investigation]
 
@@ -39,15 +39,15 @@ task :repl do
   require 'pry'
   require 'rubocop'
   ARGV.clear
-  RuboCop.pry
+  RubbyCop.pry
 end
 
 desc 'Benchmark a cop on given source file/dir'
 task :bench_cop, %i[cop srcpath times] do |_task, args|
   require 'benchmark'
   require 'rubocop'
-  include RuboCop
-  include RuboCop::Formatter::TextUtil
+  include RubbyCop
+  include RubbyCop::Formatter::TextUtil
 
   cop_name = args[:cop]
   src_path = args[:srcpath]
@@ -76,7 +76,7 @@ task :bench_cop, %i[cop srcpath times] do |_task, args|
   puts "(#{pluralize(iterations, 'iteration')}, " \
     "#{pluralize(files.size, 'file')})"
 
-  ruby_version = RuboCop::Config::KNOWN_RUBIES.last
+  ruby_version = RubbyCop::Config::KNOWN_RUBIES.last
   srcs = files.map { |file| ProcessedSource.from_file(file, ruby_version) }
 
   puts 'Finished parsing source, testing inspection...'

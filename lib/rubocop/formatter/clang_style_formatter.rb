@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This formatter formats report data in clang style.
     # The precise location of the problem is shown together with the

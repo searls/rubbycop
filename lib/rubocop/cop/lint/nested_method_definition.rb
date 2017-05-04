@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Lint
       # This cop checks for nested method definitions.
@@ -56,7 +56,7 @@ module RuboCop
       #   end
       class NestedMethodDefinition < Cop
         include OnMethodDef
-        extend RuboCop::NodePattern::Macros
+        extend RubbyCop::NodePattern::Macros
 
         MSG = 'Method definitions must not be nested. ' \
               'Use `lambda` instead.'.freeze

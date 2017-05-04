@@ -3,11 +3,11 @@
 require 'rake'
 require 'rake/tasklib'
 
-module RuboCop
+module RubbyCop
   # Provides a custom rake task.
   #
   # require 'rubocop/rake_task'
-  # RuboCop::RakeTask.new
+  # RubbyCop::RakeTask.new
   class RakeTask < Rake::TaskLib
     attr_accessor :name
     attr_accessor :verbose
@@ -20,7 +20,7 @@ module RuboCop
     def initialize(*args, &task_block)
       setup_ivars(args)
 
-      desc 'Run RuboCop' unless ::Rake.application.last_description
+      desc 'Run RubbyCop' unless ::Rake.application.last_description
 
       task(name, *args) do |_, task_args|
         RakeFileUtils.send(:verbose, verbose) do
@@ -44,9 +44,9 @@ module RuboCop
       require 'rubocop'
 
       cli = CLI.new
-      puts 'Running RuboCop...' if verbose
+      puts 'Running RubbyCop...' if verbose
       result = cli.run(options)
-      abort('RuboCop failed!') if result.nonzero? && fail_on_error
+      abort('RubbyCop failed!') if result.nonzero? && fail_on_error
     end
 
     def full_options
@@ -73,7 +73,7 @@ module RuboCop
 
     def setup_subtasks(name, *args, &task_block)
       namespace name do
-        desc 'Auto-correct RuboCop offenses'
+        desc 'Auto-correct RubbyCop offenses'
 
         task(:auto_correct, *args) do |_, task_args|
           yield(*[self, task_args].slice(0, task_block.arity)) if block_given?

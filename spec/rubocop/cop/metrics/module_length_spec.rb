@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Metrics::ModuleLength, :config do
+describe RubbyCop::Cop::Metrics::ModuleLength, :config do
   subject(:cop) { described_class.new(config) }
   let(:cop_config) { { 'Max' => 5, 'CountComments' => false } }
 

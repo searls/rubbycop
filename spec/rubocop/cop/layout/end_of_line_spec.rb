@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::EndOfLine, :config do
+describe RubbyCop::Cop::Layout::EndOfLine, :config do
   subject(:cop) { described_class.new(config) }
 
   shared_examples 'all configurations' do
@@ -22,14 +22,14 @@ describe RuboCop::Cop::Layout::EndOfLine, :config do
     let(:cop_config) { { 'EnforcedStyle' => 'native' } }
     let(:messages) do
       ['Carriage return character ' \
-        "#{RuboCop::Platform.windows? ? 'missing' : 'detected'}."]
+        "#{RubbyCop::Platform.windows? ? 'missing' : 'detected'}."]
     end
 
     it 'registers an offense for an incorrect EOL' do
       inspect_source_file(cop, ['x=0', '', "y=1\r"])
       expect(cop.messages).to eq(messages)
       expect(cop.offenses.map(&:line))
-        .to eq([RuboCop::Platform.windows? ? 1 : 3])
+        .to eq([RubbyCop::Platform.windows? ? 1 : 3])
     end
   end
 

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::RescueModifier do
+describe RubbyCop::Cop::Style::RescueModifier do
   let(:config) do
-    RuboCop::Config.new('Layout/IndentationWidth' => {
+    RubbyCop::Config.new('Layout/IndentationWidth' => {
                           'Width' => 2
                         })
   end
@@ -242,7 +242,7 @@ describe RuboCop::Cop::Style::RescueModifier do
 
   describe 'excluded file' do
     let(:config) do
-      RuboCop::Config.new('Style/RescueModifier' =>
+      RubbyCop::Config.new('Style/RescueModifier' =>
                           { 'Enabled' => true,
                             'Exclude' => ['**/**'] })
     end

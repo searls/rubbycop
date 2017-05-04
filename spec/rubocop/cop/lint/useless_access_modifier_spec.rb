@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::UselessAccessModifier do
-  let(:config) { RuboCop::Config.new }
+describe RubbyCop::Cop::Lint::UselessAccessModifier do
+  let(:config) { RubbyCop::Config.new }
   subject(:cop) { described_class.new(config) }
 
   context 'when an access modifier has no effect' do
@@ -237,7 +237,7 @@ describe RuboCop::Cop::Lint::UselessAccessModifier do
 
   context "when using ActiveSupport's `concerning` method" do
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'Lint/UselessAccessModifier' => {
           'ContextCreatingMethods' => ['concerning']
         }
@@ -324,7 +324,7 @@ describe RuboCop::Cop::Lint::UselessAccessModifier do
 
   context 'when using the class_methods method from ActiveSupport::Concern' do
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'Lint/UselessAccessModifier' => {
           'ContextCreatingMethods' => ['class_methods']
         }
@@ -355,7 +355,7 @@ describe RuboCop::Cop::Lint::UselessAccessModifier do
 
   context 'when using a known method-creating method' do
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'Lint/UselessAccessModifier' => {
           'MethodCreatingMethods' => ['delegate']
         }

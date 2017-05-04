@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::IfUnlessModifier do
+describe RubbyCop::Cop::Style::IfUnlessModifier do
   include StatementModifierHelper
 
   subject(:cop) { described_class.new(config) }
   let(:config) do
     hash = { 'Metrics/LineLength' => { 'Max' => 80 } }
-    RuboCop::Config.new(hash)
+    RubbyCop::Config.new(hash)
   end
 
   context 'multiline if that fits on one line' do
@@ -250,7 +250,7 @@ describe RuboCop::Cop::Style::IfUnlessModifier do
           'Metrics/LineLength' => { 'Max' => 100 },
           'Style/IfUnlessModifier' => { 'MaxLineLength' => 80 }
         }
-        RuboCop::Config.new(hash)
+        RubbyCop::Config.new(hash)
       end
 
       it "accepts multiline if that doesn't fit on one line" do

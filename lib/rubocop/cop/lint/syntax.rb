@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Lint
       # This is actually not a cop and inspects nothing. It just provides
-      # methods to repack Parser's diagnostics/errors into RuboCop's offenses.
+      # methods to repack Parser's diagnostics/errors into RubbyCop's offenses.
       module Syntax
         PseudoSourceRange = Struct.new(:line, :column, :source_line, :begin_pos,
                                        :end_pos)

@@ -2,11 +2,11 @@
 
 require 'parser/current'
 
-describe RuboCop::NodePattern do
+describe RubbyCop::NodePattern do
   let(:root_node) do
     buffer = Parser::Source::Buffer.new('(string)', 1)
     buffer.source = ruby
-    builder = RuboCop::AST::Builder.new
+    builder = RubbyCop::AST::Builder.new
     Parser::CurrentRuby.new(builder).parse(buffer)
   end
 
@@ -14,7 +14,7 @@ describe RuboCop::NodePattern do
   let(:params) { [] }
 
   shared_examples :matching do
-    include RuboCop::AST::Sexp
+    include RubbyCop::AST::Sexp
     it 'matches' do
       expect(described_class.new(pattern).match(node, *params)).to be true
     end
@@ -29,12 +29,12 @@ describe RuboCop::NodePattern do
   shared_examples :invalid do
     it 'is invalid' do
       expect { described_class.new(pattern) }
-        .to raise_error(RuboCop::NodePattern::Invalid)
+        .to raise_error(RubbyCop::NodePattern::Invalid)
     end
   end
 
   shared_examples :single_capture do
-    include RuboCop::AST::Sexp
+    include RubbyCop::AST::Sexp
     it 'yields captured value(s) and returns true if there is a block' do
       expect do |probe|
         compiled = described_class.new(pattern)
@@ -53,7 +53,7 @@ describe RuboCop::NodePattern do
   end
 
   shared_examples :multiple_capture do
-    include RuboCop::AST::Sexp
+    include RubbyCop::AST::Sexp
     it 'yields captured value(s) and returns true if there is a block' do
       expect do |probe|
         compiled = described_class.new(pattern)
@@ -846,7 +846,7 @@ describe RuboCop::NodePattern do
   end
 
   describe 'funcalls' do
-    module RuboCop
+    module RubbyCop
       class NodePattern
         def goodmatch(_arg1)
           true

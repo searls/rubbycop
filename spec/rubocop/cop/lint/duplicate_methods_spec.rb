@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::DuplicateMethods do
+describe RubbyCop::Cop::Lint::DuplicateMethods do
   subject(:cop) { described_class.new }
 
   shared_examples 'in scope' do |type, opening_line|

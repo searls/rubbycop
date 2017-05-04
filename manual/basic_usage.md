@@ -13,7 +13,7 @@ Alternatively you can pass `rubocop` a list of files and directories to check:
 $ rubocop app spec lib/something.rb
 ```
 
-Here's RuboCop in action. Consider the following Ruby source code:
+Here's RubbyCop in action. Consider the following Ruby source code:
 
 ```ruby
 def badName
@@ -23,7 +23,7 @@ def badName
 end
 ```
 
-Running RuboCop on it (assuming it's in a file named `test.rb`) would produce the following report:
+Running RubbyCop on it (assuming it's in a file named `test.rb`) would produce the following report:
 
 ```
 Inspecting 1 file
@@ -57,7 +57,7 @@ Command flag              | Description
 --------------------------|------------------------------------------------------------
 `-v/--version`            | Displays the current version and exits.
 `-V/--verbose-version`    | Displays the current version plus the version of Parser and Ruby.
-`-L/--list-target-files`  | List all files RuboCop will inspect.
+`-L/--list-target-files`  | List all files RubbyCop will inspect.
 `-F/--fail-fast`          | Inspects in modification time order and stops after first file with offenses.
 `-C/--cache`              | Store and reuse results for faster operation.
 `-d/--debug`              | Displays some extra debug output.
@@ -90,12 +90,12 @@ Thus, the options have the following order of precedence (from highest to lowest
 
 ## Exit codes
 
-RuboCop exits with the following status codes:
+RubbyCop exits with the following status codes:
 
 - 0 if no offenses are found, or if the severity of all offenses are less than
   `--fail-level`. (By default, if you use `--auto-correct`, offenses which are
-  auto-corrected do not cause RuboCop to fail.)
+  auto-corrected do not cause RubbyCop to fail.)
 - 1 if one or more offenses equal or greater to `--fail-level` are found. (By
   default, this is any offense which is not auto-corrected.)
-- 2 if RuboCop terminates abnormally due to invalid configuration, invalid CLI
+- 2 if RubbyCop terminates abnormally due to invalid configuration, invalid CLI
   options, or an internal error.

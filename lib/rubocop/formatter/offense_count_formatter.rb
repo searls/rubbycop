@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This formatter displays the list of offended cops with a count of how
     # many offenses of their kind were found. Ordered by desc offense count

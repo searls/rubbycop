@@ -2,14 +2,14 @@
 
 require 'timeout'
 
-describe RuboCop::CLI, :isolated_environment do
+describe RubbyCop::CLI, :isolated_environment do
   include_context 'cli spec behavior'
 
   subject(:cli) { described_class.new }
 
   context 'when interrupted' do
     it 'returns 1' do
-      allow_any_instance_of(RuboCop::Runner)
+      allow_any_instance_of(RubbyCop::Runner)
         .to receive(:aborting?).and_return(true)
       create_file('example.rb', '# encoding: utf-8')
       expect(cli.run(['example.rb'])).to eq(1)
@@ -17,7 +17,7 @@ describe RuboCop::CLI, :isolated_environment do
   end
 
   describe '#trap_interrupt' do
-    let(:runner) { RuboCop::Runner.new({}, RuboCop::ConfigStore.new) }
+    let(:runner) { RubbyCop::Runner.new({}, RubbyCop::ConfigStore.new) }
     let(:interrupt_handlers) { [] }
 
     before do
@@ -217,7 +217,7 @@ describe RuboCop::CLI, :isolated_environment do
     end
 
     before do
-      allow_any_instance_of(RuboCop::Runner)
+      allow_any_instance_of(RubbyCop::Runner)
         .to receive(:errors).and_return(errors)
     end
 
@@ -566,7 +566,7 @@ describe RuboCop::CLI, :isolated_environment do
 
   describe 'rails cops' do
     before(:each) do
-      RuboCop::ConfigLoader.default_configuration = nil
+      RubbyCop::ConfigLoader.default_configuration = nil
     end
 
     describe 'enabling/disabling' do
@@ -708,7 +708,7 @@ describe RuboCop::CLI, :isolated_environment do
 
   describe 'configuration from file' do
     before(:each) do
-      RuboCop::ConfigLoader.default_configuration = nil
+      RubbyCop::ConfigLoader.default_configuration = nil
     end
 
     context 'when configured for rails style indentation' do

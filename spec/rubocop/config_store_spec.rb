@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-describe RuboCop::ConfigStore do
+describe RubbyCop::ConfigStore do
   subject(:config_store) { described_class.new }
 
   before do
-    allow(RuboCop::ConfigLoader).to receive(:configuration_file_for) do |arg|
+    allow(RubbyCop::ConfigLoader).to receive(:configuration_file_for) do |arg|
       # File tree:
       # file1
       # dir/.rubocop.yml
@@ -12,13 +12,13 @@ describe RuboCop::ConfigStore do
       # dir/subdir/file3
       (arg =~ /dir/ ? 'dir' : '.') + '/.rubocop.yml'
     end
-    allow(RuboCop::ConfigLoader)
+    allow(RubbyCop::ConfigLoader)
       .to receive(:configuration_from_file) { |arg| arg }
-    allow(RuboCop::ConfigLoader)
-      .to receive(:load_file) { |arg| RuboCop::Config.new(arg) }
-    allow(RuboCop::ConfigLoader)
+    allow(RubbyCop::ConfigLoader)
+      .to receive(:load_file) { |arg| RubbyCop::Config.new(arg) }
+    allow(RubbyCop::ConfigLoader)
       .to receive(:merge_with_default) { |config| "merged #{config.to_h}" }
-    allow(RuboCop::ConfigLoader)
+    allow(RubbyCop::ConfigLoader)
       .to receive(:default_configuration) { 'default config' }
   end
 
@@ -30,12 +30,12 @@ describe RuboCop::ConfigStore do
 
     context 'when no config specified in command line' do
       it 'gets config path and config from cache if available' do
-        expect(RuboCop::ConfigLoader)
+        expect(RubbyCop::ConfigLoader)
           .to receive(:configuration_file_for).once.with('dir')
-        expect(RuboCop::ConfigLoader)
+        expect(RubbyCop::ConfigLoader)
           .to receive(:configuration_file_for).once.with('dir/subdir')
         # The stub returns the same config path for dir and dir/subdir.
-        expect(RuboCop::ConfigLoader)
+        expect(RubbyCop::ConfigLoader)
           .to receive(:configuration_from_file).once.with('dir/.rubocop.yml')
 
         config_store.for('dir/file2')
@@ -44,15 +44,15 @@ describe RuboCop::ConfigStore do
       end
 
       it 'searches for config path if not available in cache' do
-        expect(RuboCop::ConfigLoader).to receive(:configuration_file_for).once
-        expect(RuboCop::ConfigLoader).to receive(:configuration_from_file).once
+        expect(RubbyCop::ConfigLoader).to receive(:configuration_file_for).once
+        expect(RubbyCop::ConfigLoader).to receive(:configuration_from_file).once
         config_store.for('file1')
       end
 
       context 'when --force-default-config option is specified' do
         it 'uses default config without searching for config path' do
-          expect(RuboCop::ConfigLoader).not_to receive(:configuration_file_for)
-          expect(RuboCop::ConfigLoader).not_to receive(:configuration_from_file)
+          expect(RubbyCop::ConfigLoader).not_to receive(:configuration_file_for)
+          expect(RubbyCop::ConfigLoader).not_to receive(:configuration_from_file)
           config_store.force_default_config!
           expect(config_store.for('file1')).to eq('default config')
         end

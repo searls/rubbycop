@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::MultilineOperationIndentation do
+describe RubbyCop::Cop::Layout::MultilineOperationIndentation do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    merged = RuboCop::ConfigLoader
+    merged = RubbyCop::ConfigLoader
              .default_configuration['Layout/MultilineOperationIndentation']
              .merge(cop_config)
              .merge('IndentationWidth' => cop_indent)
-    RuboCop::Config
+    RubbyCop::Config
       .new('Layout/MultilineOperationIndentation' => merged,
            'Layout/IndentationWidth' => { 'Width' => indentation_width })
   end

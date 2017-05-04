@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common functionality for checking whether an AST node/token is aligned
     # with something on a preceding or following line

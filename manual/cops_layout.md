@@ -820,14 +820,14 @@ This cop checks for extra/unnecessary whitespace.
 
 ```ruby
 # good if AllowForAlignment is true
-name      = "RuboCop"
+name      = "RubbyCop"
 # Some comment and an empty line
 
 website  += "/bbatsov/rubocop" unless cond
 puts        "rubocop"          if     debug
 
 # bad for any configuration
-set_app("RuboCop")
+set_app("RubbyCop")
 website  = "https://github.com/bbatsov/rubocop"
 ```
 

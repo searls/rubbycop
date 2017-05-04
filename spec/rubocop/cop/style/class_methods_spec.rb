@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::ClassMethods do
+describe RubbyCop::Cop::Style::ClassMethods do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for methods using a class name' do

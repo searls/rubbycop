@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Formatter
     describe HTMLFormatter, :isolated_environment do
       spec_root = File.expand_path('../../..', __FILE__)
@@ -48,7 +48,7 @@ module RuboCop
         html = File.read(expected_html_path, encoding: Encoding::UTF_8)
         # Avoid failure on version bump
         html.sub(/(class="version".{0,20})\d+(?:\.\d+){2}/i) do
-          Regexp.last_match(1) + RuboCop::Version::STRING
+          Regexp.last_match(1) + RubbyCop::Version::STRING
         end
       end
 

@@ -2,7 +2,7 @@
 
 require 'uri'
 
-module RuboCop
+module RubbyCop
   module Cop
     # A scaffold for concrete cops.
     #
@@ -24,9 +24,9 @@ module RuboCop
     #     end
     #   end
     class Cop
-      extend RuboCop::AST::Sexp
+      extend RubbyCop::AST::Sexp
       extend NodePattern::Macros
-      include RuboCop::AST::Sexp
+      include RubbyCop::AST::Sexp
       include Util
       include IgnoredNode
       include AutocorrectLogic
@@ -177,7 +177,7 @@ module RuboCop
       private
 
       def annotate(message)
-        RuboCop::Cop::MessageAnnotator.new(
+        RubbyCop::Cop::MessageAnnotator.new(
           config, cop_config, @options
         ).annotate(message, name)
       end

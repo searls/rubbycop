@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::CommentConfig do
+describe RubbyCop::CommentConfig do
   subject(:comment_config) { described_class.new(parse_source(source)) }
 
   describe '#cop_enabled_at_line?' do
@@ -134,8 +134,8 @@ describe RuboCop::CommentConfig do
        'keyword all' do
       expected_part = (7..8).to_a
 
-      cops = RuboCop::Cop::Cop.all.reject do |klass|
-        klass == RuboCop::Cop::Lint::UnneededDisable
+      cops = RubbyCop::Cop::Cop.all.reject do |klass|
+        klass == RubbyCop::Cop::Lint::UnneededDisable
       end
 
       cops.each do |cop|

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-describe 'RuboCop Project' do
-  let(:cop_names) { RuboCop::Cop::Cop.all.map(&:cop_name) }
+describe 'RubbyCop Project' do
+  let(:cop_names) { RubbyCop::Cop::Cop.all.map(&:cop_name) }
 
   shared_context 'configuration file' do |config_path|
-    subject(:config) { RuboCop::ConfigLoader.load_file(config_path) }
+    subject(:config) { RubbyCop::ConfigLoader.load_file(config_path) }
 
     let(:configuration_keys) { config.keys }
     let(:raw_configuration) { config.to_h.values }
@@ -32,7 +32,7 @@ describe 'RuboCop Project' do
         enforced_styles = config[name]
                           .select { |key, _| key.start_with?('Enforced') }
         enforced_styles.each do |style_name, _style|
-          supported_key = RuboCop::Cop::Util.to_supported_styles(style_name)
+          supported_key = RubbyCop::Cop::Util.to_supported_styles(style_name)
           valid = config[name][supported_key]
           errors.push("#{supported_key} is missing for #{name}") unless valid
         end
@@ -43,7 +43,7 @@ describe 'RuboCop Project' do
   end
 
   describe 'cop message' do
-    let(:cops) { RuboCop::Cop::Cop.all }
+    let(:cops) { RubbyCop::Cop::Cop.all }
 
     it 'end with a period or a question mark' do
       cops.each do |cop|

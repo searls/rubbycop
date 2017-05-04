@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   class Runner
     attr_writer :errors # Needed only for testing.
   end
 end
 
-describe RuboCop::Runner, :isolated_environment do
+describe RubbyCop::Runner, :isolated_environment do
   include FileHelper
 
   let(:formatter_output_path) { 'formatter_output.txt' }
@@ -18,7 +18,7 @@ describe RuboCop::Runner, :isolated_environment do
 
   describe '#run' do
     let(:options) { { formatters: [['progress', formatter_output_path]] } }
-    subject(:runner) { described_class.new(options, RuboCop::ConfigStore.new) }
+    subject(:runner) { described_class.new(options, RubbyCop::ConfigStore.new) }
     context 'if there are no offenses in inspected files' do
       let(:source) { <<-END.strip_indent }
         # coding: utf-8
@@ -67,7 +67,7 @@ describe RuboCop::Runner, :isolated_environment do
         # ... but there's a crash in one cop.
         runner.errors = ['An error occurred in ...']
 
-        allow(RuboCop::ResultCache).to receive(:new) { cache }
+        allow(RubbyCop::ResultCache).to receive(:new) { cache }
       end
 
       let(:source) { '' }
@@ -131,17 +131,17 @@ describe RuboCop::Runner, :isolated_environment do
     end
 
     subject(:runner) do
-      runner_class = Class.new(RuboCop::Runner) do
+      runner_class = Class.new(RubbyCop::Runner) do
         def mobilized_cop_classes(_config)
-          RuboCop::Cop::Registry.new(
+          RubbyCop::Cop::Registry.new(
             [
-              RuboCop::Cop::Test::ClassMustBeAModuleCop,
-              RuboCop::Cop::Test::ModuleMustBeAClassCop
+              RubbyCop::Cop::Test::ClassMustBeAModuleCop,
+              RubbyCop::Cop::Test::ModuleMustBeAClassCop
             ]
           )
         end
       end
-      runner_class.new(options, RuboCop::ConfigStore.new)
+      runner_class.new(options, RubbyCop::ConfigStore.new)
     end
 
     context 'if there is an offense in an inspected file' do
@@ -154,7 +154,7 @@ describe RuboCop::Runner, :isolated_environment do
       it 'aborts because of an infinite loop' do
         expect do
           runner.run([])
-        end.to raise_error RuboCop::Runner::InfiniteCorrectionLoop
+        end.to raise_error RubbyCop::Runner::InfiniteCorrectionLoop
       end
     end
   end

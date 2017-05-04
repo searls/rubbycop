@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::ResultCache, :isolated_environment do
+describe RubbyCop::ResultCache, :isolated_environment do
   include FileHelper
 
   subject(:cache) do
@@ -8,10 +8,10 @@ describe RuboCop::ResultCache, :isolated_environment do
   end
   let(:file) { 'example.rb' }
   let(:options) { {} }
-  let(:config_store) { double('config_store', for: RuboCop::Config.new) }
+  let(:config_store) { double('config_store', for: RubbyCop::Config.new) }
   let(:cache_root) { "#{Dir.pwd}/rubocop_cache" }
   let(:offenses) do
-    [RuboCop::Cop::Offense.new(:warning, location, 'unused var',
+    [RubbyCop::Cop::Offense.new(:warning, location, 'unused var',
                                'Lint/UselessAssignment')]
   end
   let(:location) do
@@ -30,7 +30,7 @@ describe RuboCop::ResultCache, :isolated_environment do
       x = 1
     END
     allow(config_store).to receive(:for).with('example.rb')
-                                        .and_return(RuboCop::Config.new)
+                                        .and_return(RubbyCop::Config.new)
   end
 
   describe 'cached result that was saved with no command line option' do
@@ -67,7 +67,7 @@ describe RuboCop::ResultCache, :isolated_environment do
         before do
           # Avoid getting "symlink() function is unimplemented on this
           # machine" on Windows.
-          if RuboCop::Platform.windows?
+          if RubbyCop::Platform.windows?
             skip 'Symlinks not implemented on Windows'
           end
 
@@ -98,7 +98,7 @@ describe RuboCop::ResultCache, :isolated_environment do
         context 'and symlink attack protection is disabled' do
           before do
             allow(config_store).to receive(:for).with('.').and_return(
-              RuboCop::Config.new(
+              RubbyCop::Config.new(
                 'AllCops' => {
                   'AllowSymlinksInCacheRootDirectory' => true
                 }
@@ -154,7 +154,7 @@ describe RuboCop::ResultCache, :isolated_environment do
   describe '#save' do
     context 'when the default internal encoding is UTF-8' do
       let(:offenses) do
-        [RuboCop::Cop::Offense.new(:warning, location, "unused var \xF0",
+        [RubbyCop::Cop::Offense.new(:warning, location, "unused var \xF0",
                                    'Lint/UselessAssignment')]
       end
       before { Encoding.default_internal = Encoding::UTF_8 }
@@ -168,7 +168,7 @@ describe RuboCop::ResultCache, :isolated_environment do
 
   describe '.cleanup' do
     before do
-      cfg = RuboCop::Config.new('AllCops' => { 'MaxFilesInCache' => 1 })
+      cfg = RubbyCop::Config.new('AllCops' => { 'MaxFilesInCache' => 1 })
       allow(config_store).to receive(:for).with('.').and_return(cfg)
       allow(config_store).to receive(:for).with('other.rb').and_return(cfg)
       create_file('other.rb', ['x = 1'])
@@ -204,12 +204,12 @@ describe RuboCop::ResultCache, :isolated_environment do
 
     before do
       allow(config_store).to receive(:for).with('.').and_return(
-        RuboCop::Config.new('AllCops' => { 'CacheRootDirectory' => '/tmp' })
+        RubbyCop::Config.new('AllCops' => { 'CacheRootDirectory' => '/tmp' })
       )
     end
 
     it 'contains the process uid' do
-      cacheroot = RuboCop::ResultCache.cache_root(config_store)
+      cacheroot = RubbyCop::ResultCache.cache_root(config_store)
       expect(cacheroot).to eq(File.join(tmpdir, puid, 'rubocop_cache'))
     end
   end

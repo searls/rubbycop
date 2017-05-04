@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # rubocop:disable Style/FormatStringToken
-describe RuboCop::Cop::Lint::FormatParameterMismatch do
+describe RubbyCop::Cop::Lint::FormatParameterMismatch do
   subject(:cop) { described_class.new }
 
   shared_examples 'variables' do |variable|

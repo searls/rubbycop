@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Registry do
+describe RubbyCop::Cop::Registry do
   subject(:registry) { described_class.new(cops) }
 
   let(:cops) do
-    stub_const('RuboCop::Cop::Test', Module.new)
-    stub_const('RuboCop::Cop::RSpec', Module.new)
+    stub_const('RubbyCop::Cop::Test', Module.new)
+    stub_const('RubbyCop::Cop::RSpec', Module.new)
 
-    module RuboCop
+    module RubbyCop
       module Cop
         module Test
           # Create another cop with a different namespace
@@ -24,28 +24,28 @@ describe RuboCop::Cop::Registry do
     end
 
     [
-      RuboCop::Cop::Lint::ConditionPosition,
-      RuboCop::Cop::Lint::DuplicateMethods,
-      RuboCop::Cop::Layout::IndentArray,
-      RuboCop::Cop::Metrics::MethodLength,
-      RuboCop::Cop::RSpec::Foo,
-      RuboCop::Cop::Test::IndentArray
+      RubbyCop::Cop::Lint::ConditionPosition,
+      RubbyCop::Cop::Lint::DuplicateMethods,
+      RubbyCop::Cop::Layout::IndentArray,
+      RubbyCop::Cop::Metrics::MethodLength,
+      RubbyCop::Cop::RSpec::Foo,
+      RubbyCop::Cop::Test::IndentArray
     ]
   end
 
-  # `RuboCop::Cop::Cop` mutates its `registry` when inherited from.
+  # `RubbyCop::Cop::Cop` mutates its `registry` when inherited from.
   # This can introduce nondeterministic failures in other parts of the
   # specs if this mutation occurs before code that depends on this global cop
   # store. The workaround is to replace the global cop store with a temporary
   # store during these tests
   around do |test|
-    registry        = RuboCop::Cop::Cop.registry
+    registry        = RubbyCop::Cop::Cop.registry
     temporary_store = described_class.new(registry.cops)
-    RuboCop::Cop::Cop.instance_variable_set(:@registry, temporary_store)
+    RubbyCop::Cop::Cop.instance_variable_set(:@registry, temporary_store)
 
     test.run
 
-    RuboCop::Cop::Cop.instance_variable_set(:@registry, registry)
+    RubbyCop::Cop::Cop.instance_variable_set(:@registry, registry)
   end
 
   it 'exposes cop departments' do
@@ -103,7 +103,7 @@ describe RuboCop::Cop::Registry do
 
     it 'raises an error when a cop name is ambiguous' do
       expect { registry.qualified_cop_name('IndentArray', origin) }
-        .to raise_error(RuboCop::Cop::AmbiguousCopName).with_message(
+        .to raise_error(RubbyCop::Cop::AmbiguousCopName).with_message(
           'Ambiguous cop name `IndentArray` used in /app/.rubocop.yml needs ' \
           'department qualifier. Did you mean Layout/IndentArray or ' \
           'Test/IndentArray?'
@@ -117,12 +117,12 @@ describe RuboCop::Cop::Registry do
 
   it 'exposes a mapping of cop names to cop classes' do
     expect(registry.to_h).to eql(
-      'Lint/ConditionPosition' => [RuboCop::Cop::Lint::ConditionPosition],
-      'Lint/DuplicateMethods'  => [RuboCop::Cop::Lint::DuplicateMethods],
-      'Layout/IndentArray'     => [RuboCop::Cop::Layout::IndentArray],
-      'Metrics/MethodLength'   => [RuboCop::Cop::Metrics::MethodLength],
-      'Test/IndentArray'       => [RuboCop::Cop::Test::IndentArray],
-      'RSpec/Foo'              => [RuboCop::Cop::RSpec::Foo]
+      'Lint/ConditionPosition' => [RubbyCop::Cop::Lint::ConditionPosition],
+      'Lint/DuplicateMethods'  => [RubbyCop::Cop::Lint::DuplicateMethods],
+      'Layout/IndentArray'     => [RubbyCop::Cop::Layout::IndentArray],
+      'Metrics/MethodLength'   => [RubbyCop::Cop::Metrics::MethodLength],
+      'Test/IndentArray'       => [RubbyCop::Cop::Test::IndentArray],
+      'RSpec/Foo'              => [RubbyCop::Cop::RSpec::Foo]
     )
   end
 
@@ -138,7 +138,7 @@ describe RuboCop::Cop::Registry do
 
   context '#enabled' do
     let(:config) do
-      RuboCop::Config.new('Test/IndentArray' => { 'Enabled' => false })
+      RubbyCop::Config.new('Test/IndentArray' => { 'Enabled' => false })
     end
 
     it 'selects cops which are enabled in the config' do

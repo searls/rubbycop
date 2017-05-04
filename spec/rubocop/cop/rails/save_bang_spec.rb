@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::SaveBang do
+describe RubbyCop::Cop::Rails::SaveBang do
   subject(:cop) { described_class.new }
 
   shared_examples 'checks_common_offense' do |method|

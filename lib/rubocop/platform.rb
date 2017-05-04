@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module RuboCop
-  # This module provides information on the platform that RuboCop is being run
+module RubbyCop
+  # This module provides information on the platform that RubbyCop is being run
   # on.
   module Platform
     def self.windows?

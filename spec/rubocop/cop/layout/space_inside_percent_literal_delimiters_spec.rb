@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::SpaceInsidePercentLiteralDelimiters do
+describe RubbyCop::Cop::Layout::SpaceInsidePercentLiteralDelimiters do
   subject(:cop) { described_class.new }
 
   %w[i I w W x].each do |type|

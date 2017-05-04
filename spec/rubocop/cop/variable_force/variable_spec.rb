@@ -2,15 +2,15 @@
 
 require 'rubocop/ast/sexp'
 
-describe RuboCop::Cop::VariableForce::Variable do
-  include RuboCop::AST::Sexp
+describe RubbyCop::Cop::VariableForce::Variable do
+  include RubbyCop::AST::Sexp
 
   describe '.new' do
     context 'when non variable declaration node is passed' do
       it 'raises error' do
         name = :foo
         declaration_node = s(:def)
-        scope = RuboCop::Cop::VariableForce::Scope.new(s(:class))
+        scope = RubbyCop::Cop::VariableForce::Scope.new(s(:class))
         expect { described_class.new(name, declaration_node, scope) }
           .to raise_error(ArgumentError)
       end

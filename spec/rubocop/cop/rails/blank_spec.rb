@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::Blank, :config do
+describe RubbyCop::Cop::Rails::Blank, :config do
   subject(:cop) { described_class.new(config) }
 
   shared_examples :offense do |source, correction, message|

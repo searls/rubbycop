@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::EndBlock do
+describe RubbyCop::Cop::Style::EndBlock do
   subject(:cop) { described_class.new }
 
   it 'reports an offense for an END block' do

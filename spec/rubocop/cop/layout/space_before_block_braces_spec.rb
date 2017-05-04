@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::SpaceBeforeBlockBraces, :config do
+describe RubbyCop::Cop::Layout::SpaceBeforeBlockBraces, :config do
   subject(:cop) { described_class.new(config) }
   let(:cop_config) { { 'EnforcedStyle' => 'space' } }
 

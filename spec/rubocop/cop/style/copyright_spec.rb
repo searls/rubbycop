@@ -15,7 +15,7 @@ def expect_copyright_offense(cop, source)
   expect(cop.messages[0]).to eq(cop.message)
 end
 
-describe RuboCop::Cop::Style::Copyright, :config do
+describe RubbyCop::Cop::Style::Copyright, :config do
   subject(:cop) { described_class.new(config) }
   let(:cop_config) { { 'Notice' => 'Copyright (\(c\) )?2015 Acme Inc' } }
 
@@ -88,14 +88,14 @@ describe RuboCop::Cop::Style::Copyright, :config do
       cop_config['AutocorrectNotice'] = '# Copyleft (c) 2015 Acme Inc.'
       expect do
         autocorrect_source(cop, source)
-      end.to raise_error(RuboCop::Warning)
+      end.to raise_error(RubbyCop::Warning)
     end
 
     it 'fails to autocorrect if no AutocorrectNotice is given' do
       # cop_config['AutocorrectNotice'] = '# Copyleft (c) 2015 Acme Inc.'
       expect do
         autocorrect_source(cop, source)
-      end.to raise_error(RuboCop::Warning)
+      end.to raise_error(RubbyCop::Warning)
     end
   end
 

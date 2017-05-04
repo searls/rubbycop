@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::AmbiguousOperator do
+describe RubbyCop::Cop::Lint::AmbiguousOperator do
   subject(:cop) { described_class.new }
 
   before do

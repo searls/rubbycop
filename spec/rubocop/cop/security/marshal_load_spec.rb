@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Security::MarshalLoad, :config do
+describe RubbyCop::Cop::Security::MarshalLoad, :config do
   subject(:cop) { described_class.new(config) }
 
   before do

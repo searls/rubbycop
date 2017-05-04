@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::NestedTernaryOperator do
+describe RubbyCop::Cop::Style::NestedTernaryOperator do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for a nested ternary operator expression' do

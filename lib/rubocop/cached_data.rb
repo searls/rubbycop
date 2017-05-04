@@ -2,8 +2,8 @@
 
 require 'json'
 
-module RuboCop
-  # Converts RuboCop objects to and from the serialization format JSON.
+module RubbyCop
+  # Converts RubbyCop objects to and from the serialization format JSON.
   class CachedData
     def initialize(filename)
       @filename = filename

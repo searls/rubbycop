@@ -2,7 +2,7 @@
 
 require 'uri'
 
-module RuboCop
+module RubbyCop
   module Cop
     module Metrics
       # This cop checks the length of lines in the source code.

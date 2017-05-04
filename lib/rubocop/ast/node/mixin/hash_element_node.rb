@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # Common functionality for nodes that can be used as hash elements:
     # `pair`, `kwsplat`

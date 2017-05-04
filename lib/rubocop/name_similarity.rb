@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # Common functionality for finding names that are similar to a given name.
   module NameSimilarity
     MINIMUM_SIMILARITY_TO_SUGGEST = 0.9

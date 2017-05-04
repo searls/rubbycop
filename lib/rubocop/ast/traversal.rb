@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # Provides methods for traversing an AST.
     # Does not transform an AST; for that, use Parser::AST::Processor.

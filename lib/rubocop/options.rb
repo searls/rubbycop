@@ -3,7 +3,7 @@
 require 'optparse'
 require 'shellwords'
 
-module RuboCop
+module RubbyCop
   # This class handles command line options.
   class Options
     EXITING_OPTIONS = %i[version verbose_version show_cops].freeze
@@ -124,9 +124,9 @@ module RuboCop
     end
 
     def add_severity_option(opts)
-      table = RuboCop::Cop::Severity::CODE_TABLE.merge(A: :autocorrect)
+      table = RubbyCop::Cop::Severity::CODE_TABLE.merge(A: :autocorrect)
       option(opts, '--fail-level SEVERITY',
-             RuboCop::Cop::Severity::NAMES + [:autocorrect],
+             RubbyCop::Cop::Severity::NAMES + [:autocorrect],
              table) do |severity|
         @options[:fail_level] = severity
       end
@@ -285,7 +285,7 @@ module RuboCop
 
   # This module contains help texts for command line options.
   module OptionsHelp
-    MAX_EXCL = RuboCop::Options::DEFAULT_MAXIMUM_EXCLUSION_ITEMS.to_s
+    MAX_EXCL = RubbyCop::Options::DEFAULT_MAXIMUM_EXCLUSION_ITEMS.to_s
     TEXT = {
       only:                  'Run only the given cop(s).',
       only_guide_cops:      ['Run only cops for rules that link to a',
@@ -341,7 +341,7 @@ module RuboCop
       extra_details:         'Display extra details in offense messages.',
       rails:                 'Run extra Rails cops.',
       lint:                  'Run only lint cops.',
-      list_target_files:     'List all files RuboCop will inspect.',
+      list_target_files:     'List all files RubbyCop will inspect.',
       auto_correct:          'Auto-correct offenses.',
       no_color:              'Force color output on or off.',
       version:               'Display version.',

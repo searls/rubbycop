@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::TrailingBlankLines, :config do
+describe RubbyCop::Cop::Layout::TrailingBlankLines, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'when EnforcedStyle is final_newline' do

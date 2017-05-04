@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::EmptyMethod, :config do
+describe RubbyCop::Cop::Style::EmptyMethod, :config do
   subject(:cop) { described_class.new(config) }
 
   before do

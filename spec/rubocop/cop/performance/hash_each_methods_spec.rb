@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::HashEachMethods do
+describe RubbyCop::Cop::Performance::HashEachMethods do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for Hash#keys.each' do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::ConditionalAssignment do
+describe RubbyCop::Cop::Style::ConditionalAssignment do
   subject(:cop) { described_class.new(config) }
 
   shared_examples 'all variable types' do |variable|
@@ -642,7 +642,7 @@ describe RuboCop::Cop::Style::ConditionalAssignment do
 
   context 'SingleLineConditionsOnly true' do
     let(:config) do
-      RuboCop::Config.new('Style/ConditionalAssignment' => {
+      RubbyCop::Config.new('Style/ConditionalAssignment' => {
                             'Enabled' => true,
                             'SingleLineConditionsOnly' => true,
                             'IncludeTernaryExpressions' => true,
@@ -855,7 +855,7 @@ describe RuboCop::Cop::Style::ConditionalAssignment do
 
   context 'SingleLineConditionsOnly false' do
     let(:config) do
-      RuboCop::Config.new('Style/ConditionalAssignment' => {
+      RubbyCop::Config.new('Style/ConditionalAssignment' => {
                             'Enabled' => true,
                             'SingleLineConditionsOnly' => false,
                             'IncludeTernaryExpressions' => true,
@@ -1132,7 +1132,7 @@ describe RuboCop::Cop::Style::ConditionalAssignment do
 
   context 'IncludeTernaryExpressions false' do
     let(:config) do
-      RuboCop::Config.new('Style/ConditionalAssignment' => {
+      RubbyCop::Config.new('Style/ConditionalAssignment' => {
                             'Enabled' => true,
                             'SingleLineConditionsOnly' => true,
                             'IncludeTernaryExpressions' => false,

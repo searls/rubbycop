@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # This cop enforces consistent use of `Object#is_a?` or `Object#kind_of?`.

@@ -3,7 +3,7 @@
 require 'support/file_helper'
 require 'rubocop/rake_task'
 
-describe RuboCop::RakeTask do
+describe RubbyCop::RakeTask do
   include FileHelper
 
   describe 'defining tasks' do
@@ -48,7 +48,7 @@ describe RuboCop::RakeTask do
       described_class.new
 
       cli = double('cli', run: 0)
-      allow(RuboCop::CLI).to receive(:new) { cli }
+      allow(RubbyCop::CLI).to receive(:new) { cli }
       expect(cli).to receive(:run).with([])
 
       Rake::Task['rubocop'].execute
@@ -64,7 +64,7 @@ describe RuboCop::RakeTask do
       end
 
       cli = double('cli', run: 0)
-      allow(RuboCop::CLI).to receive(:new) { cli }
+      allow(RubbyCop::CLI).to receive(:new) { cli }
       options = ['--format', 'files', '--display-cop-names', 'lib/**/*.rb']
       expect(cli).to receive(:run).with(options)
 
@@ -79,7 +79,7 @@ describe RuboCop::RakeTask do
       end
 
       cli = double('cli', run: 0)
-      allow(RuboCop::CLI).to receive(:new) { cli }
+      allow(RubbyCop::CLI).to receive(:new) { cli }
       options = ['--format', 'files', '--require', 'library',
                  '--display-cop-names']
       expect(cli).to receive(:run).with(options)
@@ -93,7 +93,7 @@ describe RuboCop::RakeTask do
       end
 
       cli = double('cli', run: 1)
-      allow(RuboCop::CLI).to receive(:new) { cli }
+      allow(RubbyCop::CLI).to receive(:new) { cli }
 
       expect { Rake::Task['rubocop'].execute }.not_to raise_error
     end
@@ -102,7 +102,7 @@ describe RuboCop::RakeTask do
       described_class.new
 
       cli = double('cli', run: 1)
-      allow(RuboCop::CLI).to receive(:new) { cli }
+      allow(RubbyCop::CLI).to receive(:new) { cli }
 
       expect { Rake::Task['rubocop'].execute }.to raise_error(SystemExit)
     end
@@ -122,14 +122,14 @@ describe RuboCop::RakeTask do
       expect { Rake::Task['rubocop'].execute }.to raise_error(SystemExit)
 
       expect($stdout.string).to eq(<<-END.strip_indent)
-        Running RuboCop...
+        Running RubbyCop...
 
         1  Style/SpecialGlobalVars
         --
         1  Total
 
       END
-      expect($stderr.string.strip).to eq 'RuboCop failed!'
+      expect($stderr.string.strip).to eq 'RubbyCop failed!'
     end
 
     context 'auto_correct' do
@@ -137,7 +137,7 @@ describe RuboCop::RakeTask do
         described_class.new
 
         cli = double('cli', run: 0)
-        allow(RuboCop::CLI).to receive(:new) { cli }
+        allow(RubbyCop::CLI).to receive(:new) { cli }
         options = ['--auto-correct']
         expect(cli).to receive(:run).with(options)
 
@@ -154,7 +154,7 @@ describe RuboCop::RakeTask do
         end
 
         cli = double('cli', run: 0)
-        allow(RuboCop::CLI).to receive(:new) { cli }
+        allow(RubbyCop::CLI).to receive(:new) { cli }
         options = ['--auto-correct', '--format', 'files', '-D', 'lib/**/*.rb']
         expect(cli).to receive(:run).with(options)
 

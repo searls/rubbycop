@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::DoubleStartEndWith do
+describe RubbyCop::Cop::Performance::DoubleStartEndWith do
   subject(:cop) { described_class.new(config) }
 
   context 'IncludeActiveSupportAliases: false' do
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'Performance/DoubleStartEndWith' => {
           'IncludeActiveSupportAliases' => false
         }
@@ -130,7 +130,7 @@ describe RuboCop::Cop::Performance::DoubleStartEndWith do
 
   context 'IncludeActiveSupportAliases: true' do
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'Performance/DoubleStartEndWith' => {
           'IncludeActiveSupportAliases' => true
         }

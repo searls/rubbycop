@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::Void do
+describe RubbyCop::Cop::Lint::Void do
   subject(:cop) { described_class.new }
 
   described_class::OPS.each do |op|

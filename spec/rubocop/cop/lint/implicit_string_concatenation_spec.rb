@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::ImplicitStringConcatenation do
+describe RubbyCop::Cop::Lint::ImplicitStringConcatenation do
   subject(:cop) { described_class.new }
 
   before do

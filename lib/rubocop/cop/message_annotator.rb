@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Message Annotator class annotates a basic offense message
     # based on params passed into initializer.
@@ -8,7 +8,7 @@ module RuboCop
     # @see #initialize
     #
     # @example
-    #   RuboCop::Cop::MessageAnnotator.new(
+    #   RubbyCop::Cop::MessageAnnotator.new(
     #     config, cop_config, @options
     #   ).annotate('message', 'Cop/CopName')
     #  #=> 'Cop/CopName: message (http://example.org/styleguide)'
@@ -21,7 +21,7 @@ module RuboCop
         attr_reader :style_guide_urls
       end
 
-      # @param config [RuboCop::Config] Check configs for all cops
+      # @param config [RubbyCop::Config] Check configs for all cops
       #   @note Message Annotator specifically checks the
       #     following config options for_all_cops
       #     :StyleGuideBaseURL [String] URL for styleguide

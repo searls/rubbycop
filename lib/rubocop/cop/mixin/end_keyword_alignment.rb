@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Functions for checking the alignment of the `end` keyword.
     module EndKeywordAlignment

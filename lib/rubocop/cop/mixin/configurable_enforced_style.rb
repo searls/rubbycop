@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Handles `EnforcedStyle` configuration parameters.
     module ConfigurableEnforcedStyle

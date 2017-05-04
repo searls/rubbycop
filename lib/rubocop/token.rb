@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # A basic wrapper around Parser's tokens.
   class Token
     attr_reader :pos, :type, :text

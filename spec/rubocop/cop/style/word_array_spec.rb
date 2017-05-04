@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::WordArray, :config do
+describe RubbyCop::Cop::Style::WordArray, :config do
   subject(:cop) { described_class.new(config) }
 
   before(:each) do
@@ -160,8 +160,8 @@ describe RuboCop::Cop::Style::WordArray, :config do
       # Regression test for GH issue #2740
       cop1 = described_class.new(config)
       cop2 = described_class.new(config)
-      RuboCop::Formatter::DisabledConfigFormatter.config_to_allow_offenses = {}
-      RuboCop::Formatter::DisabledConfigFormatter.detected_styles = {}
+      RubbyCop::Formatter::DisabledConfigFormatter.config_to_allow_offenses = {}
+      RubbyCop::Formatter::DisabledConfigFormatter.detected_styles = {}
       # Don't use `inspect_source`; it resets `config_to_allow_offenses` each
       #   time, which suppresses the bug we are checking for
       _investigate(cop1, parse_source("['g', 'h']"))

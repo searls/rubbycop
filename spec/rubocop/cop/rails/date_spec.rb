@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::Date, :config do
+describe RubbyCop::Cop::Rails::Date, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'when EnforcedStyle is "strict"' do
@@ -66,7 +66,7 @@ describe RuboCop::Cop::Rails::Date, :config do
       expect(cop.offenses).to be_empty
     end
 
-    RuboCop::Cop::Rails::TimeZone::ACCEPTED_METHODS.each do |a_method|
+    RubbyCop::Cop::Rails::TimeZone::ACCEPTED_METHODS.each do |a_method|
       it "registers an offense for val.to_time.#{a_method}" do
         inspect_source(cop, "val.to_time.#{a_method}")
         expect(cop.offenses.size).to eq(1)
@@ -89,7 +89,7 @@ describe RuboCop::Cop::Rails::Date, :config do
       expect(cop.offenses.size).to eq(1)
     end
 
-    RuboCop::Cop::Rails::TimeZone::ACCEPTED_METHODS.each do |a_method|
+    RubbyCop::Cop::Rails::TimeZone::ACCEPTED_METHODS.each do |a_method|
       it "accepts val.to_time.#{a_method}" do
         inspect_source(cop, "val.to_time.#{a_method}")
         expect(cop.offenses).to be_empty

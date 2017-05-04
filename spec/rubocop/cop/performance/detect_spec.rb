@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::Detect do
+describe RubbyCop::Cop::Performance::Detect do
   subject(:cop) { described_class.new(config) }
 
   let(:collection_method) { nil }
   let(:config) do
-    RuboCop::Config.new(
+    RubbyCop::Config.new(
       'Style/CollectionMethods' => {
         'PreferredMethods' => {
           'detect' => collection_method
@@ -227,7 +227,7 @@ describe RuboCop::Cop::Performance::Detect do
 
   context 'SafeMode true' do
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'Rails' => {
           'Enabled' => true
         },

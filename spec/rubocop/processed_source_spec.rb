@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-describe RuboCop::ProcessedSource do
+describe RubbyCop::ProcessedSource do
   include FileHelper
 
   subject(:processed_source) { described_class.new(source, ruby_version, path) }
-  let(:ruby_version) { RuboCop::Config::KNOWN_RUBIES.last }
+  let(:ruby_version) { RubbyCop::Config::KNOWN_RUBIES.last }
 
   let(:source) { <<-END.strip_indent }
     # encoding: utf-8
@@ -33,10 +33,10 @@ describe RuboCop::ProcessedSource do
       end
     end
 
-    it 'raises RuboCop::Error when the file does not exist' do
+    it 'raises RubbyCop::Error when the file does not exist' do
       expect do
         described_class.from_file('foo', ruby_version)
-      end.to raise_error(RuboCop::Error)
+      end.to raise_error(RubbyCop::Error)
         .with_message(/No such file or directory/)
     end
   end
@@ -55,7 +55,7 @@ describe RuboCop::ProcessedSource do
 
   describe '#ast' do
     it 'is the root node of AST' do
-      expect(processed_source.ast).to be_a(RuboCop::AST::Node)
+      expect(processed_source.ast).to be_a(RubbyCop::AST::Node)
     end
   end
 
@@ -69,7 +69,7 @@ describe RuboCop::ProcessedSource do
   describe '#tokens' do
     it 'has an array of tokens' do
       expect(processed_source.tokens).to be_a(Array)
-      expect(processed_source.tokens.first).to be_a(RuboCop::Token)
+      expect(processed_source.tokens.first).to be_a(RubbyCop::Token)
     end
   end
 
@@ -92,7 +92,7 @@ describe RuboCop::ProcessedSource do
     context 'when the source lacks encoding comment and is really utf-8 ' \
             'encoded but has been read as US-ASCII' do
       let(:source) do
-        # When files are read into RuboCop, the encoding of source code
+        # When files are read into RubbyCop, the encoding of source code
         # lacking an encoding comment will default to the external encoding,
         # which could for example be US-ASCII if the LC_ALL environment
         # variable is set to "C".

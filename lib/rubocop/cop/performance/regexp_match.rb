@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Performance
       # In Ruby 2.4, `String#match?`, `Regexp#match?` and `Symbol#match?`

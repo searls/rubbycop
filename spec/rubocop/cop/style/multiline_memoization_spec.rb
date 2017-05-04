@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::MultilineMemoization, :config do
+describe RubbyCop::Cop::Style::MultilineMemoization, :config do
   subject(:cop) { described_class.new(config) }
   let(:message) { described_class::MSG }
 

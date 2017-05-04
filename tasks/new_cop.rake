@@ -15,7 +15,7 @@ task :new_cop, [:cop] do |_task, args|
   cop_name = args[:cop] # Department/Name
   raise ArgumentError, 'One argument is required' unless cop_name
 
-  badge = RuboCop::Cop::Badge.parse(cop_name)
+  badge = RubbyCop::Cop::Badge.parse(cop_name)
 
   unless badge.qualified?
     raise ArgumentError, 'Specify a cop name with Department/Name style'
@@ -25,7 +25,7 @@ task :new_cop, [:cop] do |_task, args|
     # frozen_string_literal: true
 
     # TODO: when finished, run `rake generate_cops_documentation` to update the docs
-    module RuboCop
+    module RubbyCop
       module Cop
         module #{badge.department}
           # TODO: Write cop description and example of bad / good code.
@@ -72,8 +72,8 @@ task :new_cop, [:cop] do |_task, args|
   spec_code = <<-END.strip_indent
     # frozen_string_literal: true
 
-    describe RuboCop::Cop::#{badge.department}::#{badge.cop_name} do
-      let(:config) { RuboCop::Config.new }
+    describe RubbyCop::Cop::#{badge.department}::#{badge.cop_name} do
+      let(:config) { RubbyCop::Config.new }
       subject(:cop) { described_class.new(config) }
 
       # TODO: Write test code

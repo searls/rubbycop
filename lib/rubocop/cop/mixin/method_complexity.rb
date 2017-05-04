@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # This module handles measurement and reporting of complexity in methods.
     module MethodComplexity

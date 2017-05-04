@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Common functionality for safe assignment. By safe assignment we mean
     # putting parentheses around an assignment to indicate "I know I'm using an

@@ -2,7 +2,7 @@
 
 require 'tsort'
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # Checks for simple usages of parallel assignment.
@@ -121,7 +121,7 @@ module RuboCop
         # Newer versions have a better API, but that doesn't help us
         class AssignmentSorter
           include TSort
-          extend RuboCop::NodePattern::Macros
+          extend RubbyCop::NodePattern::Macros
 
           def_node_matcher :var_name, '{(casgn _ $_) (_ $_)}'
           def_node_search :uses_var?, '{({lvar ivar cvar gvar} %) (const _ %)}'

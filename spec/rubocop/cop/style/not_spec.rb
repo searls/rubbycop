@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::Not, :config do
+describe RubbyCop::Cop::Style::Not, :config do
   subject(:cop) { described_class.new(config) }
 
   it 'registers an offense for not' do

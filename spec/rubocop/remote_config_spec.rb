@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::RemoteConfig do
+describe RubbyCop::RemoteConfig do
   include FileHelper
 
   let(:remote_config_url) { 'http://example.com/rubocop.yml' }

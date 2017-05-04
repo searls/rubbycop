@@ -4,7 +4,7 @@
 require 'rainbow'
 Rainbow.enabled = false
 
-# Coverage support needs to be required *before* the RuboCop code is required!
+# Coverage support needs to be required *before* the RubbyCop code is required!
 require 'support/coverage'
 
 require 'rubocop'

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Metrics
       # This cop checks if the length a module exceeds some maximum value.

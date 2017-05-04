@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::AccessModifierIndentation do
+describe RubbyCop::Cop::Layout::AccessModifierIndentation do
   subject(:cop) { described_class.new(config) }
   let(:config) do
     c = cop_config.merge('SupportedStyles' => %w[indent outdent])
-    RuboCop::Config
+    RubbyCop::Config
       .new('Layout/AccessModifierIndentation' => c,
            'Layout/IndentationWidth' => { 'Width' => indentation_width })
   end

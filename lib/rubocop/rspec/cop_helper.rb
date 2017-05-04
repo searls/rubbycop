@@ -22,8 +22,8 @@ module CopHelper
     if source.is_a?(Array) && source.size == 1
       raise "Don't use an array for a single line of code: #{source}"
     end
-    RuboCop::Formatter::DisabledConfigFormatter.config_to_allow_offenses = {}
-    RuboCop::Formatter::DisabledConfigFormatter.detected_styles = {}
+    RubbyCop::Formatter::DisabledConfigFormatter.config_to_allow_offenses = {}
+    RubbyCop::Formatter::DisabledConfigFormatter.detected_styles = {}
     processed_source = parse_source(source, file)
     raise 'Error parsing example code' unless processed_source.valid_syntax?
     _investigate(cop, processed_source)
@@ -38,7 +38,7 @@ module CopHelper
       file = file.path
     end
 
-    RuboCop::ProcessedSource.new(source, ruby_version, file)
+    RubbyCop::ProcessedSource.new(source, ruby_version, file)
   end
 
   def autocorrect_source_file(cop, source)
@@ -51,7 +51,7 @@ module CopHelper
     _investigate(cop, processed_source)
 
     corrector =
-      RuboCop::Cop::Corrector.new(processed_source.buffer, cop.corrections)
+      RubbyCop::Cop::Corrector.new(processed_source.buffer, cop.corrections)
     corrector.rewrite
   end
 
@@ -65,19 +65,19 @@ module CopHelper
   end
 
   def _investigate(cop, processed_source)
-    forces = RuboCop::Cop::Force.all.each_with_object([]) do |klass, instances|
+    forces = RubbyCop::Cop::Force.all.each_with_object([]) do |klass, instances|
       next unless cop.join_force?(klass)
       instances << klass.new([cop])
     end
 
     commissioner =
-      RuboCop::Cop::Commissioner.new([cop], forces, raise_error: true)
+      RubbyCop::Cop::Commissioner.new([cop], forces, raise_error: true)
     commissioner.investigate(processed_source)
     commissioner
   end
 end
 
-module RuboCop
+module RubbyCop
   module Cop
     # Monkey-patch Cop for tests to provide easy access to messages and
     # highlights.

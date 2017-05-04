@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::InverseMethods do
+describe RubbyCop::Cop::Style::InverseMethods do
   let(:config) do
-    RuboCop::Config.new(
+    RubbyCop::Config.new(
       'Style/InverseMethods' => {
         'InverseMethods' => {
           any?: :none?,

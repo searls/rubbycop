@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Rails::PluralizationGrammar do
+describe RubbyCop::Cop::Rails::PluralizationGrammar do
   subject(:cop) { described_class.new }
   before do
     inspect_source(cop, source)

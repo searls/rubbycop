@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Team do
+describe RubbyCop::Cop::Team do
   subject(:team) { described_class.new(cop_classes, config, options) }
 
-  let(:cop_classes) { RuboCop::Cop::Cop.non_rails }
-  let(:config) { RuboCop::ConfigLoader.default_configuration }
+  let(:cop_classes) { RubbyCop::Cop::Cop.non_rails }
+  let(:config) { RubbyCop::ConfigLoader.default_configuration }
   let(:options) { nil }
-  let(:ruby_version) { RuboCop::Config::KNOWN_RUBIES.last }
+  let(:ruby_version) { RubbyCop::Config::KNOWN_RUBIES.last }
 
   before(:each) do
-    RuboCop::ConfigLoader.default_configuration = nil
+    RubbyCop::ConfigLoader.default_configuration = nil
   end
 
   describe 'INCOMPATIBLE_COPS' do
     include FileHelper
 
     let(:options) { { formatters: [], auto_correct: true } }
-    let(:runner) { RuboCop::Runner.new(options, RuboCop::ConfigStore.new) }
+    let(:runner) { RubbyCop::Runner.new(options, RubbyCop::ConfigStore.new) }
     let(:file_path) { 'example.rb' }
 
     it 'auto corrects without SyntaxError', :isolated_environment do
@@ -78,7 +78,7 @@ describe RuboCop::Cop::Team do
 
     let(:file_path) { '/tmp/example.rb' }
     let(:offenses) do
-      source = RuboCop::ProcessedSource.from_file(file_path, ruby_version)
+      source = RubbyCop::ProcessedSource.from_file(file_path, ruby_version)
       team.inspect_file(source)
     end
 
@@ -91,7 +91,7 @@ describe RuboCop::Cop::Team do
 
     it 'returns offenses' do
       expect(offenses).not_to be_empty
-      expect(offenses.all? { |o| o.is_a?(RuboCop::Cop::Offense) }).to be_truthy
+      expect(offenses.all? { |o| o.is_a?(RubbyCop::Cop::Offense) }).to be_truthy
     end
 
     context 'when Parser reports non-fatal warning for the file' do
@@ -118,7 +118,7 @@ describe RuboCop::Cop::Team do
       end
 
       it 'does autocorrection' do
-        source = RuboCop::ProcessedSource.from_file(file_path, ruby_version)
+        source = RubbyCop::ProcessedSource.from_file(file_path, ruby_version)
         team.inspect_file(source)
         corrected_source = File.read(file_path)
         expect(corrected_source).to eq("puts 'string'\n")
@@ -135,13 +135,13 @@ describe RuboCop::Cop::Team do
 
     it 'returns cop instances' do
       expect(cops).not_to be_empty
-      expect(cops.all? { |c| c.is_a?(RuboCop::Cop::Cop) }).to be_truthy
+      expect(cops.all? { |c| c.is_a?(RubbyCop::Cop::Cop) }).to be_truthy
     end
 
     context 'when only some cop classes are passed to .new' do
       let(:cop_classes) do
-        RuboCop::Cop::Registry.new(
-          [RuboCop::Cop::Lint::Void, RuboCop::Cop::Metrics::LineLength]
+        RubbyCop::Cop::Registry.new(
+          [RubbyCop::Cop::Lint::Void, RubbyCop::Cop::Metrics::LineLength]
         )
       end
 
@@ -158,12 +158,12 @@ describe RuboCop::Cop::Team do
         %w[
           Lint/Void
           Metrics/LineLength
-        ].each_with_object(RuboCop::Config.new) do |cop_name, accum|
+        ].each_with_object(RubbyCop::Config.new) do |cop_name, accum|
           accum[cop_name] = { 'Enabled' => false }
         end
       end
       let(:config) do
-        RuboCop::ConfigLoader.merge_with_default(disabled_config, '')
+        RubbyCop::ConfigLoader.merge_with_default(disabled_config, '')
       end
       let(:cop_names) { cops.map(&:name) }
 
@@ -177,33 +177,33 @@ describe RuboCop::Cop::Team do
 
   describe '#forces' do
     subject(:forces) { team.forces }
-    let(:cop_classes) { RuboCop::Cop::Cop.non_rails }
+    let(:cop_classes) { RubbyCop::Cop::Cop.non_rails }
 
     it 'returns force instances' do
       expect(forces).not_to be_empty
 
       forces.each do |force|
-        expect(force).to be_a(RuboCop::Cop::Force)
+        expect(force).to be_a(RubbyCop::Cop::Force)
       end
     end
 
     context 'when a cop joined a force' do
       let(:cop_classes) do
-        RuboCop::Cop::Registry.new([RuboCop::Cop::Lint::UselessAssignment])
+        RubbyCop::Cop::Registry.new([RubbyCop::Cop::Lint::UselessAssignment])
       end
 
       it 'returns the force' do
         expect(forces.size).to eq(1)
-        expect(forces.first).to be_a(RuboCop::Cop::VariableForce)
+        expect(forces.first).to be_a(RubbyCop::Cop::VariableForce)
       end
     end
 
     context 'when multiple cops joined a same force' do
       let(:cop_classes) do
-        RuboCop::Cop::Registry.new(
+        RubbyCop::Cop::Registry.new(
           [
-            RuboCop::Cop::Lint::UselessAssignment,
-            RuboCop::Cop::Lint::ShadowingOuterLocalVariable
+            RubbyCop::Cop::Lint::UselessAssignment,
+            RubbyCop::Cop::Lint::ShadowingOuterLocalVariable
           ]
         )
       end
@@ -215,7 +215,7 @@ describe RuboCop::Cop::Team do
 
     context 'when no cops joined force' do
       let(:cop_classes) do
-        RuboCop::Cop::Registry.new([RuboCop::Cop::Style::For])
+        RubbyCop::Cop::Registry.new([RubbyCop::Cop::Style::For])
       end
 
       it 'returns nothing' do

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::VariableForce::Scope do
-  include RuboCop::AST::Sexp
+describe RubbyCop::Cop::VariableForce::Scope do
+  include RubbyCop::AST::Sexp
 
   describe '.new' do
     context 'when lvasgn node is passed' do
@@ -20,7 +20,7 @@ describe RuboCop::Cop::VariableForce::Scope do
   end
 
   let(:ast) do
-    RuboCop::ProcessedSource.new(source, ruby_version).ast
+    RubbyCop::ProcessedSource.new(source, ruby_version).ast
   end
 
   let(:scope_node) { ast.each_node(scope_node_type).first }

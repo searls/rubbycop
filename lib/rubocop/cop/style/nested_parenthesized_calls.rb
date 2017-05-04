@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # This cop checks for unparenthesized method calls in the argument list
@@ -36,7 +36,7 @@ module RuboCop
             rspec_matcher?(send_node)
         end
 
-        # TODO: Relegate this from RuboCop core
+        # TODO: Relegate this from RubbyCop core
         def rspec_matcher?(send_node)
           send_node.parent.arguments.one? && # .to, .not_to, etc
             RSPEC_MATCHERS.include?(send_node.method_name) &&

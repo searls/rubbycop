@@ -5,7 +5,7 @@ require 'find'
 require 'tmpdir'
 require 'etc'
 
-module RuboCop
+module RubbyCop
   # Provides functionality for caching rubocop runs.
   class ResultCache
     NON_CHANGING = %i[color format formatters out debug fail_level
@@ -15,7 +15,7 @@ module RuboCop
     # threshold MaxFilesInCache has been exceeded, the oldest 50% of all the
     # files in the cache are removed. The reason for removing so much is that
     # cleaning should be done relatively seldom, since there is a slight risk
-    # that some other RuboCop process was just about to read the file, when
+    # that some other RubbyCop process was just about to read the file, when
     # there's parallel execution and the cache is shared.
     def self.cleanup(config_store, verbose, cache_root = nil)
       return if inhibit_cleanup # OPTIMIZE: For faster testing
@@ -46,7 +46,7 @@ module RuboCop
         sorted = files.sort_by { |path| File.mtime(path) }
         remove_files(sorted, dirs, remove_count)
       rescue Errno::ENOENT
-        # This can happen if parallel RuboCop invocations try to remove the
+        # This can happen if parallel RubbyCop invocations try to remove the
         # same files. No problem.
         puts $ERROR_INFO if verbose
       end
@@ -97,7 +97,7 @@ module RuboCop
       dir = File.dirname(@path)
       FileUtils.mkdir_p(dir)
       preliminary_path = "#{@path}_#{rand(1_000_000_000)}"
-      # RuboCop must be in control of where its cached data is stored. A
+      # RubbyCop must be in control of where its cached data is stored. A
       # symbolic link anywhere in the cache directory tree can be an
       # indication that a symlink attack is being waged.
       return if symlink_protection_triggered?(dir)
@@ -105,7 +105,7 @@ module RuboCop
       File.open(preliminary_path, 'w', encoding: Encoding::UTF_8) do |f|
         f.write(@cached_data.to_json(offenses))
       end
-      # The preliminary path is used so that if there are multiple RuboCop
+      # The preliminary path is used so that if there are multiple RubbyCop
       # processes trying to save data for the same inspected file
       # simultaneously, the only problem we run in to is a competition who gets
       # to write to the final file. The contents are the same, so no corruption

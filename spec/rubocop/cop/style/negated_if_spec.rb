@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::NegatedIf do
+describe RubbyCop::Cop::Style::NegatedIf do
   subject(:cop) do
-    config = RuboCop::Config.new(
+    config = RubbyCop::Config.new(
       'Style/NegatedIf' => {
         'SupportedStyles' => %w[both prefix postfix],
         'EnforcedStyle' => 'both'
@@ -139,7 +139,7 @@ describe RuboCop::Cop::Style::NegatedIf do
 
   describe 'with “prefix” style' do
     subject(:cop) do
-      config = RuboCop::Config.new(
+      config = RubbyCop::Config.new(
         'Style/NegatedIf' => {
           'SupportedStyles' => %w[both prefix postfix],
           'EnforcedStyle' => 'prefix'
@@ -181,7 +181,7 @@ describe RuboCop::Cop::Style::NegatedIf do
 
   describe 'with “postfix” style' do
     subject(:cop) do
-      config = RuboCop::Config.new(
+      config = RubbyCop::Config.new(
         'Style/NegatedIf' => {
           'SupportedStyles' => %w[both prefix postfix],
           'EnforcedStyle' => 'postfix'

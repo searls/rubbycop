@@ -2,7 +2,7 @@
 
 require 'set'
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # This cop checks for extra/unnecessary whitespace.
@@ -10,14 +10,14 @@ module RuboCop
       # @example
       #
       #   # good if AllowForAlignment is true
-      #   name      = "RuboCop"
+      #   name      = "RubbyCop"
       #   # Some comment and an empty line
       #
       #   website  += "/bbatsov/rubocop" unless cond
       #   puts        "rubocop"          if     debug
       #
       #   # bad for any configuration
-      #   set_app("RuboCop")
+      #   set_app("RubbyCop")
       #   website  = "https://github.com/bbatsov/rubocop"
       class ExtraSpacing < Cop
         include PrecedingFollowingAlignment

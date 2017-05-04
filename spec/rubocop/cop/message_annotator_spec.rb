@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::MessageAnnotator do
+describe RubbyCop::Cop::MessageAnnotator do
   let(:options) { {} }
-  let(:config) { RuboCop::Config.new({}) }
+  let(:config) { RubbyCop::Config.new({}) }
   let(:annotator) { described_class.new(config, config['Cop/Cop'], options) }
 
   describe '#annotate' do
@@ -25,7 +25,7 @@ describe RuboCop::Cop::MessageAnnotator do
         }
       end
       let(:config) do
-        RuboCop::Config.new(
+        RubbyCop::Config.new(
           'Cop/Cop' => {
             'Details' => 'my cop details',
             'StyleGuide' => 'http://example.org/styleguide'
@@ -53,7 +53,7 @@ describe RuboCop::Cop::MessageAnnotator do
     end
 
     context 'when StyleGuide is not set in the config' do
-      let(:config) { RuboCop::Config.new({}) }
+      let(:config) { RubbyCop::Config.new({}) }
 
       it 'does not add style guide url' do
         expect(annotate).to eq('')
@@ -62,7 +62,7 @@ describe RuboCop::Cop::MessageAnnotator do
 
     context 'when StyleGuide is set in the config' do
       let(:config) do
-        RuboCop::Config.new(
+        RubbyCop::Config.new(
           'Cop/Cop' => { 'StyleGuide' => 'http://example.org/styleguide' }
         )
       end
@@ -74,7 +74,7 @@ describe RuboCop::Cop::MessageAnnotator do
 
     context 'when a base URL is specified' do
       let(:config) do
-        RuboCop::Config.new(
+        RubbyCop::Config.new(
           'AllCops' => {
             'StyleGuideBaseURL' => 'http://example.org/styleguide'
           }
@@ -116,7 +116,7 @@ describe RuboCop::Cop::MessageAnnotator do
   describe '#urls' do
     let(:urls) { annotator.urls }
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'AllCops' => {
           'StyleGuideBaseURL' => 'http://example.org/styleguide'
         }

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Classes that include this module just implement functions to determine
     # what is an offense and how to do auto-correction. They get help with

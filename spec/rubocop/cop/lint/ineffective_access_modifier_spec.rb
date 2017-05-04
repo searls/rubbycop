@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::IneffectiveAccessModifier do
+describe RubbyCop::Cop::Lint::IneffectiveAccessModifier do
   subject(:cop) { described_class.new }
 
   before do

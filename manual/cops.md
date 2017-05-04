@@ -1,6 +1,6 @@
 ## Cops
 
-In RuboCop lingo the various checks performed on the code are called cops.
+In RubbyCop lingo the various checks performed on the code are called cops.
 Each cop is responsible for detecting one particular offense. There are several
 cop departments, grouping the cops by class of offense. A short description of
 the different departments is provided below.
@@ -24,7 +24,7 @@ and white space.
 
 Lint cops check for ambiguities and possible errors in your code.
 
-RuboCop implements, in a portable way, all built-in MRI lint checks
+RubbyCop implements, in a portable way, all built-in MRI lint checks
 (`ruby -wc`) and adds a lot of extra lint checks of its own.
 
 You can run only the Lint cops like this:

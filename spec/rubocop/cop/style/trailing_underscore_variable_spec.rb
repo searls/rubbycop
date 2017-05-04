@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::TrailingUnderscoreVariable do
+describe RubbyCop::Cop::Style::TrailingUnderscoreVariable do
   subject(:cop) { described_class.new(config) }
 
   shared_examples 'common functionality' do
@@ -176,7 +176,7 @@ describe RuboCop::Cop::Style::TrailingUnderscoreVariable do
     include_examples 'common functionality'
 
     let(:config) do
-      RuboCop::Config.new('Style/TrailingUnderscoreVariable' => {
+      RubbyCop::Config.new('Style/TrailingUnderscoreVariable' => {
                             'Enabled' => true,
                             'AllowNamedUnderscoreVariables' => true
                           })
@@ -222,7 +222,7 @@ describe RuboCop::Cop::Style::TrailingUnderscoreVariable do
     include_examples 'common functionality'
 
     let(:config) do
-      RuboCop::Config.new('Style/TrailingUnderscoreVariable' => {
+      RubbyCop::Config.new('Style/TrailingUnderscoreVariable' => {
                             'Enabled' => true,
                             'AllowNamedUnderscoreVariables' => false
                           })

@@ -3,8 +3,8 @@
 require 'yaml'
 require 'pathname'
 
-module RuboCop
-  # This class represents the configuration of the RuboCop application
+module RubbyCop
+  # This class represents the configuration of the RubbyCop application
   # and all its cops. A Config is associated with a YAML configuration
   # file from which it was read. Several different Configs can be used
   # during a run of the rubocop program, if files in several

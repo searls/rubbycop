@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::Loop do
+describe RubbyCop::Cop::Lint::Loop do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for begin/end/while' do

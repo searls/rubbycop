@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::FixedSize do
+describe RubbyCop::Cop::Performance::FixedSize do
   subject(:cop) { described_class.new }
 
   shared_examples :common_functionality do |method|

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Metrics
       # This cop tries to produce a complexity score that's a measure of the

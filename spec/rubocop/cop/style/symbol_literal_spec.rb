@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::SymbolLiteral do
+describe RubbyCop::Cop::Style::SymbolLiteral do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for word-line symbols using string syntax' do

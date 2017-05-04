@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
     # A node extension for `send` nodes. This will be used in place of a plain
     # node when the builder constructs the AST, making its methods available
-    # to all `send` nodes within RuboCop.
+    # to all `send` nodes within RubbyCop.
     class SendNode < Node
       # The receiving node of the method invocation.
       #
@@ -100,7 +100,7 @@ module RuboCop
       #
       # @return [Boolean] whether the invoked method is an operator
       def operator_method?
-        RuboCop::Cop::Util::OPERATOR_METHODS.include?(method_name)
+        RubbyCop::Cop::Util::OPERATOR_METHODS.include?(method_name)
       end
 
       # Checks whether the invoked method is a comparison method.

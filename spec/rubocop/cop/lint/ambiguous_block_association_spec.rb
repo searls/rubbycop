@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe RuboCop::Cop::Lint::AmbiguousBlockAssociation do
+describe RubbyCop::Cop::Lint::AmbiguousBlockAssociation do
   subject(:cop) { described_class.new }
   subject(:error_message) { described_class::MSG }
 

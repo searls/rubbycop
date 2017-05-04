@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Rails
       # Prefer the use of uniq (or distinct), before pluck instead of after.
@@ -34,7 +34,7 @@ module RuboCop
       # Autocorrect is disabled by default for this cop since it may generate
       # false positives.
       #
-      class UniqBeforePluck < RuboCop::Cop::Cop
+      class UniqBeforePluck < RubbyCop::Cop::Cop
         include ConfigurableEnforcedStyle
 
         MSG = 'Use `%s` before `pluck`.'.freeze

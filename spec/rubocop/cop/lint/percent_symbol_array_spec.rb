@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::PercentSymbolArray do
+describe RubbyCop::Cop::Lint::PercentSymbolArray do
   subject(:cop) { described_class.new }
 
   def expect_offense(source)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::EndInMethod do
+describe RubbyCop::Cop::Lint::EndInMethod do
   subject(:cop) { described_class.new }
 
   it 'reports an offense for def with an END inside' do

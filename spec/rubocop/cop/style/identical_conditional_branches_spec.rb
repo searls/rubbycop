@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::IdenticalConditionalBranches do
+describe RubbyCop::Cop::Style::IdenticalConditionalBranches do
   subject(:cop) { described_class.new }
 
   before do

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::ConditionalAssignment do
+describe RubbyCop::Cop::Style::ConditionalAssignment do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    RuboCop::Config.new('Style/ConditionalAssignment' => {
+    RubbyCop::Config.new('Style/ConditionalAssignment' => {
                           'Enabled' => true,
                           'SingleLineConditionsOnly' => true,
                           'IncludeTernaryExpressions' => true,
@@ -1793,7 +1793,7 @@ describe RuboCop::Cop::Style::ConditionalAssignment do
   context 'configured to check conditions with multiple statements' do
     subject(:cop) { described_class.new(config) }
     let(:config) do
-      RuboCop::Config.new('Style/ConditionalAssignment' => {
+      RubbyCop::Config.new('Style/ConditionalAssignment' => {
                             'Enabled' => true,
                             'SingleLineConditionsOnly' => false,
                             'IncludeTernaryExpressions' => true,
@@ -2317,7 +2317,7 @@ describe RuboCop::Cop::Style::ConditionalAssignment do
   context 'EndAlignment configured to start_of_line' do
     subject(:cop) { described_class.new(config) }
     let(:config) do
-      RuboCop::Config.new('Style/ConditionalAssignment' => {
+      RubbyCop::Config.new('Style/ConditionalAssignment' => {
                             'Enabled' => true,
                             'SingleLineConditionsOnly' => false,
                             'IncludeTernaryExpressions' => true
@@ -2407,7 +2407,7 @@ describe RuboCop::Cop::Style::ConditionalAssignment do
 
   context 'IncludeTernaryExpressions false' do
     let(:config) do
-      RuboCop::Config.new('Style/ConditionalAssignment' => {
+      RubbyCop::Config.new('Style/ConditionalAssignment' => {
                             'Enabled' => true,
                             'SingleLineConditionsOnly' => true,
                             'IncludeTernaryExpressions' => false,

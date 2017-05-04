@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
-    # An offense represents a style violation detected by RuboCop.
+    # An offense represents a style violation detected by RubbyCop.
     class Offense
       include Comparable
 
@@ -14,7 +14,7 @@ module RuboCop
       #
       # @!attribute [r] severity
       #
-      # @return [RuboCop::Cop::Severity]
+      # @return [RubbyCop::Cop::Severity]
       attr_reader :severity
 
       # @api public
@@ -57,7 +57,7 @@ module RuboCop
       # @api private
       def initialize(severity, location, message, cop_name,
                      status = :uncorrected)
-        @severity = RuboCop::Cop::Severity.new(severity)
+        @severity = RubbyCop::Cop::Severity.new(severity)
         @location = location
         @message = message.freeze
         @cop_name = cop_name.freeze

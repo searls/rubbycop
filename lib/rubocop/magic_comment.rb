@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # Parse different formats of magic comments.
   #
   # @abstract parent of three different magic comment handlers
@@ -12,7 +12,7 @@ module RuboCop
     #
     # @param comment [String]
     #
-    # @return [RuboCop::MagicComment]
+    # @return [RubbyCop::MagicComment]
     def self.parse(comment)
       case comment
       when EmacsComment::FORMAT then EmacsComment.new(comment)
@@ -120,7 +120,7 @@ module RuboCop
     # Wrapper for Emacs style magic comments.
     #
     # @example Emacs style comment
-    #   comment = RuboCop::MagicComment.parse(
+    #   comment = RubbyCop::MagicComment.parse(
     #     '# -*- encoding: ASCII-8BIT -*-'
     #   )
     #
@@ -147,7 +147,7 @@ module RuboCop
     # Wrapper for Vim style magic comments.
     #
     # @example Vim style comment
-    #   comment = RuboCop::MagicComment.parse(
+    #   comment = RubbyCop::MagicComment.parse(
     #     '# vim: filetype=ruby, fileencoding=ascii-8bit'
     #   )
     #
@@ -179,12 +179,12 @@ module RuboCop
     # Simple comments can only specify one setting per comment.
     #
     # @example frozen string literal comments
-    #   comment1 = RuboCop::MagicComment.parse('# frozen_string_literal: true')
+    #   comment1 = RubbyCop::MagicComment.parse('# frozen_string_literal: true')
     #   comment1.frozen_string_literal # => true
     #   comment1.encoding              # => nil
     #
     # @example encoding comments
-    #   comment2 = RuboCop::MagicComment.parse('# encoding: utf-8')
+    #   comment2 = RubbyCop::MagicComment.parse('# encoding: utf-8')
     #   comment2.frozen_string_literal # => nil
     #   comment2.encoding              # => 'utf-8'
     class SimpleComment < MagicComment

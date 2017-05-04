@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::PreferredHashMethods, :config do
+describe RubbyCop::Cop::Style::PreferredHashMethods, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'with enforced `short` style' do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Rails
       # This cop checks for the use of Time methods without zone.
@@ -111,7 +111,7 @@ module RuboCop
         # called is part of the time class.
         def method_from_time_class?(node)
           receiver, method_name, *_args = *node
-          if (receiver.is_a? RuboCop::AST::Node) && !receiver.cbase_type?
+          if (receiver.is_a? RubbyCop::AST::Node) && !receiver.cbase_type?
             method_from_time_class?(receiver)
           else
             TIMECLASS.include? method_name

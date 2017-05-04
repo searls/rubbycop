@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::GlobalVars, :config do
+describe RubbyCop::Cop::Style::GlobalVars, :config do
   cop_config = {
     'AllowedVariables' => ['$allowed']
   }

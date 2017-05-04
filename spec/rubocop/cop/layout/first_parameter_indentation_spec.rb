@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::FirstParameterIndentation do
+describe RubbyCop::Cop::Layout::FirstParameterIndentation do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    RuboCop::Config
+    RubbyCop::Config
       .new('Layout/FirstParameterIndentation' => {
              'EnforcedStyle' => style,
              'SupportedStyles' =>
@@ -257,7 +257,7 @@ describe RuboCop::Cop::Layout::FirstParameterIndentation do
 
     context 'when indentation width is overridden for this cop only' do
       let(:config) do
-        RuboCop::Config
+        RubbyCop::Config
           .new('Layout/FirstParameterIndentation' => {
                  'EnforcedStyle' => style,
                  'SupportedStyles' =>

@@ -2,7 +2,7 @@
 
 require 'set'
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # This cops checks for two or more consecutive blank lines.

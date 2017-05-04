@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # Handles caching of configurations and association of inspected
   # ruby files to configurations.
   class ConfigStore

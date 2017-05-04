@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::Syntax do
+describe RubbyCop::Cop::Lint::Syntax do
   describe '.offense_from_diagnostic' do
     subject(:offense) do
       described_class.offense_from_diagnostic(diagnostic, 2.0)
@@ -12,7 +12,7 @@ describe RuboCop::Cop::Lint::Syntax do
     let(:location) { double('location').as_null_object }
 
     it 'returns an offense' do
-      expect(offense).to be_a(RuboCop::Cop::Offense)
+      expect(offense).to be_a(RubbyCop::Cop::Offense)
     end
 
     it "sets diagnostic's level to offense's severity" do

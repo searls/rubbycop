@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::MultilineMethodCallIndentation do
+describe RubbyCop::Cop::Layout::MultilineMethodCallIndentation do
   subject(:cop) { described_class.new(config) }
   let(:config) do
-    merged = RuboCop::ConfigLoader
+    merged = RubbyCop::ConfigLoader
              .default_configuration['Layout/MultilineMethodCallIndentation']
              .merge(cop_config)
              .merge('IndentationWidth' => cop_indent)
-    RuboCop::Config
+    RubbyCop::Config
       .new('Layout/MultilineMethodCallIndentation' => merged,
            'Layout/IndentationWidth' => { 'Width' => indentation_width })
   end

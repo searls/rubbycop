@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::ParallelAssignment, :config do
+describe RubbyCop::Cop::Style::ParallelAssignment, :config do
   subject(:cop) { described_class.new(config) }
 
   let(:config) do
-    RuboCop::Config.new('Layout/IndentationWidth' => { 'Width' => 2 })
+    RubbyCop::Config.new('Layout/IndentationWidth' => { 'Width' => 2 })
   end
 
   shared_examples('offenses') do |source|
@@ -504,7 +504,7 @@ describe RuboCop::Cop::Style::ParallelAssignment, :config do
 
     describe 'using custom indentation width' do
       let(:config) do
-        RuboCop::Config.new('Performance/ParallelAssignment' => {
+        RubbyCop::Config.new('Performance/ParallelAssignment' => {
                               'Enabled' => true
                             },
                             'Layout/IndentationWidth' => {

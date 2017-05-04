@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::UnreachableCode do
+describe RubbyCop::Cop::Lint::UnreachableCode do
   subject(:cop) { described_class.new }
 
   described_class::NODE_TYPES.each do |t|

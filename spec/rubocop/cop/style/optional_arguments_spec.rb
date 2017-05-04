@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::OptionalArguments do
+describe RubbyCop::Cop::Style::OptionalArguments do
   subject(:cop) { described_class.new }
 
   it 'registers an offense when an optional argument is followed by a ' \

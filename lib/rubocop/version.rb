@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module RuboCop
-  # This module holds the RuboCop version information.
+module RubbyCop
+  # This module holds the RubbyCop version information.
   module Version
     STRING = '0.48.1'.freeze
 

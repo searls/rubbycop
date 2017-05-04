@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     class VariableForce
       # Mix-in module for classes which own a node and need branch information

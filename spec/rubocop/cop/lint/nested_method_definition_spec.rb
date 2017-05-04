@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Lint::NestedMethodDefinition do
+describe RubbyCop::Cop::Lint::NestedMethodDefinition do
   subject(:cop) { described_class.new }
 
   it 'registers an offense for a nested method definition' do

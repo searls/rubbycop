@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # This module provides approximate string matching methods.
   module StringUtil
     module_function

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Style
       # This cop checks for nested use of if, unless, while and until in their
@@ -79,7 +79,7 @@ module RuboCop
 
         def requires_parens?(node)
           node.or_type? ||
-            !(RuboCop::AST::Node::COMPARISON_OPERATORS & node.children).empty?
+            !(RubbyCop::AST::Node::COMPARISON_OPERATORS & node.children).empty?
         end
       end
     end

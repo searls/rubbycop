@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::HashSyntax, :config do
+describe RubbyCop::Cop::Style::HashSyntax, :config do
   subject(:cop) { described_class.new(config) }
 
   context 'configured to enforce ruby19 style' do
     context 'with SpaceAroundOperators enabled' do
       let(:config) do
-        RuboCop::Config.new('AllCops' => {
+        RubbyCop::Config.new('AllCops' => {
                               'TargetRubyVersion' => ruby_version
                             },
                             'Style/HashSyntax' => cop_config,
@@ -138,7 +138,7 @@ describe RuboCop::Cop::Style::HashSyntax, :config do
 
     context 'with SpaceAroundOperators disabled' do
       let(:config) do
-        RuboCop::Config.new('AllCops' => {
+        RubbyCop::Config.new('AllCops' => {
                               'TargetRubyVersion' => ruby_version
                             },
                             'Style/HashSyntax' => {
@@ -159,7 +159,7 @@ describe RuboCop::Cop::Style::HashSyntax, :config do
 
     context 'configured to use hash rockets when symbol values are found' do
       let(:config) do
-        RuboCop::Config.new('Style/HashSyntax' => {
+        RubbyCop::Config.new('Style/HashSyntax' => {
                               'EnforcedStyle' => 'ruby19',
                               'SupportedStyles' => %w[ruby19 hash_rockets],
                               'UseHashRocketsWithSymbolValues' => true

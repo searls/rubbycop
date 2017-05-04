@@ -4,8 +4,8 @@ require 'pathname'
 
 # rubocop:disable Metrics/ClassLength
 
-module RuboCop
-  # This class represents the configuration of the RuboCop application
+module RubbyCop
+  # This class represents the configuration of the RubbyCop application
   # and all its cops. A Config is associated with a YAML configuration
   # file from which it was read. Several different Configs can be used
   # during a run of the rubocop program, if files in several
@@ -213,7 +213,7 @@ module RuboCop
     end
 
     def validate
-      # Don't validate RuboCop's own files. Avoids infinite recursion.
+      # Don't validate RubbyCop's own files. Avoids infinite recursion.
       base_config_path = File.expand_path(File.join(ConfigLoader::RUBOCOP_HOME,
                                                     'config'))
       return if File.expand_path(loaded_path).start_with?(base_config_path)
@@ -279,7 +279,7 @@ module RuboCop
     # Paths specified in configuration files starting with .rubocop are
     # relative to the directory where that file is. Paths in other config files
     # are relative to the current directory. This is so that paths in
-    # config/default.yml, for example, are not relative to RuboCop's config
+    # config/default.yml, for example, are not relative to RubbyCop's config
     # directory since that wouldn't work.
     def base_dir_for_path_parameters
       @base_dir_for_path_parameters ||=
@@ -354,7 +354,7 @@ module RuboCop
         styles = self[name].select { |key, _| key.start_with?('Enforced') }
 
         styles.each do |style_name, style|
-          supported_key = RuboCop::Cop::Util.to_supported_styles(style_name)
+          supported_key = RubbyCop::Cop::Util.to_supported_styles(style_name)
           valid = ConfigLoader.default_configuration[name][supported_key]
           next unless valid
           next if valid.include?(style)

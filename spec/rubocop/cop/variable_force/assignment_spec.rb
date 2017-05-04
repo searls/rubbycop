@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::VariableForce::Assignment do
-  include RuboCop::AST::Sexp
+describe RubbyCop::Cop::VariableForce::Assignment do
+  include RubbyCop::AST::Sexp
 
   let(:ast) do
-    RuboCop::ProcessedSource.new(source, ruby_version).ast
+    RubbyCop::ProcessedSource.new(source, ruby_version).ast
   end
 
   let(:source) do
@@ -26,9 +26,9 @@ describe RuboCop::Cop::VariableForce::Assignment do
   let(:lvasgn_node) { ast.each_node.find(&:lvasgn_type?) }
 
   let(:name) { lvasgn_node.children.first }
-  let(:scope) { RuboCop::Cop::VariableForce::Scope.new(def_node) }
+  let(:scope) { RubbyCop::Cop::VariableForce::Scope.new(def_node) }
   let(:variable) do
-    RuboCop::Cop::VariableForce::Variable.new(name, lvasgn_node, scope)
+    RubbyCop::Cop::VariableForce::Variable.new(name, lvasgn_node, scope)
   end
   let(:assignment) { described_class.new(lvasgn_node, variable) }
 

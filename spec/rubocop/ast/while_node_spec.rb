@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::AST::WhileNode do
+describe RubbyCop::AST::WhileNode do
   let(:while_node) { parse_source(source).ast }
 
   describe '.new' do

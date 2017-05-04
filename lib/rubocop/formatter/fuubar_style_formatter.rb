@@ -2,7 +2,7 @@
 
 require 'ruby-progressbar'
 
-module RuboCop
+module RubbyCop
   module Formatter
     # This formatter displays a progress bar and shows details of offenses as
     # soon as they are detected.

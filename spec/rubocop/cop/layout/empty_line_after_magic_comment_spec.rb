@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Layout::EmptyLineAfterMagicComment do
-  let(:config) { RuboCop::Config.new }
+describe RubbyCop::Cop::Layout::EmptyLineAfterMagicComment do
+  let(:config) { RubbyCop::Config.new }
   subject(:cop) { described_class.new(config) }
 
   it 'registers an offense for code that immediately follows comment' do

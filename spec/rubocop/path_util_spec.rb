@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::PathUtil do
+describe RubbyCop::PathUtil do
   describe '#relative_path' do
     it 'builds paths relative to PWD by default as a stop-gap' do
       relative = File.join(Dir.pwd, 'relative')

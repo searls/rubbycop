@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::MissingElse do
+describe RubbyCop::Cop::Style::MissingElse do
   subject(:cop) { described_class.new(config) }
 
   context 'UnlessElse enabled' do
     let(:config) do
-      RuboCop::Config.new('Style/MissingElse' => {
+      RubbyCop::Config.new('Style/MissingElse' => {
                             'Enabled' => true,
                             'EnforcedStyle' => 'both',
                             'SupportedStyles' => %w[if case both]
@@ -108,7 +108,7 @@ describe RuboCop::Cop::Style::MissingElse do
 
   context 'UnlessElse disabled' do
     let(:config) do
-      RuboCop::Config.new('Style/MissingElse' => {
+      RubbyCop::Config.new('Style/MissingElse' => {
                             'Enabled' => true,
                             'EnforcedStyle' => 'both',
                             'SupportedStyles' => %w[if case both]
@@ -213,7 +213,7 @@ describe RuboCop::Cop::Style::MissingElse do
   context 'EmptyElse enabled and set to warn on empty' do
     let(:config) do
       styles = %w[if case both]
-      RuboCop::Config.new('Style/MissingElse' => {
+      RubbyCop::Config.new('Style/MissingElse' => {
                             'Enabled' => true,
                             'EnforcedStyle' => 'both',
                             'SupportedStyles' => styles
@@ -331,7 +331,7 @@ describe RuboCop::Cop::Style::MissingElse do
   context 'EmptyElse enabled and set to warn on nil' do
     let(:config) do
       styles = %w[if case both]
-      RuboCop::Config.new('Style/MissingElse' => {
+      RubbyCop::Config.new('Style/MissingElse' => {
                             'Enabled' => true,
                             'EnforcedStyle' => 'both',
                             'SupportedStyles' => styles
@@ -441,7 +441,7 @@ describe RuboCop::Cop::Style::MissingElse do
   context 'configured to warn only on empty if' do
     let(:config) do
       styles = %w[if case both]
-      RuboCop::Config.new('Style/MissingElse' => {
+      RubbyCop::Config.new('Style/MissingElse' => {
                             'Enabled' => true,
                             'EnforcedStyle' => 'if',
                             'SupportedStyles' => styles
@@ -550,7 +550,7 @@ describe RuboCop::Cop::Style::MissingElse do
   context 'configured to warn only on empty case' do
     let(:config) do
       styles = %w[if case both]
-      RuboCop::Config.new('Style/MissingElse' => {
+      RubbyCop::Config.new('Style/MissingElse' => {
                             'Enabled' => true,
                             'EnforcedStyle' => 'case',
                             'SupportedStyles' => styles

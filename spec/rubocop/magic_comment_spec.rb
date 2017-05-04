@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RuboCop::MagicComment do
+RSpec.describe RubbyCop::MagicComment do
   shared_examples 'magic comment' do |comment, expectations = {}|
     encoding = expectations[:encoding]
     frozen_string = expectations[:frozen_string_literal]

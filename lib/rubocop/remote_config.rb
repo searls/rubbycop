@@ -3,7 +3,7 @@
 require 'net/http'
 require 'time'
 
-module RuboCop
+module RubbyCop
   # Common methods and behaviors for dealing with remote config files.
   class RemoteConfig
     CACHE_LIFETIME = 24 * 60 * 60

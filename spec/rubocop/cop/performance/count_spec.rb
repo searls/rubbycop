@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Performance::Count do
+describe RubbyCop::Cop::Performance::Count do
   subject(:cop) { described_class.new }
 
   shared_examples 'selectors' do |selector|
@@ -314,7 +314,7 @@ describe RuboCop::Cop::Performance::Count do
     subject(:cop) { described_class.new(config) }
 
     let(:config) do
-      RuboCop::Config.new(
+      RubbyCop::Config.new(
         'Rails' => {
           'Enabled' => true
         },

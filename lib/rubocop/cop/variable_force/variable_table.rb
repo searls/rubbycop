@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     class VariableForce
       # A VariableTable manages the lifetime of all scopes and local variables

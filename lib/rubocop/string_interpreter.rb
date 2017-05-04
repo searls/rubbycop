@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # Take a string with embedded escapes, and convert the escapes as the Ruby
   # interpreter would when reading a double-quoted string literal.
   # For example, "\\n" will be converted to "\n".

@@ -1,7 +1,7 @@
 
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     module Layout
       # This cops checks if empty lines exist around the bodies of begin-end

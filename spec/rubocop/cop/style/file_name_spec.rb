@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-describe RuboCop::Cop::Style::FileName do
+describe RubbyCop::Cop::Style::FileName do
   subject(:cop) { described_class.new(config) }
 
   let(:config) do
-    RuboCop::Config.new(
+    RubbyCop::Config.new(
       { 'AllCops' => { 'Include' => includes },
         'Style/FileName' => cop_config },
       '/some/.rubocop.yml'

@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module AST
-    # `RuboCop::Builder` is an AST builder that is utilized to let `Parser`
-    # generate ASTs with {RuboCop::AST::Node}.
+    # `RubbyCop::Builder` is an AST builder that is utilized to let `Parser`
+    # generate ASTs with {RubbyCop::AST::Node}.
     #
     # @example
     #   buffer = Parser::Source::Buffer.new('(string)')
     #   buffer.source = 'puts :foo'
     #
-    #   builder = RuboCop::Builder.new
+    #   builder = RubbyCop::Builder.new
     #   parser = Parser::CurrentRuby.new(builder)
     #   root_node = parser.parse(buffer)
     class Builder < Parser::Builders::Default

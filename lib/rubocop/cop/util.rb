@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 # rubocop:disable Metrics/ModuleLength
-module RuboCop
+module RubbyCop
   module Cop
     # This module contains a collection of useful utility methods.
     module Util
       include PathUtil
-      extend RuboCop::AST::Sexp
+      extend RubbyCop::AST::Sexp
 
       BYTE_ORDER_MARK = 0xfeff # The Unicode codepoint
 

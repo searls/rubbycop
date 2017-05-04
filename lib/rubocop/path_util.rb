@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   # Common methods and behaviors for dealing with paths.
   module PathUtil
     module_function

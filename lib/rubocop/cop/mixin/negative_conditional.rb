@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RuboCop
+module RubbyCop
   module Cop
     # Some common code shared between `NegatedIf` and
     # `NegatedWhile` cops.
