@@ -14,7 +14,7 @@ Patches in any form are always welcome! GitHub pull requests are even better! :-
 
 Before submitting a patch or a pull request make sure all tests are
 passing and that your patch is in line with the [contribution
-guidelines](https://github.com/bbatsov/rubocop/blob/master/.github/CONTRIBUTING.md).
+guidelines](https://github.com/searls/rubbycop/blob/master/.github/CONTRIBUTING.md).
 
 See also. [development.md](development.md)
 
@@ -24,12 +24,12 @@ Good documentation is just as important as good code.
 
 Consider improving and extending the
 this manual and the
-[community wiki](https://github.com/bbatsov/rubocop/wiki).
+[community wiki](https://github.com/searls/rubbycop/wiki).
 
 ### Working on the Manual
 
 The manual is generated from the markdown files in the
-[doc](https://github.com/bbatsov/rubocop/tree/master/manual) folder of RubbyCop's
+[doc](https://github.com/searls/rubbycop/tree/master/manual) folder of RubbyCop's
 GitHub repo and is published to [Read the Docs](readthedocs.org). The
 [MkDocs](http://www.mkdocs.org/) tool is used to convert the markdown sources to
 HTML.
@@ -42,12 +42,12 @@ You can install `MkDocs` locally and use the command `mkdocs serve` to see the
 result of changes you make to the manual locally:
 
 ```
-$ cd path/to/rubocop/repo
+$ cd path/to/rubbycop/repo
 $ mkdocs serve
 ```
 
 If you want to make changes to the manual's page structure you'll have to edit
-[mkdocs.yml](https://github.com/bbatsov/rubocop/blob/master/mkdocs.yml).
+[mkdocs.yml](https://github.com/searls/rubbycop/blob/master/mkdocs.yml).
 
 ## Funding
 
@@ -58,13 +58,13 @@ Raising a monthly budget of over $5000 would open the possibility of someone wor
 which would speed up the pace of development significantly.
 
 We welcome both individual and corporate sponsors! We also offer a wide array of funding channels to account
-for your preferences (although currently [Open Collective](https://opencollective.com/rubocop) is our preferred funding platform).
+for your preferences (although currently [Open Collective](https://opencollective.com/rubbycop) is our preferred funding platform).
 
 If you're working in a company that's making significant use of RubbyCop we'd appreciate it if you suggest to your company
 to become a RubbyCop sponsor.
 
 You can support the development of RubbyCop via
-[Salt](https://salt.bountysource.com/teams/rubocop),
-[Gratipay](https://www.gratipay.com/rubocop) and [Open Collective](https://opencollective.com/rubocop).
+[Salt](https://salt.bountysource.com/teams/rubbycop),
+[Gratipay](https://www.gratipay.com/rubbycop) and [Open Collective](https://opencollective.com/rubbycop).
 
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.1.3/dist/gratipay.png)](https://gratipay.com/rubocop)
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.1.3/dist/gratipay.png)](https://gratipay.com/rubbycop)

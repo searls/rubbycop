@@ -751,7 +751,7 @@ Style/NumericPredicate:
   StyleGuide: '#predicate-methods'
   # This will change to a new method call which isn't guaranteed to be on the
   # object. Switching these methods has to be done with knowledge of the types
-  # of the variables which rubocop doesn't have.
+  # of the variables which rubbycop doesn't have.
   AutoCorrect: false
   Enabled: true
 
@@ -1311,7 +1311,7 @@ Lint/UnifiedInteger:
 
 Lint/UnneededDisable:
   Description: >-
-                 Checks for rubocop:disable comments that can be removed.
+                 Checks for rubbycop:disable comments that can be removed.
                  Note: this cop is not disabled when disabling all cops.
                  It must be explicitly disabled.
   Enabled: true
@@ -1415,7 +1415,7 @@ Performance/EndWith:
   Reference: 'https://github.com/JuanitoFatas/fast-ruby#stringmatch-vs-stringstart_withstringend_with-code-start-code-end'
   # This will change to a new method call which isn't guaranteed to be on the
   # object. Switching these methods has to be done with knowledge of the types
-  # of the variables which rubocop doesn't have.
+  # of the variables which rubbycop doesn't have.
   AutoCorrect: false
   Enabled: true
 
@@ -1507,7 +1507,7 @@ Performance/StartWith:
   Reference: 'https://github.com/JuanitoFatas/fast-ruby#stringmatch-vs-stringstart_withstringend_with-code-start-code-end'
   # This will change to a new method call which isn't guaranteed to be on the
   # object. Switching these methods has to be done with knowledge of the types
-  # of the variables which rubocop doesn't have.
+  # of the variables which rubbycop doesn't have.
   AutoCorrect: false
   Enabled: true
 
@@ -1570,7 +1570,7 @@ Rails/DelegateAllowBlank:
 
 Rails/DynamicFindBy:
   Description: 'Use `find_by` instead of dynamic `find_by_*`.'
-  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find_by'
+  StyleGuide: 'https://github.com/searls/rails-style-guide#find_by'
   Enabled: true
 
 Rails/EnumUniqueness:
@@ -1590,17 +1590,17 @@ Rails/FilePath:
 
 Rails/FindBy:
   Description: 'Prefer find_by over where.first.'
-  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find_by'
+  StyleGuide: 'https://github.com/searls/rails-style-guide#find_by'
   Enabled: true
 
 Rails/FindEach:
   Description: 'Prefer all.find_each over all.find.'
-  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find-each'
+  StyleGuide: 'https://github.com/searls/rails-style-guide#find-each'
   Enabled: true
 
 Rails/HasAndBelongsToMany:
   Description: 'Prefer has_many :through to has_and_belongs_to_many.'
-  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#has-many-through'
+  StyleGuide: 'https://github.com/searls/rails-style-guide#has-many-through'
   Enabled: true
 
 Rails/HttpPositionalArguments:
@@ -1640,7 +1640,7 @@ Rails/ReadWriteAttribute:
   Description: >-
                  Checks for read_attribute(:attr) and
                  write_attribute(:attr, val).
-  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#read-attribute'
+  StyleGuide: 'https://github.com/searls/rails-style-guide#read-attribute'
   Enabled: true
 
 Rails/RelativeDateConstant:
@@ -1653,7 +1653,7 @@ Rails/RequestReferer:
 
 Rails/ReversibleMigration:
   Description: 'Checks whether the change method of the migration file is reversible.'
-  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#reversible-migration'
+  StyleGuide: 'https://github.com/searls/rails-style-guide#reversible-migration'
   Reference: 'http://api.rubyonrails.org/classes/ActiveRecord/Migration/CommandRecorder.html'
   Enabled: true
 
@@ -1667,7 +1667,7 @@ Rails/ScopeArgs:
 
 Rails/TimeZone:
   Description: 'Checks the correct usage of time zone aware methods.'
-  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#time'
+  StyleGuide: 'https://github.com/searls/rails-style-guide#time'
   Reference: 'http://danilenko.org/2012/7/6/rails_timezones'
   Enabled: true
 

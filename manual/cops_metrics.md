@@ -63,7 +63,7 @@ Max | 3
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count](https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count)
+* [https://github.com/searls/ruby-style-guide#three-is-the-number-thou-shalt-count](https://github.com/searls/ruby-style-guide#three-is-the-number-thou-shalt-count)
 
 ## Metrics/ClassLength
 
@@ -127,7 +127,7 @@ IgnoredPatterns |
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#80-character-limits](https://github.com/bbatsov/ruby-style-guide#80-character-limits)
+* [https://github.com/searls/ruby-style-guide#80-character-limits](https://github.com/searls/ruby-style-guide#80-character-limits)
 
 ## Metrics/MethodLength
 
@@ -148,7 +148,7 @@ Max | 10
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#short-methods](https://github.com/bbatsov/ruby-style-guide#short-methods)
+* [https://github.com/searls/ruby-style-guide#short-methods](https://github.com/searls/ruby-style-guide#short-methods)
 
 ## Metrics/ModuleLength
 
@@ -187,7 +187,7 @@ CountKeywordArgs | true
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#too-many-params](https://github.com/bbatsov/ruby-style-guide#too-many-params)
+* [https://github.com/searls/ruby-style-guide#too-many-params](https://github.com/searls/ruby-style-guide#too-many-params)
 
 ## Metrics/PerceivedComplexity
 

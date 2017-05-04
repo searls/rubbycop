@@ -14,7 +14,7 @@ RSpec.shared_context 'cli spec behavior' do
     RubbyCop::ConfigLoader.debug = false
 
     # OPTIMIZE: Makes these specs faster. Work directory (the parent of
-    # .rubocop_cache) is removed afterwards anyway.
+    # .rubbycop_cache) is removed afterwards anyway.
     RubbyCop::ResultCache.inhibit_cleanup = true
   end
 

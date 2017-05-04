@@ -255,7 +255,7 @@ Enabled | Yes
 
 This cop checks dynamic `find_by_*` methods.
 Use `find_by` instead of dynamic method.
-See. https://github.com/bbatsov/rails-style-guide#find_by
+See. https://github.com/searls/rails-style-guide#find_by
 
 ### Example
 
@@ -287,7 +287,7 @@ Whitelist | find_by_sql
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#find_by](https://github.com/bbatsov/rails-style-guide#find_by)
+* [https://github.com/searls/rails-style-guide#find_by](https://github.com/searls/rails-style-guide#find_by)
 
 ## Rails/EnumUniqueness
 
@@ -395,7 +395,7 @@ Include | app/models/\*\*/\*.rb
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#find_by](https://github.com/bbatsov/rails-style-guide#find_by)
+* [https://github.com/searls/rails-style-guide#find_by](https://github.com/searls/rails-style-guide#find_by)
 
 ## Rails/FindEach
 
@@ -424,7 +424,7 @@ Include | app/models/\*\*/\*.rb
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#find-each](https://github.com/bbatsov/rails-style-guide#find-each)
+* [https://github.com/searls/rails-style-guide#find-each](https://github.com/searls/rails-style-guide#find-each)
 
 ## Rails/HasAndBelongsToMany
 
@@ -442,7 +442,7 @@ Include | app/models/\*\*/\*.rb
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#has-many-through](https://github.com/bbatsov/rails-style-guide#has-many-through)
+* [https://github.com/searls/rails-style-guide#has-many-through](https://github.com/searls/rails-style-guide#has-many-through)
 
 ## Rails/HttpPositionalArguments
 
@@ -455,7 +455,7 @@ This cop is used to identify usages of http methods like `get`, `post`,
 change them to use keyword args.  This cop only applies to Rails >= 5 .
 If you are not running Rails < 5 you should disable # the
 Rails/HttpPositionalArguments cop or set your TargetRailsVersion in your
-.rubocop.yml file to 4.0, etc.
+.rubbycop.yml file to 4.0, etc.
 
 ### Example
 
@@ -654,7 +654,7 @@ Include | app/models/\*\*/\*.rb
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#read-attribute](https://github.com/bbatsov/rails-style-guide#read-attribute)
+* [https://github.com/searls/rails-style-guide#read-attribute](https://github.com/searls/rails-style-guide#read-attribute)
 
 ## Rails/RelativeDateConstant
 
@@ -819,7 +819,7 @@ Include | db/migrate/\*.rb
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#reversible-migration](https://github.com/bbatsov/rails-style-guide#reversible-migration)
+* [https://github.com/searls/rails-style-guide#reversible-migration](https://github.com/searls/rails-style-guide#reversible-migration)
 * [http://api.rubyonrails.org/classes/ActiveRecord/Migration/CommandRecorder.html](http://api.rubyonrails.org/classes/ActiveRecord/Migration/CommandRecorder.html)
 
 ## Rails/SafeNavigation
@@ -916,7 +916,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#save-bang](https://github.com/bbatsov/rails-style-guide#save-bang)
+* [https://github.com/searls/rails-style-guide#save-bang](https://github.com/searls/rails-style-guide#save-bang)
 
 ## Rails/ScopeArgs
 
@@ -990,7 +990,7 @@ Enabled | No
 
 This cop checks for the use of Time methods without zone.
 
-Built on top of Ruby on Rails style guide (https://github.com/bbatsov/rails-style-guide#time)
+Built on top of Ruby on Rails style guide (https://github.com/searls/rails-style-guide#time)
 and the article http://danilenko.org/2012/7/6/rails_timezones/ .
 
 Two styles are supported for this cop. When EnforcedStyle is 'strict'
@@ -1025,7 +1025,7 @@ SupportedStyles | strict, flexible
 
 ### References
 
-* [https://github.com/bbatsov/rails-style-guide#time](https://github.com/bbatsov/rails-style-guide#time)
+* [https://github.com/searls/rails-style-guide#time](https://github.com/searls/rails-style-guide#time)
 * [http://danilenko.org/2012/7/6/rails_timezones](http://danilenko.org/2012/7/6/rails_timezones)
 
 ## Rails/UniqBeforePluck

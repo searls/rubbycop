@@ -9,7 +9,7 @@ if ENV['TRAVIS'] && RUBY_ENGINE == 'jruby'
   tmp_dir = ENV['TMPDIR'] || ENV['TMP'] || ENV['TEMP'] ||
             Etc.systmpdir || '/tmp'
 
-  non_world_writable_tmp_dir = File.join(tmp_dir, 'rubocop')
+  non_world_writable_tmp_dir = File.join(tmp_dir, 'rubbycop')
   FileUtils.makedirs(non_world_writable_tmp_dir, mode: 0o700)
   ENV['TMPDIR'] = non_world_writable_tmp_dir
 end

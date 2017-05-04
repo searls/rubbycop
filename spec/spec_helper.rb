@@ -7,14 +7,14 @@ Rainbow.enabled = false
 # Coverage support needs to be required *before* the RubbyCop code is required!
 require 'support/coverage'
 
-require 'rubocop'
+require 'rubbycop'
 
 require 'webmock/rspec'
 
 require 'powerpack/string/strip_margin'
 
 # Require supporting files exposed for testing.
-require 'rubocop/rspec/support'
+require 'rubbycop/rspec/support'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.

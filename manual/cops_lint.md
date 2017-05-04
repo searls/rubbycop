@@ -31,7 +31,7 @@ foo = ->(bar) { bar.baz }
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#syntax](https://github.com/bbatsov/ruby-style-guide#syntax)
+* [https://github.com/searls/ruby-style-guide#syntax](https://github.com/searls/ruby-style-guide#syntax)
 
 ## Lint/AmbiguousOperator
 
@@ -60,7 +60,7 @@ do_something(*some_array)
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#method-invocation-parens](https://github.com/bbatsov/ruby-style-guide#method-invocation-parens)
+* [https://github.com/searls/ruby-style-guide#method-invocation-parens](https://github.com/searls/ruby-style-guide#method-invocation-parens)
 
 ## Lint/AmbiguousRegexpLiteral
 
@@ -122,7 +122,7 @@ AllowSafeAssignment | true
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#safe-assignment-in-condition](https://github.com/bbatsov/ruby-style-guide#safe-assignment-in-condition)
+* [https://github.com/searls/ruby-style-guide#safe-assignment-in-condition](https://github.com/searls/ruby-style-guide#safe-assignment-in-condition)
 
 ## Lint/BlockAlignment
 
@@ -270,7 +270,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#same-line-condition](https://github.com/bbatsov/ruby-style-guide#same-line-condition)
+* [https://github.com/searls/ruby-style-guide#same-line-condition](https://github.com/searls/ruby-style-guide#same-line-condition)
 
 ## Lint/Debugger
 
@@ -774,7 +774,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-return-ensure](https://github.com/bbatsov/ruby-style-guide#no-return-ensure)
+* [https://github.com/searls/ruby-style-guide#no-return-ensure](https://github.com/searls/ruby-style-guide#no-return-ensure)
 
 ## Lint/FloatOutOfRange
 
@@ -871,7 +871,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions](https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions)
+* [https://github.com/searls/ruby-style-guide#dont-hide-exceptions](https://github.com/searls/ruby-style-guide#dont-hide-exceptions)
 
 ## Lint/ImplicitStringConcatenation
 
@@ -1115,7 +1115,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#loop-with-break](https://github.com/bbatsov/ruby-style-guide#loop-with-break)
+* [https://github.com/searls/ruby-style-guide#loop-with-break](https://github.com/searls/ruby-style-guide#loop-with-break)
 
 ## Lint/MultipleCompare
 
@@ -1202,7 +1202,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-nested-methods](https://github.com/bbatsov/ruby-style-guide#no-nested-methods)
+* [https://github.com/searls/ruby-style-guide#no-nested-methods](https://github.com/searls/ruby-style-guide#no-nested-methods)
 
 ## Lint/NextWithoutAccumulator
 
@@ -1298,7 +1298,7 @@ puts(x + y)
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#parens-no-spaces](https://github.com/bbatsov/ruby-style-guide#parens-no-spaces)
+* [https://github.com/searls/ruby-style-guide#parens-no-spaces](https://github.com/searls/ruby-style-guide#parens-no-spaces)
 
 ## Lint/PercentStringArray
 
@@ -1436,7 +1436,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-blind-rescues](https://github.com/bbatsov/ruby-style-guide#no-blind-rescues)
+* [https://github.com/searls/ruby-style-guide#no-blind-rescues](https://github.com/searls/ruby-style-guide#no-blind-rescues)
 
 ## Lint/SafeNavigationChain
 
@@ -1567,7 +1567,7 @@ which is redundant.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-to-s](https://github.com/bbatsov/ruby-style-guide#no-to-s)
+* [https://github.com/searls/ruby-style-guide#no-to-s](https://github.com/searls/ruby-style-guide#no-to-s)
 
 ## Lint/UnderscorePrefixedVariableName
 
@@ -1630,7 +1630,7 @@ Enabled by default | Supports autocorrection
 --- | ---
 Enabled | Yes
 
-This cop detects instances of rubocop:disable comments that can be
+This cop detects instances of rubbycop:disable comments that can be
 removed without causing any offenses to be reported. It's implemented
 as a cop in that it inherits from the Cop base class and calls
 add_offense. The unusual part of its implementation is that it doesn't
@@ -1772,7 +1772,7 @@ AllowUnusedKeywordArguments | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars](https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars)
+* [https://github.com/searls/ruby-style-guide#underscore-unused-vars](https://github.com/searls/ruby-style-guide#underscore-unused-vars)
 
 ## Lint/UnusedMethodArgument
 
@@ -1808,7 +1808,7 @@ IgnoreEmptyMethods | true
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars](https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars)
+* [https://github.com/searls/ruby-style-guide#underscore-unused-vars](https://github.com/searls/ruby-style-guide#underscore-unused-vars)
 
 ## Lint/UselessAccessModifier
 
@@ -1949,7 +1949,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars](https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars)
+* [https://github.com/searls/ruby-style-guide#underscore-unused-vars](https://github.com/searls/ruby-style-guide#underscore-unused-vars)
 
 ## Lint/UselessComparison
 

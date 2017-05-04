@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bbatsov/rubocop/master/logo/rubo-logo-horizontal.png" alt="RubbyCop Logo"/>
+  <img src="https://raw.githubusercontent.com/searls/rubbycop/master/logo/rubo-logo-horizontal.png" alt="RubbyCop Logo"/>
 </p>
 
 > Role models are important. <br/>
@@ -7,10 +7,10 @@
 
 **RubbyCop** is a Ruby static code analyzer. Out of the box it will
 enforce many of the guidelines outlined in the community
-[Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
+[Ruby Style Guide](https://github.com/searls/ruby-style-guide).
 
 Most aspects of its behavior can be tweaked via various
-[configuration options](https://github.com/bbatsov/rubocop/blob/master/config/default.yml).
+[configuration options](https://github.com/searls/rubbycop/blob/master/config/default.yml).
 
 Apart from reporting problems in your code, RubbyCop can also
 automatically fix some of the problems for you.

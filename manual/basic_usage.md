@@ -1,16 +1,16 @@
 ## Basic Usage
 
-Running `rubocop` with no arguments will check all Ruby source files
+Running `rubbycop` with no arguments will check all Ruby source files
 in the current directory:
 
 ```sh
-$ rubocop
+$ rubbycop
 ```
 
-Alternatively you can pass `rubocop` a list of files and directories to check:
+Alternatively you can pass `rubbycop` a list of files and directories to check:
 
 ```sh
-$ rubocop app spec lib/something.rb
+$ rubbycop app spec lib/something.rb
 ```
 
 Here's RubbyCop in action. Consider the following Ruby source code:
@@ -50,7 +50,7 @@ test.rb:4:5: W: end at 4, 4 is not aligned with if at 2, 2
 For more details check the available command-line options:
 
 ```sh
-$ rubocop -h
+$ rubbycop -h
 ```
 
 Command flag              | Description
@@ -81,12 +81,12 @@ Command flag              | Description
 `--[no-]color`            | Force color output on or off.
 `--parallel`              | Use available CPUs to execute inspection in parallel.
 
-Default command-line options are loaded from `.rubocop` and `RUBOCOP_OPTS` and are combined with command-line options that are explicitly passed to `rubocop`.
+Default command-line options are loaded from `.rubbycop` and `RUBOCOP_OPTS` and are combined with command-line options that are explicitly passed to `rubbycop`.
 Thus, the options have the following order of precedence (from highest to lowest):
 
 1. Explicit command-line options
 2. Options from `RUBOCOP_OPTS` environment variable
-3. Options from `.rubocop` file.
+3. Options from `.rubbycop` file.
 
 ## Exit codes
 

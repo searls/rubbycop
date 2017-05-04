@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'yard'
-require 'rubocop'
+require 'rubbycop'
 
 desc 'Generate docs of all cops departments'
 

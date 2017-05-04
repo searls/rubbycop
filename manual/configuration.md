@@ -1,7 +1,7 @@
 ## Configuration
 
 The behavior of RubbyCop can be controlled via the
-[.rubocop.yml](https://github.com/bbatsov/rubocop/blob/master/.rubocop.yml)
+[.rubbycop.yml](https://github.com/searls/rubbycop/blob/master/.rubbycop.yml)
 configuration file. It makes it possible to enable/disable certain cops
 (checks) and to alter their behavior if they accept any parameters. The file
 can be placed either in your home directory or in some project directory.
@@ -12,7 +12,7 @@ where the inspected file is and continue its way up to the root directory.
 The file has the following format:
 
 ```yaml
-inherit_from: ../.rubocop.yml
+inherit_from: ../.rubbycop.yml
 
 Style/Encoding:
   Enabled: false
@@ -40,7 +40,7 @@ configuration.
 
 The optional `inherit_from` directive is used to include configuration
 from one or more files. This makes it possible to have the common
-project settings in the `.rubocop.yml` file at the project root, and
+project settings in the `.rubbycop.yml` file at the project root, and
 then only the deviations from those rules in the subdirectories. The
 files can be given with absolute paths or paths relative to the file
 where they are referenced. The settings after an `inherit_from`
@@ -51,8 +51,8 @@ inheritance is:
 
 ```yaml
 inherit_from:
-  - ../.rubocop.yml
-  - ../conf/.rubocop.yml
+  - ../.rubbycop.yml
+  - ../conf/.rubbycop.yml
 ```
 
 ### Inheriting configuration from a remote URL
@@ -74,8 +74,8 @@ last one has the highest. The format for multiple inheritance using URLs is:
 
 ```yaml
 inherit_from:
-  - http://www.example.com/rubocop.yml
-  - ../.rubocop.yml
+  - http://www.example.com/rubbycop.yml
+  - ../.rubbycop.yml
 ```
 
 #### Inheriting configuration from a dependency gem
@@ -98,8 +98,8 @@ key and the relative path within the gem as the value:
 
 ```yaml
 inherit_gem:
-  my-shared-gem: .rubocop.yml
-  cucumber: conf/rubocop.yml
+  my-shared-gem: .rubbycop.yml
+  cucumber: conf/rubbycop.yml
 ```
 
 An array can also be used as the value to include multiple configuration files
@@ -118,17 +118,17 @@ necessary to also invoke RubbyCop using Bundler in order to find the
 dependency's installation path at runtime:
 
 ```
-$ bundle exec rubocop <options...>
+$ bundle exec rubbycop <options...>
 ```
 
 ### Defaults
 
 The file
-[config/default.yml](https://github.com/bbatsov/rubocop/blob/master/config/default.yml)
+[config/default.yml](https://github.com/searls/rubbycop/blob/master/config/default.yml)
 under the RubbyCop home directory contains the default settings that
-all configurations inherit from. Project and personal `.rubocop.yml`
+all configurations inherit from. Project and personal `.rubbycop.yml`
 files need only make settings that are different from the default
-ones. If there is no `.rubocop.yml` file in the project or home
+ones. If there is no `.rubbycop.yml` file in the project or home
 directory, `config/default.yml` will be used.
 
 ### Including/Excluding files
@@ -160,11 +160,11 @@ AllCops:
 # ...
 ```
 
-In `.rubocop.yml` and any other configuration file beginning with `.rubocop`,
+In `.rubbycop.yml` and any other configuration file beginning with `.rubbycop`,
 files and directories are specified relative to the directory where the
-configuration file is. In configuration files that don't begin with `.rubocop`,
+configuration file is. In configuration files that don't begin with `.rubbycop`,
 e.g. `our_company_defaults.yml`, paths are relative to the directory where
-`rubocop` is run.
+`rubbycop` is run.
 
 **Note**: Patterns that are just a file name, e.g. `Rakefile`, will match
 that file name in any directory, but this pattern style is deprecated. The
@@ -177,10 +177,10 @@ correct way to match the file in any directory, including the current, is
 
 **Note**: The `Include` and `Exclude` parameters are special. They are
 valid for the directory tree starting where they are defined. They are not
-shadowed by the setting of `Include` and `Exclude` in other `.rubocop.yml`
+shadowed by the setting of `Include` and `Exclude` in other `.rubbycop.yml`
 files in subdirectories. This is different from all other parameters, who
 follow RubbyCop's general principle that configuration for an inspected file
-is taken from the nearest `.rubocop.yml`, searching upwards.
+is taken from the nearest `.rubbycop.yml`, searching upwards.
 
 Cops can be run only on specific sets of files when that's needed (for
 instance you might want to run some Rails model checks only on files whose
@@ -218,7 +218,7 @@ Metrics/LineLength:
 ```
 
 Most cops are enabled by default. Some cops, configured in
-[config/disabled.yml](https://github.com/bbatsov/rubocop/blob/master/config/disabled.yml),
+[config/disabled.yml](https://github.com/searls/rubbycop/blob/master/config/disabled.yml),
 are disabled by default. The cop enabling process can be altered by
 setting `DisabledByDefault` or `EnabledByDefault` (but not both) to `true`.
 
@@ -299,19 +299,19 @@ AllCops:
 ### Automatically Generated Configuration
 
 If you have a code base with an overwhelming amount of offenses, it can
-be a good idea to use `rubocop --auto-gen-config` and add an
-`inherit_from: .rubocop_todo.yml` in your `.rubocop.yml`. The generated
-file `.rubocop_todo.yml` contains configuration to disable cops that
+be a good idea to use `rubbycop --auto-gen-config` and add an
+`inherit_from: .rubbycop_todo.yml` in your `.rubbycop.yml`. The generated
+file `.rubbycop_todo.yml` contains configuration to disable cops that
 currently detect an offense in the code by excluding the offending
 files, or disabling the cop altogether once a file count limit has been
 reached.
 
-By adding the option `--exclude-limit COUNT`, e.g., `rubocop
+By adding the option `--exclude-limit COUNT`, e.g., `rubbycop
 --auto-gen-config --exclude-limit 5`, you can change how many files are
 excluded before the cop is entirely disabled. The default COUNT is 15.
 
 Then you can start removing the entries in the generated
-`.rubocop_todo.yml` file one by one as you work through all the offenses
+`.rubbycop_todo.yml` file one by one as you work through all the offenses
 in the code.
 
 ## Disabling Cops within Source Code
@@ -320,22 +320,22 @@ One or more individual cops can be disabled locally in a section of a
 file by adding a comment such as
 
 ```ruby
-# rubocop:disable Metrics/LineLength, Style/StringLiterals
+# rubbycop:disable Metrics/LineLength, Style/StringLiterals
 [...]
-# rubocop:enable Metrics/LineLength, Style/StringLiterals
+# rubbycop:enable Metrics/LineLength, Style/StringLiterals
 ```
 
 You can also disable *all* cops with
 
 ```ruby
-# rubocop:disable all
+# rubbycop:disable all
 [...]
-# rubocop:enable all
+# rubbycop:enable all
 ```
 
 One or more cops can be disabled on a single line with an end-of-line
 comment.
 
 ```ruby
-for x in (0..19) # rubocop:disable Style/AvoidFor
+for x in (0..19) # rubbycop:disable Style/AvoidFor
 ```

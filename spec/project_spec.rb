@@ -75,7 +75,7 @@ describe 'RubbyCop Project' do
     end
   end
 
-  describe 'changelog' do
+  xdescribe 'changelog' do
     subject(:changelog) do
       path = File.join(File.dirname(__FILE__), '..', 'CHANGELOG.md')
       File.read(path)
@@ -128,7 +128,7 @@ describe 'RubbyCop Project' do
         it 'has a valid URL' do
           issues.each do |issue|
             number = issue[:number].gsub(/\D/, '')
-            pattern = %r{^https://github\.com/bbatsov/rubocop/(?:issues|pull)/#{number}$} # rubocop:disable Metrics/LineLength
+            pattern = %r{^https://github\.com/searls/rubbycop/(?:issues|pull)/#{number}$} # rubbycop:disable Metrics/LineLength
             expect(issue[:url]).to match(pattern)
           end
         end
@@ -173,9 +173,9 @@ describe 'RubbyCop Project' do
     it 'emits no warnings' do
       whitelisted = ->(line) { line =~ /warning: private attribute\?$/ }
 
-      warnings = `ruby -Ilib -w -W2 lib/rubocop.rb 2>&1`
+      warnings = `ruby -Ilib -w -W2 lib/rubbycop.rb 2>&1`
                  .lines
-                 .grep(%r{/lib/rubocop}) # ignore warnings from dependencies
+                 .grep(%r{/lib/rubbycop}) # ignore warnings from dependencies
                  .reject(&whitelisted)
       expect(warnings).to be_empty
     end

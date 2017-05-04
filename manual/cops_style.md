@@ -26,7 +26,7 @@ def attribute ...
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#accessor_mutator_method_names](https://github.com/bbatsov/ruby-style-guide#accessor_mutator_method_names)
+* [https://github.com/searls/ruby-style-guide#accessor_mutator_method_names](https://github.com/searls/ruby-style-guide#accessor_mutator_method_names)
 
 ## Style/Alias
 
@@ -48,7 +48,7 @@ SupportedStyles | prefer_alias, prefer_alias_method
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#alias-method](https://github.com/bbatsov/ruby-style-guide#alias-method)
+* [https://github.com/searls/ruby-style-guide#alias-method](https://github.com/searls/ruby-style-guide#alias-method)
 
 ## Style/AndOr
 
@@ -67,7 +67,7 @@ SupportedStyles | always, conditionals
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-and-or-or](https://github.com/bbatsov/ruby-style-guide#no-and-or-or)
+* [https://github.com/searls/ruby-style-guide#no-and-or-or](https://github.com/searls/ruby-style-guide#no-and-or-or)
 
 ## Style/ArrayJoin
 
@@ -83,7 +83,7 @@ array literal or the second is a string literal.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#array-join](https://github.com/bbatsov/ruby-style-guide#array-join)
+* [https://github.com/searls/ruby-style-guide#array-join](https://github.com/searls/ruby-style-guide#array-join)
 
 ## Style/AsciiComments
 
@@ -96,7 +96,7 @@ in comments.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#english-comments](https://github.com/bbatsov/ruby-style-guide#english-comments)
+* [https://github.com/searls/ruby-style-guide#english-comments](https://github.com/searls/ruby-style-guide#english-comments)
 
 ## Style/AsciiIdentifiers
 
@@ -108,7 +108,7 @@ This cop checks for non-ascii characters in identifier names.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#english-identifiers](https://github.com/bbatsov/ruby-style-guide#english-identifiers)
+* [https://github.com/searls/ruby-style-guide#english-identifiers](https://github.com/searls/ruby-style-guide#english-identifiers)
 
 ## Style/Attr
 
@@ -120,7 +120,7 @@ This cop checks for uses of Module#attr.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#attr](https://github.com/bbatsov/ruby-style-guide#attr)
+* [https://github.com/searls/ruby-style-guide#attr](https://github.com/searls/ruby-style-guide#attr)
 
 ## Style/AutoResourceCleanup
 
@@ -161,7 +161,7 @@ SupportedStyles | percent_q, bare_percent
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#percent-q-shorthand](https://github.com/bbatsov/ruby-style-guide#percent-q-shorthand)
+* [https://github.com/searls/ruby-style-guide#percent-q-shorthand](https://github.com/searls/ruby-style-guide#percent-q-shorthand)
 
 ## Style/BeginBlock
 
@@ -173,7 +173,7 @@ This cop checks for BEGIN blocks.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-BEGIN-blocks](https://github.com/bbatsov/ruby-style-guide#no-BEGIN-blocks)
+* [https://github.com/searls/ruby-style-guide#no-BEGIN-blocks](https://github.com/searls/ruby-style-guide#no-BEGIN-blocks)
 
 ## Style/BlockComments
 
@@ -185,7 +185,7 @@ This cop looks for uses of block comments (=begin...=end).
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-block-comments](https://github.com/bbatsov/ruby-style-guide#no-block-comments)
+* [https://github.com/searls/ruby-style-guide#no-block-comments](https://github.com/searls/ruby-style-guide#no-block-comments)
 
 ## Style/BlockDelimiters
 
@@ -208,7 +208,7 @@ IgnoredMethods | lambda, proc, it
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#single-line-blocks](https://github.com/bbatsov/ruby-style-guide#single-line-blocks)
+* [https://github.com/searls/ruby-style-guide#single-line-blocks](https://github.com/searls/ruby-style-guide#single-line-blocks)
 
 ## Style/BracesAroundHashParameters
 
@@ -273,7 +273,7 @@ This cop checks for uses of the case equality operator(===).
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-case-equality](https://github.com/bbatsov/ruby-style-guide#no-case-equality)
+* [https://github.com/searls/ruby-style-guide#no-case-equality](https://github.com/searls/ruby-style-guide#no-case-equality)
 
 ## Style/CharacterLiteral
 
@@ -285,7 +285,7 @@ Checks for uses of the character literal ?x.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-character-literals](https://github.com/bbatsov/ruby-style-guide#no-character-literals)
+* [https://github.com/searls/ruby-style-guide#no-character-literals](https://github.com/searls/ruby-style-guide#no-character-literals)
 
 ## Style/ClassAndModuleCamelCase
 
@@ -298,7 +298,7 @@ an underscore in them.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#camelcase-classes](https://github.com/bbatsov/ruby-style-guide#camelcase-classes)
+* [https://github.com/searls/ruby-style-guide#camelcase-classes](https://github.com/searls/ruby-style-guide#camelcase-classes)
 
 ## Style/ClassAndModuleChildren
 
@@ -372,7 +372,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#def-self-class-methods](https://github.com/bbatsov/ruby-style-guide#def-self-class-methods)
+* [https://github.com/searls/ruby-style-guide#def-self-class-methods](https://github.com/searls/ruby-style-guide#def-self-class-methods)
 
 ## Style/ClassVars
 
@@ -386,7 +386,7 @@ reduced the number of offenses that would be reported.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-class-vars](https://github.com/bbatsov/ruby-style-guide#no-class-vars)
+* [https://github.com/searls/ruby-style-guide#no-class-vars](https://github.com/searls/ruby-style-guide#no-class-vars)
 
 ## Style/CollectionMethods
 
@@ -409,7 +409,7 @@ PreferredMethods | {"collect"=>"map", "collect!"=>"map!", "inject"=>"reduce", "d
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#map-find-select-reduce-size](https://github.com/bbatsov/ruby-style-guide#map-find-select-reduce-size)
+* [https://github.com/searls/ruby-style-guide#map-find-select-reduce-size](https://github.com/searls/ruby-style-guide#map-find-select-reduce-size)
 
 ## Style/ColonMethodCall
 
@@ -422,7 +422,7 @@ of the . operator (like FileUtils::rmdir instead of FileUtils.rmdir).
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#double-colons](https://github.com/bbatsov/ruby-style-guide#double-colons)
+* [https://github.com/searls/ruby-style-guide#double-colons](https://github.com/searls/ruby-style-guide#double-colons)
 
 ## Style/CommandLiteral
 
@@ -467,7 +467,7 @@ AllowInnerBackticks | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#percent-x](https://github.com/bbatsov/ruby-style-guide#percent-x)
+* [https://github.com/searls/ruby-style-guide#percent-x](https://github.com/searls/ruby-style-guide#percent-x)
 
 ## Style/CommentAnnotation
 
@@ -486,7 +486,7 @@ Keywords | TODO, FIXME, OPTIMIZE, HACK, REVIEW
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#annotate-keywords](https://github.com/bbatsov/ruby-style-guide#annotate-keywords)
+* [https://github.com/searls/ruby-style-guide#annotate-keywords](https://github.com/searls/ruby-style-guide#annotate-keywords)
 
 ## Style/ConditionalAssignment
 
@@ -616,7 +616,7 @@ for certain the type of value that would be assigned to a constant.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#screaming-snake-case](https://github.com/bbatsov/ruby-style-guide#screaming-snake-case)
+* [https://github.com/searls/ruby-style-guide#screaming-snake-case](https://github.com/searls/ruby-style-guide#screaming-snake-case)
 
 ## Style/Copyright
 
@@ -655,7 +655,7 @@ class/singleton methods are checked.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#method-parens](https://github.com/bbatsov/ruby-style-guide#method-parens)
+* [https://github.com/searls/ruby-style-guide#method-parens](https://github.com/searls/ruby-style-guide#method-parens)
 
 ## Style/Documentation
 
@@ -765,7 +765,7 @@ this is rarely a problem in practice.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-bang-bang](https://github.com/bbatsov/ruby-style-guide#no-bang-bang)
+* [https://github.com/searls/ruby-style-guide#no-bang-bang](https://github.com/searls/ruby-style-guide#no-bang-bang)
 
 ## Style/EachForSimpleLoop
 
@@ -954,7 +954,7 @@ would be a literal, like an empty array, hash or string.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#literal-array-hash](https://github.com/bbatsov/ruby-style-guide#literal-array-hash)
+* [https://github.com/searls/ruby-style-guide#literal-array-hash](https://github.com/searls/ruby-style-guide#literal-array-hash)
 
 ## Style/EmptyMethod
 
@@ -1010,7 +1010,7 @@ SupportedStyles | compact, expanded
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-single-line-methods](https://github.com/bbatsov/ruby-style-guide#no-single-line-methods)
+* [https://github.com/searls/ruby-style-guide#no-single-line-methods](https://github.com/searls/ruby-style-guide#no-single-line-methods)
 
 ## Style/Encoding
 
@@ -1039,7 +1039,7 @@ AutoCorrectEncodingComment | # encoding: utf-8
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#utf-8](https://github.com/bbatsov/ruby-style-guide#utf-8)
+* [https://github.com/searls/ruby-style-guide#utf-8](https://github.com/searls/ruby-style-guide#utf-8)
 
 ## Style/EndBlock
 
@@ -1051,7 +1051,7 @@ This cop checks for END blocks.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-END-blocks](https://github.com/bbatsov/ruby-style-guide#no-END-blocks)
+* [https://github.com/searls/ruby-style-guide#no-END-blocks](https://github.com/searls/ruby-style-guide#no-END-blocks)
 
 ## Style/EvenOdd
 
@@ -1074,7 +1074,7 @@ if x.even?
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#predicate-methods](https://github.com/bbatsov/ruby-style-guide#predicate-methods)
+* [https://github.com/searls/ruby-style-guide#predicate-methods](https://github.com/searls/ruby-style-guide#predicate-methods)
 
 ## Style/FileName
 
@@ -1098,7 +1098,7 @@ AllowedAcronyms | CLI, DSL, ACL, API, ASCII, CPU, CSS, DNS, EOF, GUID, HTML, HTT
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#snake-case-files](https://github.com/bbatsov/ruby-style-guide#snake-case-files)
+* [https://github.com/searls/ruby-style-guide#snake-case-files](https://github.com/searls/ruby-style-guide#snake-case-files)
 
 ## Style/FlipFlop
 
@@ -1110,7 +1110,7 @@ This cop looks for uses of flip flop operator
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-flip-flops](https://github.com/bbatsov/ruby-style-guide#no-flip-flops)
+* [https://github.com/searls/ruby-style-guide#no-flip-flops](https://github.com/searls/ruby-style-guide#no-flip-flops)
 
 ## Style/For
 
@@ -1132,7 +1132,7 @@ SupportedStyles | for, each
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-for-loops](https://github.com/bbatsov/ruby-style-guide#no-for-loops)
+* [https://github.com/searls/ruby-style-guide#no-for-loops](https://github.com/searls/ruby-style-guide#no-for-loops)
 
 ## Style/FormatString
 
@@ -1157,7 +1157,7 @@ SupportedStyles | format, sprintf, percent
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#sprintf](https://github.com/bbatsov/ruby-style-guide#sprintf)
+* [https://github.com/searls/ruby-style-guide#sprintf](https://github.com/searls/ruby-style-guide#sprintf)
 
 ## Style/FormatStringToken
 
@@ -1241,7 +1241,7 @@ AllowedVariables |
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#instance-vars](https://github.com/bbatsov/ruby-style-guide#instance-vars)
+* [https://github.com/searls/ruby-style-guide#instance-vars](https://github.com/searls/ruby-style-guide#instance-vars)
 * [http://www.zenspider.com/Languages/Ruby/QuickRef.html](http://www.zenspider.com/Languages/Ruby/QuickRef.html)
 
 ## Style/GuardClause
@@ -1294,7 +1294,7 @@ MinBodyLength | 1
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals](https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals)
+* [https://github.com/searls/ruby-style-guide#no-nested-conditionals](https://github.com/searls/ruby-style-guide#no-nested-conditionals)
 
 ## Style/HashSyntax
 
@@ -1376,7 +1376,7 @@ PreferHashRocketsForNonAlnumEndingSymbols | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#hash-literals](https://github.com/bbatsov/ruby-style-guide#hash-literals)
+* [https://github.com/searls/ruby-style-guide#hash-literals](https://github.com/searls/ruby-style-guide#hash-literals)
 
 ## Style/IdenticalConditionalBranches
 
@@ -1499,7 +1499,7 @@ MaxLineLength | 80
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#if-as-a-modifier](https://github.com/bbatsov/ruby-style-guide#if-as-a-modifier)
+* [https://github.com/searls/ruby-style-guide#if-as-a-modifier](https://github.com/searls/ruby-style-guide#if-as-a-modifier)
 
 ## Style/IfUnlessModifierOfIfUnless
 
@@ -1539,7 +1539,7 @@ Checks for uses of semicolon in if statements.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-semicolon-ifs](https://github.com/bbatsov/ruby-style-guide#no-semicolon-ifs)
+* [https://github.com/searls/ruby-style-guide#no-semicolon-ifs](https://github.com/searls/ruby-style-guide#no-semicolon-ifs)
 
 ## Style/ImplicitRuntimeError
 
@@ -1586,7 +1586,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#infinite-loop](https://github.com/bbatsov/ruby-style-guide#infinite-loop)
+* [https://github.com/searls/ruby-style-guide#infinite-loop](https://github.com/searls/ruby-style-guide#infinite-loop)
 
 ## Style/InlineComment
 
@@ -1719,7 +1719,7 @@ SupportedStyles | line_count_dependent, lambda, literal
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#lambda-multi-line](https://github.com/bbatsov/ruby-style-guide#lambda-multi-line)
+* [https://github.com/searls/ruby-style-guide#lambda-multi-line](https://github.com/searls/ruby-style-guide#lambda-multi-line)
 
 ## Style/LambdaCall
 
@@ -1748,7 +1748,7 @@ SupportedStyles | call, braces
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#proc-call](https://github.com/bbatsov/ruby-style-guide#proc-call)
+* [https://github.com/searls/ruby-style-guide#proc-call](https://github.com/searls/ruby-style-guide#proc-call)
 
 ## Style/LineEndConcatenation
 
@@ -1828,7 +1828,7 @@ IgnoredMethods |
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#method-invocation-parens](https://github.com/bbatsov/ruby-style-guide#method-invocation-parens)
+* [https://github.com/searls/ruby-style-guide#method-invocation-parens](https://github.com/searls/ruby-style-guide#method-invocation-parens)
 
 ## Style/MethodCallWithoutArgsParentheses
 
@@ -1850,7 +1850,7 @@ object.some_method
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#method-invocation-parens](https://github.com/bbatsov/ruby-style-guide#method-invocation-parens)
+* [https://github.com/searls/ruby-style-guide#method-invocation-parens](https://github.com/searls/ruby-style-guide#method-invocation-parens)
 
 ## Style/MethodCalledOnDoEndBlock
 
@@ -1872,7 +1872,7 @@ end.c
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#single-line-blocks](https://github.com/bbatsov/ruby-style-guide#single-line-blocks)
+* [https://github.com/searls/ruby-style-guide#single-line-blocks](https://github.com/searls/ruby-style-guide#single-line-blocks)
 
 ## Style/MethodDefParentheses
 
@@ -1892,7 +1892,7 @@ SupportedStyles | require_parentheses, require_no_parentheses, require_no_parent
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#method-parens](https://github.com/bbatsov/ruby-style-guide#method-parens)
+* [https://github.com/searls/ruby-style-guide#method-parens](https://github.com/searls/ruby-style-guide#method-parens)
 
 ## Style/MethodMissing
 
@@ -1924,7 +1924,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-method-missing](https://github.com/bbatsov/ruby-style-guide#no-method-missing)
+* [https://github.com/searls/ruby-style-guide#no-method-missing](https://github.com/searls/ruby-style-guide#no-method-missing)
 
 ## Style/MethodName
 
@@ -1945,7 +1945,7 @@ SupportedStyles | snake_case, camelCase
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#snake-case-symbols-methods-vars](https://github.com/bbatsov/ruby-style-guide#snake-case-symbols-methods-vars)
+* [https://github.com/searls/ruby-style-guide#snake-case-symbols-methods-vars](https://github.com/searls/ruby-style-guide#snake-case-symbols-methods-vars)
 
 ## Style/MissingElse
 
@@ -2039,7 +2039,7 @@ SupportedStyles | separated, grouped
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#mixin-grouping](https://github.com/bbatsov/ruby-style-guide#mixin-grouping)
+* [https://github.com/searls/ruby-style-guide#mixin-grouping](https://github.com/searls/ruby-style-guide#mixin-grouping)
 
 ## Style/ModuleFunction
 
@@ -2080,7 +2080,7 @@ SupportedStyles | module_function, extend_self
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#module-function](https://github.com/bbatsov/ruby-style-guide#module-function)
+* [https://github.com/searls/ruby-style-guide#module-function](https://github.com/searls/ruby-style-guide#module-function)
 
 ## Style/MultilineBlockChain
 
@@ -2103,7 +2103,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#single-line-blocks](https://github.com/bbatsov/ruby-style-guide#single-line-blocks)
+* [https://github.com/searls/ruby-style-guide#single-line-blocks](https://github.com/searls/ruby-style-guide#single-line-blocks)
 
 ## Style/MultilineIfModifier
 
@@ -2127,7 +2127,7 @@ Checks for uses of if/unless modifiers with multiple-lines bodies.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-multiline-if-modifiers](https://github.com/bbatsov/ruby-style-guide#no-multiline-if-modifiers)
+* [https://github.com/searls/ruby-style-guide#no-multiline-if-modifiers](https://github.com/searls/ruby-style-guide#no-multiline-if-modifiers)
 
 ## Style/MultilineIfThen
 
@@ -2151,7 +2151,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-then](https://github.com/bbatsov/ruby-style-guide#no-then)
+* [https://github.com/searls/ruby-style-guide#no-then](https://github.com/searls/ruby-style-guide#no-then)
 
 ## Style/MultilineMemoization
 
@@ -2211,7 +2211,7 @@ This cop checks for multi-line ternary op expressions.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-multiline-ternary](https://github.com/bbatsov/ruby-style-guide#no-multiline-ternary)
+* [https://github.com/searls/ruby-style-guide#no-multiline-ternary](https://github.com/searls/ruby-style-guide#no-multiline-ternary)
 
 ## Style/MutableConstant
 
@@ -2319,7 +2319,7 @@ SupportedStyles | both, prefix, postfix
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#unless-for-negatives](https://github.com/bbatsov/ruby-style-guide#unless-for-negatives)
+* [https://github.com/searls/ruby-style-guide#unless-for-negatives](https://github.com/searls/ruby-style-guide#unless-for-negatives)
 
 ## Style/NegatedWhile
 
@@ -2331,7 +2331,7 @@ Checks for uses of while with a negated condition.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#until-for-negatives](https://github.com/bbatsov/ruby-style-guide#until-for-negatives)
+* [https://github.com/searls/ruby-style-guide#until-for-negatives](https://github.com/searls/ruby-style-guide#until-for-negatives)
 
 ## Style/NestedModifier
 
@@ -2354,7 +2354,7 @@ something if b && a
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-nested-modifiers](https://github.com/bbatsov/ruby-style-guide#no-nested-modifiers)
+* [https://github.com/searls/ruby-style-guide#no-nested-modifiers](https://github.com/searls/ruby-style-guide#no-nested-modifiers)
 
 ## Style/NestedParenthesizedCalls
 
@@ -2385,7 +2385,7 @@ This cop checks for nested ternary op expressions.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-nested-ternary](https://github.com/bbatsov/ruby-style-guide#no-nested-ternary)
+* [https://github.com/searls/ruby-style-guide#no-nested-ternary](https://github.com/searls/ruby-style-guide#no-nested-ternary)
 
 ## Style/Next
 
@@ -2422,7 +2422,7 @@ SupportedStyles | skip_modifier_ifs, always
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals](https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals)
+* [https://github.com/searls/ruby-style-guide#no-nested-conditionals](https://github.com/searls/ruby-style-guide#no-nested-conditionals)
 
 ## Style/NilComparison
 
@@ -2444,7 +2444,7 @@ if x.nil?
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#predicate-methods](https://github.com/bbatsov/ruby-style-guide#predicate-methods)
+* [https://github.com/searls/ruby-style-guide#predicate-methods](https://github.com/searls/ruby-style-guide#predicate-methods)
 
 ## Style/NonNilCheck
 
@@ -2483,7 +2483,7 @@ IncludeSemanticChanges | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-non-nil-checks](https://github.com/bbatsov/ruby-style-guide#no-non-nil-checks)
+* [https://github.com/searls/ruby-style-guide#no-non-nil-checks](https://github.com/searls/ruby-style-guide#no-non-nil-checks)
 
 ## Style/Not
 
@@ -2495,7 +2495,7 @@ This cop checks for uses if the keyword *not* instead of !.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#bang-not-not](https://github.com/bbatsov/ruby-style-guide#bang-not-not)
+* [https://github.com/searls/ruby-style-guide#bang-not-not](https://github.com/searls/ruby-style-guide#bang-not-not)
 
 ## Style/NumericLiteralPrefix
 
@@ -2520,7 +2520,7 @@ SupportedOctalStyles | zero_with_o, zero_only
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#numeric-literal-prefixes](https://github.com/bbatsov/ruby-style-guide#numeric-literal-prefixes)
+* [https://github.com/searls/ruby-style-guide#numeric-literal-prefixes](https://github.com/searls/ruby-style-guide#numeric-literal-prefixes)
 
 ## Style/NumericLiterals
 
@@ -2559,7 +2559,7 @@ Strict | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics](https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics)
+* [https://github.com/searls/ruby-style-guide#underscores-in-numerics](https://github.com/searls/ruby-style-guide#underscores-in-numerics)
 
 ## Style/NumericPredicate
 
@@ -2620,7 +2620,7 @@ Exclude | spec/\*\*/\*
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#predicate-methods](https://github.com/bbatsov/ruby-style-guide#predicate-methods)
+* [https://github.com/searls/ruby-style-guide#predicate-methods](https://github.com/searls/ruby-style-guide#predicate-methods)
 
 ## Style/OneLineConditional
 
@@ -2633,7 +2633,7 @@ Checks for uses of if/then/else/end on a single line.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#ternary-operator](https://github.com/bbatsov/ruby-style-guide#ternary-operator)
+* [https://github.com/searls/ruby-style-guide#ternary-operator](https://github.com/searls/ruby-style-guide#ternary-operator)
 
 ## Style/OpMethod
 
@@ -2656,7 +2656,7 @@ def +(other); end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#other-arg](https://github.com/bbatsov/ruby-style-guide#other-arg)
+* [https://github.com/searls/ruby-style-guide#other-arg](https://github.com/searls/ruby-style-guide#other-arg)
 
 ## Style/OptionHash
 
@@ -2716,7 +2716,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#optional-arguments](https://github.com/bbatsov/ruby-style-guide#optional-arguments)
+* [https://github.com/searls/ruby-style-guide#optional-arguments](https://github.com/searls/ruby-style-guide#optional-arguments)
 
 ## Style/ParallelAssignment
 
@@ -2747,7 +2747,7 @@ c = 3
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#parallel-assignment](https://github.com/bbatsov/ruby-style-guide#parallel-assignment)
+* [https://github.com/searls/ruby-style-guide#parallel-assignment](https://github.com/searls/ruby-style-guide#parallel-assignment)
 
 ## Style/ParenthesesAroundCondition
 
@@ -2766,7 +2766,7 @@ AllowSafeAssignment | true
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-parens-around-condition](https://github.com/bbatsov/ruby-style-guide#no-parens-around-condition)
+* [https://github.com/searls/ruby-style-guide#no-parens-around-condition](https://github.com/searls/ruby-style-guide#no-parens-around-condition)
 
 ## Style/PercentLiteralDelimiters
 
@@ -2806,7 +2806,7 @@ PreferredDelimiters | {"default"=>"()", "%i"=>"[]", "%I"=>"[]", "%r"=>"{}", "%w"
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#percent-literal-braces](https://github.com/bbatsov/ruby-style-guide#percent-literal-braces)
+* [https://github.com/searls/ruby-style-guide#percent-literal-braces](https://github.com/searls/ruby-style-guide#percent-literal-braces)
 
 ## Style/PercentQLiterals
 
@@ -2834,7 +2834,7 @@ backreferences like $1, $2, etc.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-perl-regexp-last-matchers](https://github.com/bbatsov/ruby-style-guide#no-perl-regexp-last-matchers)
+* [https://github.com/searls/ruby-style-guide#no-perl-regexp-last-matchers](https://github.com/searls/ruby-style-guide#no-perl-regexp-last-matchers)
 
 ## Style/PredicateName
 
@@ -2871,7 +2871,7 @@ Exclude | spec/\*\*/\*
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#bool-methods-qmark](https://github.com/bbatsov/ruby-style-guide#bool-methods-qmark)
+* [https://github.com/searls/ruby-style-guide#bool-methods-qmark](https://github.com/searls/ruby-style-guide#bool-methods-qmark)
 
 ## Style/PreferredHashMethods
 
@@ -2918,7 +2918,7 @@ SupportedStyles | short, verbose
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#hash-key](https://github.com/bbatsov/ruby-style-guide#hash-key)
+* [https://github.com/searls/ruby-style-guide#hash-key](https://github.com/searls/ruby-style-guide#hash-key)
 
 ## Style/Proc
 
@@ -2931,7 +2931,7 @@ would be more appropriate.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#proc](https://github.com/bbatsov/ruby-style-guide#proc)
+* [https://github.com/searls/ruby-style-guide#proc](https://github.com/searls/ruby-style-guide#proc)
 
 ## Style/RaiseArgs
 
@@ -2985,7 +2985,7 @@ SupportedStyles | compact, exploded
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#exception-class-messages](https://github.com/bbatsov/ruby-style-guide#exception-class-messages)
+* [https://github.com/searls/ruby-style-guide#exception-class-messages](https://github.com/searls/ruby-style-guide#exception-class-messages)
 
 ## Style/RedundantBegin
 
@@ -3019,7 +3019,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#begin-implicit](https://github.com/bbatsov/ruby-style-guide#begin-implicit)
+* [https://github.com/searls/ruby-style-guide#begin-implicit](https://github.com/searls/ruby-style-guide#begin-implicit)
 
 ## Style/RedundantException
 
@@ -3046,7 +3046,7 @@ raise 'message'
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-explicit-runtimeerror](https://github.com/bbatsov/ruby-style-guide#no-explicit-runtimeerror)
+* [https://github.com/searls/ruby-style-guide#no-explicit-runtimeerror](https://github.com/searls/ruby-style-guide#no-explicit-runtimeerror)
 
 ## Style/RedundantFreeze
 
@@ -3118,7 +3118,7 @@ AllowMultipleReturnValues | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-explicit-return](https://github.com/bbatsov/ruby-style-guide#no-explicit-return)
+* [https://github.com/searls/ruby-style-guide#no-explicit-return](https://github.com/searls/ruby-style-guide#no-explicit-return)
 
 ## Style/RedundantSelf
 
@@ -3168,7 +3168,7 @@ otherwise.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-self-unless-required](https://github.com/bbatsov/ruby-style-guide#no-self-unless-required)
+* [https://github.com/searls/ruby-style-guide#no-self-unless-required](https://github.com/searls/ruby-style-guide#no-self-unless-required)
 
 ## Style/RegexpLiteral
 
@@ -3215,7 +3215,7 @@ AllowInnerSlashes | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#percent-r](https://github.com/bbatsov/ruby-style-guide#percent-r)
+* [https://github.com/searls/ruby-style-guide#percent-r](https://github.com/searls/ruby-style-guide#percent-r)
 
 ## Style/RescueModifier
 
@@ -3227,7 +3227,7 @@ This cop checks for uses of rescue in its modifier form.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-rescue-modifiers](https://github.com/bbatsov/ruby-style-guide#no-rescue-modifiers)
+* [https://github.com/searls/ruby-style-guide#no-rescue-modifiers](https://github.com/searls/ruby-style-guide#no-rescue-modifiers)
 
 ## Style/SafeNavigation
 
@@ -3305,7 +3305,7 @@ x += 1
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#self-assignment](https://github.com/bbatsov/ruby-style-guide#self-assignment)
+* [https://github.com/searls/ruby-style-guide#self-assignment](https://github.com/searls/ruby-style-guide#self-assignment)
 
 ## Style/Semicolon
 
@@ -3324,7 +3324,7 @@ AllowAsExpressionSeparator | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-semicolon](https://github.com/bbatsov/ruby-style-guide#no-semicolon)
+* [https://github.com/searls/ruby-style-guide#no-semicolon](https://github.com/searls/ruby-style-guide#no-semicolon)
 
 ## Style/Send
 
@@ -3336,7 +3336,7 @@ This cop checks for the use of the send method.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#prefer-public-send](https://github.com/bbatsov/ruby-style-guide#prefer-public-send)
+* [https://github.com/searls/ruby-style-guide#prefer-public-send](https://github.com/searls/ruby-style-guide#prefer-public-send)
 
 ## Style/SignalException
 
@@ -3355,7 +3355,7 @@ SupportedStyles | only_raise, only_fail, semantic
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#prefer-raise-over-fail](https://github.com/bbatsov/ruby-style-guide#prefer-raise-over-fail)
+* [https://github.com/searls/ruby-style-guide#prefer-raise-over-fail](https://github.com/searls/ruby-style-guide#prefer-raise-over-fail)
 
 ## Style/SingleLineBlockParams
 
@@ -3392,7 +3392,7 @@ AllowIfMethodIsEmpty | true
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-single-line-methods](https://github.com/bbatsov/ruby-style-guide#no-single-line-methods)
+* [https://github.com/searls/ruby-style-guide#no-single-line-methods](https://github.com/searls/ruby-style-guide#no-single-line-methods)
 
 ## Style/SpecialGlobalVars
 
@@ -3411,7 +3411,7 @@ SupportedStyles | use_perl_names, use_english_names
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-cryptic-perlisms](https://github.com/bbatsov/ruby-style-guide#no-cryptic-perlisms)
+* [https://github.com/searls/ruby-style-guide#no-cryptic-perlisms](https://github.com/searls/ruby-style-guide#no-cryptic-perlisms)
 
 ## Style/StabbyLambdaParentheses
 
@@ -3447,7 +3447,7 @@ SupportedStyles | require_parentheses, require_no_parentheses
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#stabby-lambda-with-args](https://github.com/bbatsov/ruby-style-guide#stabby-lambda-with-args)
+* [https://github.com/searls/ruby-style-guide#stabby-lambda-with-args](https://github.com/searls/ruby-style-guide#stabby-lambda-with-args)
 
 ## Style/StringLiterals
 
@@ -3467,7 +3467,7 @@ ConsistentQuotesInMultiline | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#consistent-string-literals](https://github.com/bbatsov/ruby-style-guide#consistent-string-literals)
+* [https://github.com/searls/ruby-style-guide#consistent-string-literals](https://github.com/searls/ruby-style-guide#consistent-string-literals)
 
 ## Style/StringLiteralsInInterpolation
 
@@ -3520,7 +3520,7 @@ Person = Struct.new(:first_name, :last_name)
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-extend-struct-new](https://github.com/bbatsov/ruby-style-guide#no-extend-struct-new)
+* [https://github.com/searls/ruby-style-guide#no-extend-struct-new](https://github.com/searls/ruby-style-guide#no-extend-struct-new)
 
 ## Style/SymbolArray
 
@@ -3571,7 +3571,7 @@ SupportedStyles | percent, brackets
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#percent-i](https://github.com/bbatsov/ruby-style-guide#percent-i)
+* [https://github.com/searls/ruby-style-guide#percent-i](https://github.com/searls/ruby-style-guide#percent-i)
 
 ## Style/SymbolLiteral
 
@@ -3718,7 +3718,7 @@ SupportedStylesForMultiline | comma, consistent_comma, no_comma
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-trailing-params-comma](https://github.com/bbatsov/ruby-style-guide#no-trailing-params-comma)
+* [https://github.com/searls/ruby-style-guide#no-trailing-params-comma](https://github.com/searls/ruby-style-guide#no-trailing-params-comma)
 
 ## Style/TrailingCommaInLiteral
 
@@ -3762,7 +3762,7 @@ SupportedStylesForMultiline | comma, consistent_comma, no_comma
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas](https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas)
+* [https://github.com/searls/ruby-style-guide#no-trailing-array-commas](https://github.com/searls/ruby-style-guide#no-trailing-array-commas)
 
 ## Style/TrailingUnderscoreVariable
 
@@ -3818,7 +3818,7 @@ Whitelist | to_ary, to_a, to_c, to_enum, to_h, to_hash, to_i, to_int, to_io, to_
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#attr_family](https://github.com/bbatsov/ruby-style-guide#attr_family)
+* [https://github.com/searls/ruby-style-guide#attr_family](https://github.com/searls/ruby-style-guide#attr_family)
 
 ## Style/UnlessElse
 
@@ -3830,7 +3830,7 @@ This cop looks for *unless* expressions with *else* clauses.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-else-with-unless](https://github.com/bbatsov/ruby-style-guide#no-else-with-unless)
+* [https://github.com/searls/ruby-style-guide#no-else-with-unless](https://github.com/searls/ruby-style-guide#no-else-with-unless)
 
 ## Style/UnneededCapitalW
 
@@ -3871,7 +3871,7 @@ This cop checks for usage of the %q/%Q syntax when '' or "" would do.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#percent-q](https://github.com/bbatsov/ruby-style-guide#percent-q)
+* [https://github.com/searls/ruby-style-guide#percent-q](https://github.com/searls/ruby-style-guide#percent-q)
 
 ## Style/VariableInterpolation
 
@@ -3883,7 +3883,7 @@ This cop checks for variable interpolation (like "#@ivar").
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#curlies-interpolate](https://github.com/bbatsov/ruby-style-guide#curlies-interpolate)
+* [https://github.com/searls/ruby-style-guide#curlies-interpolate](https://github.com/searls/ruby-style-guide#curlies-interpolate)
 
 ## Style/VariableName
 
@@ -3903,7 +3903,7 @@ SupportedStyles | snake_case, camelCase
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#snake-case-symbols-methods-vars](https://github.com/bbatsov/ruby-style-guide#snake-case-symbols-methods-vars)
+* [https://github.com/searls/ruby-style-guide#snake-case-symbols-methods-vars](https://github.com/searls/ruby-style-guide#snake-case-symbols-methods-vars)
 
 ## Style/VariableNumber
 
@@ -3972,7 +3972,7 @@ This cop checks for *when;* uses in *case* expressions.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#one-line-cases](https://github.com/bbatsov/ruby-style-guide#one-line-cases)
+* [https://github.com/searls/ruby-style-guide#one-line-cases](https://github.com/searls/ruby-style-guide#one-line-cases)
 
 ## Style/WhileUntilDo
 
@@ -3984,7 +3984,7 @@ Checks for uses of `do` in multi-line `while/until` statements.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-multiline-while-do](https://github.com/bbatsov/ruby-style-guide#no-multiline-while-do)
+* [https://github.com/searls/ruby-style-guide#no-multiline-while-do](https://github.com/searls/ruby-style-guide#no-multiline-while-do)
 
 ## Style/WhileUntilModifier
 
@@ -4004,7 +4004,7 @@ MaxLineLength | 80
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#while-as-a-modifier](https://github.com/bbatsov/ruby-style-guide#while-as-a-modifier)
+* [https://github.com/searls/ruby-style-guide#while-as-a-modifier](https://github.com/searls/ruby-style-guide#while-as-a-modifier)
 
 ## Style/WordArray
 
@@ -4055,7 +4055,7 @@ WordRegex | (?-mix:\A[\p{Word}\n\t]+\z)
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#percent-w](https://github.com/bbatsov/ruby-style-guide#percent-w)
+* [https://github.com/searls/ruby-style-guide#percent-w](https://github.com/searls/ruby-style-guide#percent-w)
 
 ## Style/ZeroLengthPredicate
 

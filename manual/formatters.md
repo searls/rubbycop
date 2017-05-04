@@ -15,25 +15,25 @@ or the default `progress` format if no `-f/--format` is specified before the `-o
 
 ```sh
 # Simple format to $stdout.
-$ rubocop --format simple
+$ rubbycop --format simple
 
 # Progress (default) format to the file result.txt.
-$ rubocop --out result.txt
+$ rubbycop --out result.txt
 
 # Both progress and offense count formats to $stdout.
 # The offense count formatter outputs only the final summary,
 # so you'll mostly see the outputs from the progress formatter,
 # and at the end the offense count summary will be outputted.
-$ rubocop --format progress --format offenses
+$ rubbycop --format progress --format offenses
 
-# Progress format to $stdout, and JSON format to the file rubocop.json.
-$ rubocop --format progress --format json --out rubocop.json
+# Progress format to $stdout, and JSON format to the file rubbycop.json.
+$ rubbycop --format progress --format json --out rubbycop.json
 #         ~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~
 #                 |               |_______________|
 #              $stdout
 
 # Progress format to result.txt, and simple format to $stdout.
-$ rubocop --output result.txt --format simple
+$ rubbycop --output result.txt --format simple
 #         ~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~
 #                  |                 |
 #           default format        $stdout
@@ -49,7 +49,7 @@ A `.` represents a clean file, and each of the capital letters means
 the severest offense (convention, warning, error or fatal) found in a file.
 
 ```sh
-$ rubocop
+$ rubbycop
 Inspecting 26 files
 ..W.C....C..CWCW.C...WC.CC
 
@@ -69,7 +69,7 @@ lib/foo.rb:6:5: C: Missing top-level class documentation comment.
 The `clang` formatter displays the offenses in a manner similar to `clang`:
 
 ```sh
-$ rubocop test.rb
+$ rubbycop test.rb
 Inspecting 1 file
 W
 
@@ -98,7 +98,7 @@ and shows details of offenses in the `clang` format as soon as they are detected
 This is inspired by the [Fuubar](https://github.com/thekompanee/fuubar) formatter for RSpec.
 
 ```sh
-$ rubocop --format fuubar
+$ rubbycop --format fuubar
 lib/foo.rb.rb:1:1: C: Use snake_case for methods and variables.
 def badName
     ^^^^^^^
@@ -115,7 +115,7 @@ lib/bar.rb:13:14: W: File.exists? is deprecated in favor of File.exist?.
 The `emacs` formatter displays the offenses in a format suitable for consumption by `Emacs` (and possibly other tools).
 
 ```sh
-$ rubocop --format emacs test.rb
+$ rubbycop --format emacs test.rb
 /Users/bozhidar/projects/test.rb:1:1: C: Use snake_case for methods and variables.
 /Users/bozhidar/projects/test.rb:2:3: C: Favor modifier if/unless usage when you have a single-line body. Another good alternative is the usage of control flow &&/||.
 /Users/bozhidar/projects/test.rb:4:5: W: end at 4, 4 is not aligned with if at 2, 2
@@ -126,7 +126,7 @@ $ rubocop --format emacs test.rb
 The name of the formatter says it all :-)
 
 ```sh
-$ rubocop --format simple test.rb
+$ rubbycop --format simple test.rb
 == test.rb ==
 C:  1:  5: Use snake_case for method names.
 C:  2:  3: Use a guard clause instead of wrapping the code inside a conditional expression.
@@ -145,7 +145,7 @@ favorite editor. This formatter outputs just the names of the files
 with offenses in them and makes it possible to do something like:
 
 ```sh
-$ rubocop --format files | xargs vim
+$ rubbycop --format files | xargs vim
 ```
 
 ### JSON Formatter
@@ -158,7 +158,7 @@ The JSON structure is like the following example:
 ```javascript
 {
   "metadata": {
-    "rubocop_version": "0.9.0",
+    "rubbycop_version": "0.9.0",
     "ruby_engine": "ruby",
     "ruby_version": "2.0.0",
     "ruby_patchlevel": "195",
@@ -210,7 +210,7 @@ With this in mind, you can use the offense count formatter to outline the offend
 cops and the number of offenses found for each by running:
 
 ```sh
-$ rubocop --format offenses
+$ rubbycop --format offenses
 
 87   Documentation
 12   DotPosition
@@ -232,7 +232,7 @@ $ rubocop --format offenses
 Similar to the Offense Count formatter, but lists the files which need the most attention:
 
 ```sh
-$ rubocop --format worst
+$ rubbycop --format worst
 
 89  this/file/is/really/bad.rb
 2   much/better.rb
@@ -245,5 +245,5 @@ $ rubocop --format worst
 Useful for CI environments. It will create an HTML report like [this](http://f.cl.ly/items/0M3029412x3O091a1X1R/expected.html).
 
 ```sh
-$ rubocop --format html -o rubocop.html
+$ rubbycop --format html -o rubbycop.html
 ```

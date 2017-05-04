@@ -358,7 +358,7 @@ AutoCorrect | false
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#hash-each](https://github.com/bbatsov/ruby-style-guide#hash-each)
+* [https://github.com/searls/ruby-style-guide#hash-each](https://github.com/searls/ruby-style-guide#hash-each)
 
 ## Performance/LstripRstrip
 

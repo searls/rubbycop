@@ -51,7 +51,7 @@ IndentationWidth |
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#indent-public-private-protected](https://github.com/bbatsov/ruby-style-guide#indent-public-private-protected)
+* [https://github.com/searls/ruby-style-guide#indent-public-private-protected](https://github.com/searls/ruby-style-guide#indent-public-private-protected)
 
 ## Layout/AlignArray
 
@@ -82,7 +82,7 @@ a = ['run',
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#align-multiline-arrays](https://github.com/bbatsov/ruby-style-guide#align-multiline-arrays)
+* [https://github.com/searls/ruby-style-guide#align-multiline-arrays](https://github.com/searls/ruby-style-guide#align-multiline-arrays)
 
 ## Layout/AlignHash
 
@@ -244,7 +244,7 @@ IndentationWidth |
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-double-indent](https://github.com/bbatsov/ruby-style-guide#no-double-indent)
+* [https://github.com/searls/ruby-style-guide#no-double-indent](https://github.com/searls/ruby-style-guide#no-double-indent)
 
 ## Layout/BlockEndNewline
 
@@ -365,7 +365,7 @@ IndentationWidth |
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#indent-when-to-case](https://github.com/bbatsov/ruby-style-guide#indent-when-to-case)
+* [https://github.com/searls/ruby-style-guide#indent-when-to-case](https://github.com/searls/ruby-style-guide#indent-when-to-case)
 
 ## Layout/ClosingParenthesisIndentation
 
@@ -423,7 +423,7 @@ SupportedStyles | leading, trailing
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains](https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains)
+* [https://github.com/searls/ruby-style-guide#consistent-multi-line-chains](https://github.com/searls/ruby-style-guide#consistent-multi-line-chains)
 
 ## Layout/ElseAlignment
 
@@ -465,7 +465,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#separate-magic-comments-from-code](https://github.com/bbatsov/ruby-style-guide#separate-magic-comments-from-code)
+* [https://github.com/searls/ruby-style-guide#separate-magic-comments-from-code](https://github.com/searls/ruby-style-guide#separate-magic-comments-from-code)
 
 ## Layout/EmptyLineBetweenDefs
 
@@ -510,7 +510,7 @@ NumberOfEmptyLines | 1
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-between-methods](https://github.com/bbatsov/ruby-style-guide#empty-lines-between-methods)
+* [https://github.com/searls/ruby-style-guide#empty-lines-between-methods](https://github.com/searls/ruby-style-guide#empty-lines-between-methods)
 
 ## Layout/EmptyLines
 
@@ -522,7 +522,7 @@ This cops checks for two or more consecutive blank lines.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#two-or-more-empty-lines](https://github.com/bbatsov/ruby-style-guide#two-or-more-empty-lines)
+* [https://github.com/searls/ruby-style-guide#two-or-more-empty-lines](https://github.com/searls/ruby-style-guide#two-or-more-empty-lines)
 
 ## Layout/EmptyLinesAroundAccessModifier
 
@@ -534,7 +534,7 @@ Access modifiers should be surrounded by blank lines.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-around-access-modifier](https://github.com/bbatsov/ruby-style-guide#empty-lines-around-access-modifier)
+* [https://github.com/searls/ruby-style-guide#empty-lines-around-access-modifier](https://github.com/searls/ruby-style-guide#empty-lines-around-access-modifier)
 
 ## Layout/EmptyLinesAroundBeginBody
 
@@ -565,7 +565,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies](https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies)
+* [https://github.com/searls/ruby-style-guide#empty-lines-around-bodies](https://github.com/searls/ruby-style-guide#empty-lines-around-bodies)
 
 ## Layout/EmptyLinesAroundBlockBody
 
@@ -607,7 +607,7 @@ SupportedStyles | empty_lines, no_empty_lines
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies](https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies)
+* [https://github.com/searls/ruby-style-guide#empty-lines-around-bodies](https://github.com/searls/ruby-style-guide#empty-lines-around-bodies)
 
 ## Layout/EmptyLinesAroundClassBody
 
@@ -643,7 +643,7 @@ SupportedStyles | empty_lines, empty_lines_except_namespace, empty_lines_special
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies](https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies)
+* [https://github.com/searls/ruby-style-guide#empty-lines-around-bodies](https://github.com/searls/ruby-style-guide#empty-lines-around-bodies)
 
 ## Layout/EmptyLinesAroundExceptionHandlingKeywords
 
@@ -711,7 +711,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies](https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies)
+* [https://github.com/searls/ruby-style-guide#empty-lines-around-bodies](https://github.com/searls/ruby-style-guide#empty-lines-around-bodies)
 
 ## Layout/EmptyLinesAroundMethodBody
 
@@ -741,7 +741,7 @@ end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies](https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies)
+* [https://github.com/searls/ruby-style-guide#empty-lines-around-bodies](https://github.com/searls/ruby-style-guide#empty-lines-around-bodies)
 
 ## Layout/EmptyLinesAroundModuleBody
 
@@ -787,7 +787,7 @@ SupportedStyles | empty_lines, empty_lines_except_namespace, empty_lines_special
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies](https://github.com/bbatsov/ruby-style-guide#empty-lines-around-bodies)
+* [https://github.com/searls/ruby-style-guide#empty-lines-around-bodies](https://github.com/searls/ruby-style-guide#empty-lines-around-bodies)
 
 ## Layout/EndOfLine
 
@@ -806,7 +806,7 @@ SupportedStyles | native, lf, crlf
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#crlf](https://github.com/bbatsov/ruby-style-guide#crlf)
+* [https://github.com/searls/ruby-style-guide#crlf](https://github.com/searls/ruby-style-guide#crlf)
 
 ## Layout/ExtraSpacing
 
@@ -823,12 +823,12 @@ This cop checks for extra/unnecessary whitespace.
 name      = "RubbyCop"
 # Some comment and an empty line
 
-website  += "/bbatsov/rubocop" unless cond
-puts        "rubocop"          if     debug
+website  += "/searls/rubbycop" unless cond
+puts        "rubbycop"          if     debug
 
 # bad for any configuration
 set_app("RubbyCop")
-website  = "https://github.com/bbatsov/rubocop"
+website  = "https://github.com/searls/rubbycop"
 ```
 
 ### Important attributes
@@ -1148,7 +1148,7 @@ SupportedStyles | auto_detection, squiggly, active_support, powerpack, unindent
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#squiggly-heredocs](https://github.com/bbatsov/ruby-style-guide#squiggly-heredocs)
+* [https://github.com/searls/ruby-style-guide#squiggly-heredocs](https://github.com/searls/ruby-style-guide#squiggly-heredocs)
 
 ## Layout/IndentationConsistency
 
@@ -1178,7 +1178,7 @@ SupportedStyles | normal, rails
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-indentation](https://github.com/bbatsov/ruby-style-guide#spaces-indentation)
+* [https://github.com/searls/ruby-style-guide#spaces-indentation](https://github.com/searls/ruby-style-guide#spaces-indentation)
 
 ## Layout/IndentationWidth
 
@@ -1241,7 +1241,7 @@ IgnoredPatterns |
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-indentation](https://github.com/bbatsov/ruby-style-guide#spaces-indentation)
+* [https://github.com/searls/ruby-style-guide#spaces-indentation](https://github.com/searls/ruby-style-guide#spaces-indentation)
 
 ## Layout/InitialIndentation
 
@@ -1266,7 +1266,7 @@ like #++, #--, #:nodoc, etc. Neither is it required for
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#hash-space](https://github.com/bbatsov/ruby-style-guide#hash-space)
+* [https://github.com/searls/ruby-style-guide#hash-space](https://github.com/searls/ruby-style-guide#hash-space)
 
 ## Layout/MultilineArrayBraceLayout
 
@@ -1383,7 +1383,7 @@ SupportedStyles | same_line, new_line
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#indent-conditional-assignment](https://github.com/bbatsov/ruby-style-guide#indent-conditional-assignment)
+* [https://github.com/searls/ruby-style-guide#indent-conditional-assignment](https://github.com/searls/ruby-style-guide#indent-conditional-assignment)
 
 ## Layout/MultilineBlockLayout
 
@@ -1759,7 +1759,7 @@ instead handled by Layout/SpaceAroundOperators.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-operators](https://github.com/bbatsov/ruby-style-guide#spaces-operators)
+* [https://github.com/searls/ruby-style-guide#spaces-operators](https://github.com/searls/ruby-style-guide#spaces-operators)
 
 ## Layout/SpaceAfterComma
 
@@ -1771,7 +1771,7 @@ Checks for comma (,) not followed by some kind of space.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-operators](https://github.com/bbatsov/ruby-style-guide#spaces-operators)
+* [https://github.com/searls/ruby-style-guide#spaces-operators](https://github.com/searls/ruby-style-guide#spaces-operators)
 
 ## Layout/SpaceAfterMethodName
 
@@ -1793,7 +1793,7 @@ def func(x) ... end
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#parens-no-spaces](https://github.com/bbatsov/ruby-style-guide#parens-no-spaces)
+* [https://github.com/searls/ruby-style-guide#parens-no-spaces](https://github.com/searls/ruby-style-guide#parens-no-spaces)
 
 ## Layout/SpaceAfterNot
 
@@ -1815,7 +1815,7 @@ This cop checks for space after `!`.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-space-bang](https://github.com/bbatsov/ruby-style-guide#no-space-bang)
+* [https://github.com/searls/ruby-style-guide#no-space-bang](https://github.com/searls/ruby-style-guide#no-space-bang)
 
 ## Layout/SpaceAfterSemicolon
 
@@ -1827,7 +1827,7 @@ Checks for semicolon (;) not followed by some kind of space.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-operators](https://github.com/bbatsov/ruby-style-guide#spaces-operators)
+* [https://github.com/searls/ruby-style-guide#spaces-operators](https://github.com/searls/ruby-style-guide#spaces-operators)
 
 ## Layout/SpaceAroundBlockParameters
 
@@ -1872,7 +1872,7 @@ SupportedStyles | space, no_space
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-around-equals](https://github.com/bbatsov/ruby-style-guide#spaces-around-equals)
+* [https://github.com/searls/ruby-style-guide#spaces-around-equals](https://github.com/searls/ruby-style-guide#spaces-around-equals)
 
 ## Layout/SpaceAroundKeyword
 
@@ -1921,7 +1921,7 @@ AllowForAlignment | true
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-operators](https://github.com/bbatsov/ruby-style-guide#spaces-operators)
+* [https://github.com/searls/ruby-style-guide#spaces-operators](https://github.com/searls/ruby-style-guide#spaces-operators)
 
 ## Layout/SpaceBeforeBlockBraces
 
@@ -2084,7 +2084,7 @@ Checks for spaces inside square brackets.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-spaces-braces](https://github.com/bbatsov/ruby-style-guide#no-spaces-braces)
+* [https://github.com/searls/ruby-style-guide#no-spaces-braces](https://github.com/searls/ruby-style-guide#no-spaces-braces)
 
 ## Layout/SpaceInsideHashLiteralBraces
 
@@ -2106,7 +2106,7 @@ SupportedStylesForEmptyBraces | space, no_space
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-operators](https://github.com/bbatsov/ruby-style-guide#spaces-operators)
+* [https://github.com/searls/ruby-style-guide#spaces-operators](https://github.com/searls/ruby-style-guide#spaces-operators)
 
 ## Layout/SpaceInsideParens
 
@@ -2118,7 +2118,7 @@ Checks for spaces inside ordinary round parentheses.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-spaces-braces](https://github.com/bbatsov/ruby-style-guide#no-spaces-braces)
+* [https://github.com/searls/ruby-style-guide#no-spaces-braces](https://github.com/searls/ruby-style-guide#no-spaces-braces)
 
 ## Layout/SpaceInsidePercentLiteralDelimiters
 
@@ -2168,7 +2168,7 @@ Checks for spaces inside range literals.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-space-inside-range-literals](https://github.com/bbatsov/ruby-style-guide#no-space-inside-range-literals)
+* [https://github.com/searls/ruby-style-guide#no-space-inside-range-literals](https://github.com/searls/ruby-style-guide#no-space-inside-range-literals)
 
 ## Layout/SpaceInsideStringInterpolation
 
@@ -2197,7 +2197,7 @@ SupportedStyles | space, no_space
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#string-interpolation](https://github.com/bbatsov/ruby-style-guide#string-interpolation)
+* [https://github.com/searls/ruby-style-guide#string-interpolation](https://github.com/searls/ruby-style-guide#string-interpolation)
 
 ## Layout/Tab
 
@@ -2209,7 +2209,7 @@ This cop checks for tabs inside the source code.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#spaces-indentation](https://github.com/bbatsov/ruby-style-guide#spaces-indentation)
+* [https://github.com/searls/ruby-style-guide#spaces-indentation](https://github.com/searls/ruby-style-guide#spaces-indentation)
 
 ## Layout/TrailingBlankLines
 
@@ -2229,7 +2229,7 @@ SupportedStyles | final_newline, final_blank_line
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#newline-eof](https://github.com/bbatsov/ruby-style-guide#newline-eof)
+* [https://github.com/searls/ruby-style-guide#newline-eof](https://github.com/searls/ruby-style-guide#newline-eof)
 
 ## Layout/TrailingWhitespace
 
@@ -2241,4 +2241,4 @@ This cop looks for trailing whitespace in the source code.
 
 ### References
 
-* [https://github.com/bbatsov/ruby-style-guide#no-trailing-whitespace](https://github.com/bbatsov/ruby-style-guide#no-trailing-whitespace)
+* [https://github.com/searls/ruby-style-guide#no-trailing-whitespace](https://github.com/searls/ruby-style-guide#no-trailing-whitespace)

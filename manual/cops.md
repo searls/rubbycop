@@ -13,7 +13,7 @@ You can also load [custom cops](extensions.md#custom-cops).
 ### Style
 
 Style cops check for stylistic consistency of your code. Many of the them are
-based on the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
+based on the [Ruby Style Guide](https://github.com/searls/ruby-style-guide).
 
 ### Layout
 
@@ -30,7 +30,7 @@ RubbyCop implements, in a portable way, all built-in MRI lint checks
 You can run only the Lint cops like this:
 
 ```sh
-$ rubocop -l
+$ rubbycop -l
 ```
 
 The `-l`/`--lint` option can be used together with `--only` to run all the
@@ -43,7 +43,7 @@ Disabling Lint cops is generally a bad idea.
 Metrics cops deal with properties of the source code that can be measured,
 such as class length, method length, etc. Generally speaking, they have a
 configuration parameter called `Max` and when running
-`rubocop --auto-gen-config`, this parameter will be set to the highest value
+`rubbycop --auto-gen-config`, this parameter will be set to the highest value
 found for the inspected code.
 
 ### Performance
@@ -62,10 +62,10 @@ Rails cops are specific to the Ruby on Rails framework. Unlike all other cop
 types they are not used by default, and you have to request them explicity:
 
 ```sh
-$ rubocop -R
+$ rubbycop -R
 ```
 
-or add the following directive to your `.rubocop.yml`:
+or add the following directive to your `.rubbycop.yml`:
 
 ```yaml
 Rails:

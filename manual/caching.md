@@ -13,11 +13,11 @@ done if the cache for the file is still valid, which it is if there
 are no changes in:
 * the contents of the inspected file
 * RubbyCop configuration for the file
-* the options given to `rubocop`, with some exceptions that have no
+* the options given to `rubbycop`, with some exceptions that have no
   bearing on which offenses are reported
-* the Ruby version used to invoke `rubocop`
-* version of the `rubocop` program (or to be precise, anything in the
-  source code of the invoked `rubocop` program)
+* the Ruby version used to invoke `rubbycop`
+* version of the `rubbycop` program (or to be precise, anything in the
+  source code of the invoked `rubbycop` program)
 
 ### Enabling and Disabling the Cache
 
@@ -25,13 +25,13 @@ The caching functionality is enabled if the configuration parameter
 `AllCops: UseCache` is `true`, which it is by default. The command
 line option `--cache false` can be used to turn off caching, thus
 overriding the configuration parameter. If `AllCops: UseCache` is set
-to `false` in the local `.rubocop.yml`, then it's `--cache true` that
+to `false` in the local `.rubbycop.yml`, then it's `--cache true` that
 overrides the setting.
 
 ### Cache Path
 
 By default, the cache is stored in a subdirectory of the temporary
-directory, `/tmp/rubocop_cache/` on Unix-like systems. The
+directory, `/tmp/rubbycop_cache/` on Unix-like systems. The
 configuration parameter `AllCops: CacheRootDirectory` can be used to
 set it to a different path. One reason to use this option could be
 that there's a network disk where users on different machines want to

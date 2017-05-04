@@ -67,7 +67,7 @@ AllCops:
   DisplayStyleGuide: false
   # When specifying style guide URLs, any paths and/or fragments will be
   # evaluated relative to the base URL.
-  StyleGuideBaseURL: https://github.com/bbatsov/ruby-style-guide
+  StyleGuideBaseURL: https://github.com/searls/ruby-style-guide
   # Extra details are not displayed in offense messages by default. Change
   # behavior by overriding ExtraDetails, or by giving the
   # `-E/--extra-details` option.
@@ -95,7 +95,7 @@ AllCops:
   # Threshold for how many files can be stored in the result cache before some
   # of the files are automatically removed.
   MaxFilesInCache: 20000
-  # The cache will be stored in "rubocop_cache" under this directory. The name
+  # The cache will be stored in "rubbycop_cache" under this directory. The name
   # "/tmp" is special and will be converted to the system temporary directory,
   # which is "/tmp" on Unix-like systems, but could be something else on other
   # systems.
@@ -722,7 +722,7 @@ Style/ConditionalAssignment:
 
 # Checks that you have put a copyright in a comment before any code.
 #
-# You can override the default Notice in your .rubocop.yml file.
+# You can override the default Notice in your .rubbycop.yml file.
 #
 # In order to use autocorrect, you must supply a value for the
 # `AutocorrectNotice` key that matches the regexp Notice.  A blank
@@ -731,7 +731,7 @@ Style/ConditionalAssignment:
 # Autocorrect will add a copyright notice in a comment at the top
 # of the file immediately after any shebang or encoding comments.
 #
-# Example rubocop.yml:
+# Example rubbycop.yml:
 #
 # Style/Copyright:
 #   Enabled: true
@@ -1323,7 +1323,7 @@ Metrics/LineLength:
     - http
     - https
   # The IgnoreCopDirectives option causes the LineLength rule to ignore cop
-  # directives like '# rubocop: enable ...' when calculating a line's length.
+  # directives like '# rubbycop: enable ...' when calculating a line's length.
   IgnoreCopDirectives: false
   # The IgnoredPatterns option is a list of !ruby/regexp and/or string
   # elements. Strings will be converted to Regexp objects. A line that matches

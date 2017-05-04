@@ -1,6 +1,6 @@
-# This is the configuration used to check the rubocop source code.
+# This is the configuration used to check the rubbycop source code.
 
-inherit_from: .rubocop_todo.yml
+inherit_from: .rubbycop_todo.yml
 
 AllCops:
   Exclude:

@@ -12,25 +12,25 @@ A Gem's requirements should be listed only once in a Gemfile.
 
 ```ruby
 # bad
-gem 'rubocop'
-gem 'rubocop'
+gem 'rubbycop'
+gem 'rubbycop'
 
 # bad
 group :development do
-  gem 'rubocop'
+  gem 'rubbycop'
 end
 
 group :test do
-  gem 'rubocop'
+  gem 'rubbycop'
 end
 
 # good
 group :development, :test do
-  gem 'rubocop'
+  gem 'rubbycop'
 end
 
 # good
-gem 'rubocop', groups: [:development, :test]
+gem 'rubbycop', groups: [:development, :test]
 ```
 
 ### Important attributes
@@ -51,21 +51,21 @@ Gems should be alphabetically sorted within groups.
 
 ```ruby
 # bad
-gem 'rubocop'
+gem 'rubbycop'
 gem 'rspec'
 
 # good
 gem 'rspec'
-gem 'rubocop'
+gem 'rubbycop'
 
 # good
-gem 'rubocop'
+gem 'rubbycop'
 
 gem 'rspec'
 
 # good only if TreatCommentsAsGroupSeparators is true
 # For code quality
-gem 'rubocop'
+gem 'rubbycop'
 # For tests
 gem 'rspec'
 ```

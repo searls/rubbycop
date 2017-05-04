@@ -1,0 +1,161 @@
+# frozen_string_literal: true
+
+module RubbyCop
+  class Runner
+    attr_writer :errors # Needed only for testing.
+  end
+end
+
+describe RubbyCop::Runner, :isolated_environment do
+  include FileHelper
+
+  let(:formatter_output_path) { 'formatter_output.txt' }
+  let(:formatter_output) { File.read(formatter_output_path) }
+
+  before do
+    create_file('example.rb', source)
+  end
+
+  describe '#run' do
+    let(:options) { { formatters: [['progress', formatter_output_path]] } }
+    subject(:runner) { described_class.new(options, RubbyCop::ConfigStore.new) }
+    context 'if there are no offenses in inspected files' do
+      let(:source) { <<-END.strip_indent }
+        # coding: utf-8
+
+        def valid_code; end
+      END
+
+      it 'returns true' do
+        expect(runner.run([])).to be true
+      end
+    end
+
+    context 'if there is an offense in an inspected file' do
+      let(:source) { <<-END.strip_indent }
+        # coding: utf-8
+
+        def INVALID_CODE; end
+      END
+
+      it 'returns false' do
+        expect(runner.run([])).to be false
+      end
+
+      it 'sends the offense to a formatter' do
+        runner.run([])
+        expect(formatter_output).to eq <<-END.strip_indent
+          Inspecting 1 file
+          C
+
+          Offenses:
+
+          example.rb:3:5: C: Use snake_case for method names.
+          def INVALID_CODE; end
+              ^^^^^^^^^^^^
+
+          1 file inspected, 1 offense detected
+        END
+      end
+    end
+
+    context 'if a cop crashes' do
+      before do
+        # The cache responds that it's not valid, which means that new results
+        # should normally be collected and saved...
+        cache = double('cache', 'valid?' => false)
+        # ... but there's a crash in one cop.
+        runner.errors = ['An error occurred in ...']
+
+        allow(RubbyCop::ResultCache).to receive(:new) { cache }
+      end
+
+      let(:source) { '' }
+
+      it 'does not call ResultCache#save' do
+        # The double doesn't define #save, so we'd get an error if it were
+        # called.
+        runner.run([])
+      end
+    end
+
+    context 'if -s/--stdin is used with an offense' do
+      before do
+        # Make Style/EndOfLine give same output regardless of platform.
+        create_file('.rubbycop.yml', <<-END.strip_indent)
+          Layout/EndOfLine:
+            EnforcedStyle: lf
+        END
+      end
+
+      let(:options) do
+        {
+          formatters: [['progress', formatter_output_path]],
+          stdin: <<-END.strip_indent
+            # coding: utf-8
+
+            def INVALID_CODE; end
+          END
+        }
+      end
+      let(:source) { '' }
+
+      it 'returns false' do
+        expect(runner.run([])).to be false
+      end
+
+      it 'sends the offense to a formatter' do
+        runner.run([])
+        expect(formatter_output).to eq <<-END.strip_indent
+          Inspecting 1 file
+          C
+
+          Offenses:
+
+          example.rb:3:5: C: Use snake_case for method names.
+          def INVALID_CODE; end
+              ^^^^^^^^^^^^
+
+          1 file inspected, 1 offense detected
+        END
+      end
+    end
+  end
+
+  describe '#run with cops autocorrecting each-other' do
+    let(:options) do
+      {
+        auto_correct: true,
+        formatters: [['progress', formatter_output_path]]
+      }
+    end
+
+    subject(:runner) do
+      runner_class = Class.new(RubbyCop::Runner) do
+        def mobilized_cop_classes(_config)
+          RubbyCop::Cop::Registry.new(
+            [
+              RubbyCop::Cop::Test::ClassMustBeAModuleCop,
+              RubbyCop::Cop::Test::ModuleMustBeAClassCop
+            ]
+          )
+        end
+      end
+      runner_class.new(options, RubbyCop::ConfigStore.new)
+    end
+
+    context 'if there is an offense in an inspected file' do
+      let(:source) { <<-END.strip_indent }
+        # coding: utf-8
+        class Klass
+        end
+      END
+
+      it 'aborts because of an infinite loop' do
+        expect do
+          runner.run([])
+        end.to raise_error RubbyCop::Runner::InfiniteCorrectionLoop
+      end
+    end
+  end
+end
