@@ -218,7 +218,7 @@ describe RubbyCop::Cop::Metrics::LineLength, :config do
     context 'and the source is acceptable length' do
       let(:acceptable_source) { 'a' * 80 }
 
-      context 'with a trailing Rubocop directive' do
+      context 'with a trailing Rubbycop directive' do
         let(:cop_directive) { ' # rubcop:disable Metrics/SomeCop' }
         let(:source) { acceptable_source + cop_directive }
 
@@ -258,7 +258,7 @@ describe RubbyCop::Cop::Metrics::LineLength, :config do
   context 'when IgnoreCopDirectives is enabled' do
     let(:cop_config) { { 'Max' => 80, 'IgnoreCopDirectives' => true } }
 
-    context 'and the Rubocop directive is excessively long' do
+    context 'and the Rubbycop directive is excessively long' do
       let(:source) { <<-END }
         # rubbycop:disable Metrics/SomeReallyLongMetricNameThatShouldBeMuchShorterAndNeedsANameChange
       END
@@ -269,7 +269,7 @@ describe RubbyCop::Cop::Metrics::LineLength, :config do
       end
     end
 
-    context 'and the Rubocop directive causes an excessive line length' do
+    context 'and the Rubbycop directive causes an excessive line length' do
       let(:source) { <<-END }
         def method_definition_that_is_just_under_the_line_length_limit(foo, bar) # rubbycop:disable Metrics/AbcSize
           # complex method

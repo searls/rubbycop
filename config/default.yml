@@ -102,8 +102,8 @@ AllCops:
   CacheRootDirectory: /tmp
   # The default cache root directory is /tmp, which on most systems is
   # writable by any system user. This means that it is possible for a
-  # malicious user to anticipate the location of Rubocop's cache directory,
-  # and create a symlink in its place that could cause Rubocop to overwrite
+  # malicious user to anticipate the location of Rubbycop's cache directory,
+  # and create a symlink in its place that could cause Rubbycop to overwrite
   # unintended files, or read malicious input. If you are certain that your
   # cache location is secure from this kind of attack, and wish to use a
   # symlinked cache location, set this value to "true".

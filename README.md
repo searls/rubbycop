@@ -6,7 +6,7 @@
 [![Inline docs](http://inch-ci.org/github/searls/rubbycop.svg)](http://inch-ci.org/github/searls/rubbycop)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/searls/rubbycop/master/logo/rubo-logo-horizontal.png" alt="RubbyCop Logo"/>
+  <img src="https://raw.githubusercontent.com/searls/rubbycop/master/logo/rubby-logo-horizontal.png" alt="RubbyCop Logo"/>
 </p>
 
 RubbyCop is a fork of [RuboCop](https://github.com/bbatsov/rubocop) that hopes
@@ -58,7 +58,7 @@ RubbyCop supports the following Ruby implementations:
 
 RuboCop's logo was originally created by [Dimiter
 Petrov](https://www.chadomoto.com/).  To disambiguate this project from
-RuboConf, wechanged it. You can find the logo in various
+RuboCop, wechanged it. You can find the logo in various
 formats [here](https://github.com/searls/rubbycop/tree/master/logo).
 
 The logo is licensed under a
