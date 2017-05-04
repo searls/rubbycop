@@ -13,7 +13,7 @@ end
 require 'rake'
 require 'rspec/core'
 require 'rspec/core/rake_task'
-require 'rubbycop/rake_task'
+# require 'rubbycop/rake_task'
 
 Dir['tasks/**/*.rake'].each { |t| load t }
 
@@ -26,10 +26,7 @@ task :coverage do
   Rake::Task['spec'].execute
 end
 
-desc 'Run RubbyCop over itself'
-RubbyCop::RakeTask.new(:internal_investigation)
-
-task default: %i[spec ascii_spec internal_investigation]
+task default: %i[spec ascii_spec]
 
 require 'yard'
 YARD::Rake::YardocTask.new
