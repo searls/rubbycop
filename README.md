@@ -58,7 +58,7 @@ RubbyCop supports the following Ruby implementations:
 
 RuboCop's logo was originally created by [Dimiter
 Petrov](https://www.chadomoto.com/).  To disambiguate this project from
-RuboCop, wechanged it. You can find the logo in various
+RuboCop, we changed it. You can find the logo in various
 formats [here](https://github.com/searls/rubbycop/tree/master/logo).
 
 The logo is licensed under a
