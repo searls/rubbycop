@@ -1,3 +1,7 @@
+# **Don't use this**
+
+**I gave up on this. Use [StandardRB](https://github.com/testdouble/standard) instead.**
+
 [![Gem Version](https://badge.fury.io/rb/rubbycop.svg)](http://badge.fury.io/rb/rubbycop)
 [![Dependency Status](https://gemnasium.com/searls/rubbycop.svg)](https://gemnasium.com/searls/rubbycop)
 [![Build Status](https://travis-ci.org/searls/rubbycop.svg?branch=master)](https://travis-ci.org/searls/rubbycop)
